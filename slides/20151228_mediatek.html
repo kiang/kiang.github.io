@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>聯發科技 開放資料研究社</title>
+
+		<meta name="description" content="頻道 https://www.youtube.com/channel/UCgvLoZQMg7dHuiVH2avx3Lw">
+		<meta name="author" content="Finjon Kiang">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>跌入 g0v <br />的那些日子</h1>
+					<h3>case studies</h3>
+					<p>
+						<small>kiang @ 開放資料研究社 2015-12-28</small>
+					</p>
+				</section>
+				<section>
+					<section data-background="20151228_mediatek/bribes_map.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://kiang.github.io/bribes_map/" target="_blank">台灣賄選<br />實價登錄地圖</a></h1>
+					</section>
+					<section>
+						<h1>關鍵項目</h1>
+						<ul>
+							<li><span class="fragment"><a href="https://www.ptt.cc/bbs/Gossiping/M.1450410800.A.F6D.html" target="_blank">案件資料</a></span><span class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;別人做的</span></li>
+							<li><span class="fragment"><a href="https://googlemaps.github.io/js-marker-clusterer/docs/examples.html" target="_blank">MarkerClusterer</a> & <a href="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.8/docs/examples.html" target="_blank">MarkerWithLabel</a></span><span class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;別人做的</span></li>
+							<li><span class="fragment"><a href="http://osk2.me/" target="_blank">畫面設計</a></span><span class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;別人做的</span></li>
+							<li><span class="fragment"><a href="https://github.com/kiang/bribes_map/" target="_blank">網站主機</a></span><span class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;也是別人做的</span></li>
+						</ul>
+					</section>
+					<section>
+						<h1>這不是收割，<br />那什麼是收割？</h1>
+					</section>
+					<section>
+						<h1>下一步</h1>
+						<ul>
+							<li><span class="fragment"><a href="https://github.com/kiang/bribes_map/tree/gh-pages/2016" target="_blank">批次姓名配對案件</a></span></li>
+							<li><span class="fragment">搭配<a href="http://k.olc.tw/elections/" target="_blank">選舉黃頁</a>資料進行交叉連結</span></li>
+							<li><span class="fragment">群眾外包</span></li>
+							<li><span class="fragment">配合<a href="https://news-hackathon.hackpad.com/r3mwpLmeALP" target="_blank">報導者記者想法</a>讓議題發酵</span></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-background="20151228_mediatek/chimney_map.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://kiang.github.io/chimney_map/" target="_blank">固定污染源<br />管制地圖</a></h1>
+					</section>
+					<section>
+						<h1>關鍵項目</h1>
+						<ul>
+							<li><span class="fragment">排程取得最新資料，上傳到<a href="https://github.com/ks-opendata-community/chimney/tree/gh-pages" target="_blank">github</a></span></li>
+							<li><span class="fragment">畫面在需要時才下載資料，下載過的就快取在全域變數</span></li>
+							<li><span class="fragment">每個畫面保有固定網址，方便分享</span></li>
+						</ul>
+					</section>
+					<section>
+						<p>幾個小時可以產出的資料，花了幾週的時間討論</p>
+						<h1 class="fragment">害怕被究責</h1>
+					</section>
+					<section>
+						<h1>下一步</h1>
+					</section>
+					<section data-background="20151228_mediatek/ienv_epa_gov_tw.png">
+						<h1 class="fragment" style="background-color: #111;">放入多樣化的資料</h1>
+					</section>
+					<section data-background="20151228_mediatek/env_g0v_tw_air.png">
+						<h1 class="fragment" style="background-color: #111;">人們期待可以一目了然的畫面</h1>
+					</section>
+					<section>
+						<ul>
+							<li><span class="fragment">資料改放在資料庫，方便檢索</span></li>
+							<li><span class="fragment">畫出標準值的線條</span></li>
+							<li><span class="fragment">計算排放量進行比較</span></li>
+							<li><span class="fragment">找出排放超標資料進行標示</span></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-background="20151228_mediatek/k_olc_tw_elections.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://k.olc.tw/elections/" target="_blank">選舉黃頁</a></h1>
+					</section>
+					<section>
+						<h1>關鍵項目</h1>
+					</section>
+					<section data-background="20151228_mediatek/elections_map.png">
+						<h1 class="fragment" style="background-color: #111;">地圖找到村里，<br />展開所有候選人</h1>
+					</section>
+					<section data-background="20151228_mediatek/elections_candidate.png">
+						<h1 class="fragment" style="background-color: #111;">任何人都可以編輯<br />志工後台審核</h1>
+					</section>
+					<section data-background="20151228_mediatek/elections_history.png">
+						<h1 class="fragment" style="background-color: #111;">參選記錄</h1>
+					</section>
+					<section data-background="20151228_mediatek/elections_tag.png">
+						<h1 class="fragment" style="background-color: #111;">標籤</h1>
+					</section>
+					<section data-background="20151228_mediatek/elections_api.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="https://g0v.hackpad.com/-API-alpha-y3IHgVIYYSY" target="_blank">API</a></h1>
+					</section>
+					<section>
+						<h1>問題</h1>
+					</section>
+					<section>
+						<h1>無法承受大流量</h1>
+						<ul>
+							<li><span class="fragment">雖然已經加入資料庫查詢快取</span></li>
+							<li><span class="fragment">也許要考慮全部靜態化</span></li>
+							<li><span class="fragment">或是希望有正規單位接手</span></li>
+						</ul>
+					</section>
+					<section>
+						<h1>習慣臨時抱佛腳</h1>
+						<ul>
+							<li><span class="fragment">需要更多圖像化加強</span></li>
+							<li><span class="fragment">也許得要加入比較性質功能</span></li>
+							<li><span class="fragment">或是希望有正規單位接手</span></li>
+						</ul>
+					</section>
+					<section>
+						<h1>缺乏互動性</h1>
+						<ul>
+							<li><span class="fragment">如何讓人們願意參與資料的編輯？</span></li>
+							<li><span class="fragment">也許可以結合選民服務延伸</span></li>
+							<li><span class="fragment">或是希望有正規單位接手</span></li>
+						</ul>
+					</section>
+					<section>
+						<h1>連結更多資料</h1>
+						<ul>
+							<li><span class="fragment">還蠻容易被告的 XD</span></li>
+							<li><span class="fragment">連結的資料需要思考下架機制</span></li>
+							<li><span class="fragment">或是希望有正規單位接手</span></li>
+						</ul>
+					</section>
+					<section>
+						<h1>希望</h1>
+						<ul>
+							<li><span class="fragment">希望有正規單位接手</span></li>
+							<li><span class="fragment">希望有正規單位接手</span></li>
+							<li><span class="fragment">希望有正規單位接手</span></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-background="20151228_mediatek/drugs.jpg">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://drugs.olc.tw/" target="_blank">藥要看</a></h1>
+					</section>
+					<section>
+						<h1>關鍵項目</h1>
+					</section>
+					<section data-background="20151228_mediatek/drugs_api.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="https://g0v.hackpad.com/-API-alpha-V9f5Q6QHUyZ" target="_blank">API</a></h1>
+					</section>
+					<section data-background="20151228_mediatek/drugs_list.png">
+						<h1 class="fragment" style="background-color: #111;">中西藥並陳</h1>
+					</section>
+					<section data-background="20151228_mediatek/drugs_search.png">
+						<h1 class="fragment" style="background-color: #111;">簡易搜尋</h1>
+					</section>
+					<section data-background="20151228_mediatek/drugs_articles.png">
+						<h1 class="fragment" style="background-color: #111;">文章連結</h1>
+					</section>
+					<section>
+						<h1>問題</h1>
+					</section>
+					<section data-background="20151228_mediatek/drugs_nhi.png">
+						<h1 class="fragment" style="background-color: #111;">缺乏醫學專業</h1>
+					</section>
+					<section data-background="20151228_mediatek/drugs_outward.png">
+						<h1 class="fragment" style="background-color: #111;">圖片普遍闕漏</h1>
+					</section>
+					<section data-background="20151228_mediatek/drugs_slip.jpg">
+						<h1 class="fragment" style="background-color: #111;">仿單缺少結構化</h1>
+					</section>
+					<section data-background="20151228_mediatek/drugs_issues.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="https://github.com/kiang/drugs/issues" target="_blank">很多很多</a></h1>
+					</section>
+				</section>
+				<section>
+					<section data-background="20151228_mediatek/TainanDengueMap.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://kiang.github.io/TainanDengueMap/" target="_blank">台南登革熱地圖</a></h1>
+					</section>
+					<section data-background="20151227_reporter/tw_population.png">
+						<h1 style="background-color: #111;"><a href="http://kiang.github.io/tw_population/" target="_blank">老人</a></h1>
+					</section>
+					<section>
+						<ul>
+							<li><p class="fragment">目前還是手動更新</p></li>
+							<li><p class="fragment">也許可以動態調整年齡範圍</p></li>
+							<li><p class="fragment">有更小範圍的最小統計區資料</p></li>
+							<li><p class="fragment">可以結合其他數據呈現</p></li>
+						</ul>
+					</section>
+					<section data-background="20151227_reporter/chemical.png">
+						<h1 style="background-color: #111;"><a href="http://kiang.github.io/TainanDengueMap/chemical/" target="_blank">噴藥</a></h1>
+					</section>
+					<section>
+						<ul>
+							<li><p class="fragment">如何規劃最佳噴藥路徑？</p></li>
+							<li><p class="fragment">如何呈現噴藥涵蓋範圍</p></li>
+							<li><p class="fragment">如何多管道知會民眾？</p></li>
+							<li><p class="fragment">行程的管理與稽核</p></li>
+						</ul>
+					</section>
+					<section data-background="20151227_reporter/tracks.png">
+						<h1 style="background-color: #111;"><a href="http://kiang.github.io/TainanDengueMap/tracks/" target="_blank">軌跡</a></h1>
+					</section>
+					<section>
+						<ul>
+							<li><p class="fragment">設備座標誤差太大</p></li>
+							<li><p class="fragment">需要快速區分場次</p></li>
+							<li><p class="fragment">自動回傳機制</p></li>
+							<li><p class="fragment">設備需要在惡劣的環境運作</p></li>
+						</ul>
+					</section>
+					<section data-background="20151227_reporter/ushahidi_posts.png">
+						<h1 style="background-color: #111;"><a href="http://kiang.github.io/ushahidi_posts/" target="_blank">1999民眾回報</a></h1>
+					</section>
+					<section>
+						<ul>
+							<li><p class="fragment">介面不夠友善</p></li>
+							<li><p class="fragment">需要保留編輯記錄進行比對</p></li>
+							<li><p class="fragment">再次回報機制</p></li>
+							<li><p class="fragment">串聯相關回報</p></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>更多</h1>
+					</section>
+					<section data-background="20151228_mediatek/foundations.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://foundations.olc.tw/" target="_blank">社團 / 財團法人<br />資料檢索</a></h1>
+					</section>
+					<section data-background="20151228_mediatek/factories.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="https://wdc.gov.tw/syi.idb/" target="_blank">工廠公示資料<br />查詢系統</a></h1>
+					</section>
+					<section data-background="20151228_mediatek/lead_pipes.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://kiang.github.io/lead_pipes/" target="_blank">鉛管分佈地圖</a></h1>
+					</section>
+					<section data-background="20151228_mediatek/taipei_issue.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://kiang.github.io/taipei/" target="_blank">Taipei Issue Talk</a></h1>
+					</section>
+					<section data-background="20151228_mediatek/tncc.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://k.olc.tw/tncc/" target="_blank">台南市<br />議員觀測中心</a></h1>
+					</section>
+					<section data-background="20151228_mediatek/city_budget.png">
+						<h1 class="fragment" style="background-color: #111;"><a href="http://kiang.github.io/dgbas.gov.tw/city_budget.html" target="_blank">縣市總預算彙編<br />視覺化</a></h1>
+					</section>
+				</section>
+
+				<section>
+					<a href="http://kiang.github.io/slides/20151228_mediatek.html"><img src="20151228_mediatek/qrcode.png" style="width: 50%;" /></a><br />
+					<h1>收工</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
