@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Open Data黑客技巧分享 @ Maker X Hacker桃園開放資料黑客松 活動辦法說明會</title>
+
+		<meta name="author" content="Finjon Kiang">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Open Data<br />黑客技巧分享</h1>
+					<p>
+						<small>kiang @ Maker X Hacker桃園開放資料黑客松 說明會 2016-05-31</small>
+					</p>
+				</section>
+				<section>
+					<h1>什麼是黑客？</h1>
+				</section>
+				<section data-background="20160531_taoyuan/the_matrix.jpg">
+					<!-- 電影駭客任務劇照 -->
+				</section>
+				<section>
+					<h1>你電影看太多了！</h1>
+				</section>
+				<section>
+					<h1>實際上是這樣...</h1>
+				</section>
+				<section data-background="20160531_taoyuan/dirty_hands.jpg">
+					<!-- from https://www.flickr.com/photos/27132029@N06/6253368421 -->
+				</section>
+				<section>
+					<h1 class="fragment">黑客是實做主義者</h1>
+					<h1 class="fragment">技巧只有一個</h1>
+				</section>
+				<section>
+					<h1> 『做』 就對了</h1>
+				</section>
+				<section>
+					<h1>今天的演講到這邊，謝謝大家</h1>
+				</section>
+				<section>
+					<h1>. . .</h1>
+				</section>
+				<section>
+					<h1>咦，還沒結束...？</h1>
+				</section>
+				<section>
+					<h1>如果想要在黑客松競賽獲得青睞</h1>
+				</section>
+				<section>
+					<h1 class="fragment">功能實做</h1>
+					<h1 class="fragment">視覺傳達</h1>
+					<h1 class="fragment">上台報告</h1>
+				</section>
+				<section data-background="20160531_taoyuan/hunter4-2.jpg">
+					<!-- from http://nnkopeko.blog120.fc2.com/category15-23.html -->
+				</section>
+				<section>
+					<h1>其實比賽<br />早就已經開始</h1>
+				</section>
+				<section data-background="20160531_taoyuan/tycg.png">
+				</section>
+				<section>
+					<h1>還沒看過這個畫面？</h1>
+				</section>
+				<section>
+					<h1>你確定有計畫參賽？</h1>
+				</section>
+				<section>
+					<h1>黑客松 = 馬拉松</h1>
+				</section>
+				<section>
+					<h1>全程走完是基本</h1>
+				</section>
+				<section>
+					<h1>黑客松 != 馬拉松</h1>
+				</section>
+				<section>
+					<h1>歡迎偷跑</h1>
+					<p>...大部分情況下</p>
+				</section>
+				<section>
+					<h1>開始找隊友吧！</h1>
+					<p>看左邊、看右邊</p>
+				</section>
+				<section>
+					<h1>case study</h1>
+				</section>
+				<section data-background="20160531_taoyuan/elections-1.png">
+					<h1 class="fragment" style="background-color: #111;"><a href="http://k.olc.tw/elections/" target="_blank">選舉黃頁</a></h1>
+				</section>
+				<section data-background="20151228_mediatek/elections_map.png">
+					<h1 class="fragment" style="background-color: #111;">地圖找到村里，<br />展開所有候選人</h1>
+				</section>
+				<section>
+					<h1 class="fragment">google maps api</h1>
+					<h1 class="fragment">村里界圖(WGS84)</h1>
+					<h1 class="fragment">geojson</h1>
+				</section>
+				<section data-background="20151228_mediatek/elections_candidate.png">
+					<h1 class="fragment" style="background-color: #111;">任何人都可以編輯<br />志工後台審核</h1>
+				</section>
+				<section>
+					<h1 class="fragment">ACL</h1>
+					<h1 class="fragment">管理介面</h1>
+				</section>
+				<section data-background="20151228_mediatek/elections_history.png">
+					<h1 class="fragment" style="background-color: #111;">參選記錄</h1>
+				</section>
+				<section>
+					<h1 class="fragment">中選會選舉資料庫</h1>
+					<h1 class="fragment">姓名檢索</h1>
+				</section>
+				<section data-background="20151228_mediatek/elections_tag.png">
+					<h1 class="fragment" style="background-color: #111;">標籤</h1>
+				</section>
+				<section>
+					<h1 class="fragment">多對多關聯</h1>
+					<h1 class="fragment">管理介面</h1>
+				</section>
+				<section data-background="20151228_mediatek/elections_api.png">
+					<h1 class="fragment" style="background-color: #111;"><a href="https://g0v.hackpad.com/-API-alpha-y3IHgVIYYSY" target="_blank">API</a></h1>
+				</section>
+				<section>
+					<h1 class="fragment">快取</h1>
+					<h1 class="fragment">流量限制</h1>
+				</section>
+				<section data-background="20151228_mediatek/drugs.jpg">
+					<h1 class="fragment" style="background-color: #111;"><a href="http://drugs.olc.tw/" target="_blank">藥要看</a></h1>
+				</section>
+				<section data-background="20151228_mediatek/drugs_list.png">
+					<h1 class="fragment" style="background-color: #111;">中西藥並陳</h1>
+				</section>
+				<section>
+					<h1 class="fragment">開放資料 -> 爬蟲</h1>
+					<h1 class="fragment">沒有資料 -> 爬蟲</h1>
+				</section>
+				<section data-background="20151228_mediatek/drugs_search.png">
+					<h1 class="fragment" style="background-color: #111;">簡易搜尋</h1>
+				</section>
+				<section>
+					<h1 class="fragment">資料庫快取</h1>
+					<h1 class="fragment">cloudflare cdn</h1>
+				</section>
+				<section data-background="20151228_mediatek/drugs_articles.png">
+					<h1 class="fragment" style="background-color: #111;">文章連結</h1>
+				</section>
+				<section>
+					<h1 class="fragment">多對多關聯</h1>
+					<h1 class="fragment">管理介面</h1>
+				</section>
+				<section data-background="20151228_mediatek/drugs_api.png">
+					<h1 class="fragment" style="background-color: #111;"><a href="https://g0v.hackpad.com/-API-alpha-V9f5Q6QHUyZ" target="_blank">API</a></h1>
+				</section>
+				<section>
+					<h1 class="fragment">快取</h1>
+					<h1 class="fragment">流量限制</h1>
+				</section>
+				<section data-background="20151228_mediatek/chimney_map.png">
+					<h1 class="fragment" style="background-color: #111;"><a href="http://kiang.github.io/chimney_map/" target="_blank">固定污染源<br />管制地圖</a></h1>
+				</section>
+				<section>
+					<ul>
+						<li><span class="fragment">排程取得最新資料，上傳到<a href="https://github.com/ks-opendata-community/chimney/tree/gh-pages" target="_blank">github</a></span></li>
+						<li><span class="fragment">畫面在需要時才下載資料，下載過的就快取在全域變數</span></li>
+						<li><span class="fragment">每個畫面保有固定網址，方便分享</span></li>
+					</ul>
+				</section>
+				<section data-background="20151228_mediatek/bribes_map.png">
+					<h1 class="fragment" style="background-color: #111;"><a href="http://kiang.github.io/bribes_map/" target="_blank">台灣賄選<br />實價登錄地圖</a></h1>
+				</section>
+				<section>
+					<ul>
+						<li><span class="fragment"><a href="https://www.ptt.cc/bbs/Gossiping/M.1450410800.A.F6D.html" target="_blank">案件資料</a></span><span class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;別人做的</span></li>
+						<li><span class="fragment"><a href="https://googlemaps.github.io/js-marker-clusterer/docs/examples.html" target="_blank">MarkerClusterer</a> & <a href="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.8/docs/examples.html" target="_blank">MarkerWithLabel</a></span><span class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;別人做的</span></li>
+						<li><span class="fragment"><a href="http://osk2.me/" target="_blank">畫面設計</a></span><span class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;別人做的</span></li>
+						<li><span class="fragment"><a href="https://github.com/kiang/bribes_map/" target="_blank">網站主機</a></span><span class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;也是別人做的</span></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
