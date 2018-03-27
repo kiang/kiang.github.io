@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>台南待孳清空地空屋資料 @ 台南市政府研考會</title>
+
+		<meta name="author" content="Finjon Kiang">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>台南待孳清空地空屋資料處理</h1>
+					<p>
+						<small>kiang @ 台南市政府研考會 2018-03-28</small>
+					</p>
+				</section>
+				<section data-background="20180328_tainan_city/2015_DengueMap.png">
+					<h2 style="background-color: white;">2015 登革熱病例數在台南爆增</h2>
+				</section>
+				<section data-background="20180328_tainan_city/dengue_spray.jpg"><!-- image from https://health.tainan.gov.tw//page.asp?mainid=91C0347B-7686-4F22-88FA-0F12D0F9FC62 -->
+					<h2 style="background-color: white;">防疫工作量持續滿載</h2>
+				</section>
+				<section data-background="20180328_tainan_city/dengue_list.png"><!-- image from http://data.tainan.gov.tw/dataset/dengue-dist/resource/d0fb0392-1fc2-4866-80a1-cab1062a18ea -->
+					<h2 style="background-color: white;">民眾通報仍然持續湧入</h2>
+				</section>
+				<section>
+					<h2><ul>
+						<li>第一線防疫人員已經無暇逐一確認訊息</li>
+						<li class="fragment">關切疫情的民眾很多，卻大多只能乾著急</li>
+					</ul></h2>
+				</section>
+				<section>
+					<h2>群眾外包 crowdsourcing</h2>
+					<p>Crowdsourcing is a sourcing model in which individuals or organizations obtain goods and services, including ideas and finances, from a large, relatively open and often rapidly-evolving group of internet users</p>
+					<p>from <a href="https://en.wikipedia.org/wiki/Crowdsourcing" target="_blank">Wikipedia</a></p>
+				</section>
+				<section>
+					<h2>雛型概念</h2>
+					<ul>
+						<li class="fragment">請市府開放尚未確認的待孳清通報資料</li>
+						<li class="fragment">運用民眾的力量在地圖上標記通報資料位置</li>
+						<li class="fragment">鄰近民眾獲知後可以主動協助清理或避免進入</li>
+					</ul>
+				</section>
+				<section data-background="20180328_tainan_city/ushahidi.png">
+					<h2 style="background-color: white;">Ushahidi</h2>
+					<h2 style="background-color: white;">最初聚焦在肯亞總統選舉監督，在海地大地震時獲得關注</h2>
+				</section>
+				<section>
+					<h2>面臨問題</h2>
+					<ul>
+						<li class="fragment">原始資料並沒有固定格式</li>
+						<li class="fragment">Ushahidi 功能完整但複雜，參與門檻高</li>
+						<li class="fragment">原始流程需要有熱心志工長時間審核、整理</li>
+					</ul>
+				</section>
+				<section>
+					<h2>解題過程</h2>
+					<ul>
+						<li class="fragment">透過程式自動整理出可能的住址資料，並且先以程式批次轉換座標</li>
+						<li class="fragment">聚焦在點位座標的確認，盡可能簡化操作</li>
+						<li class="fragment">透過程式介面與系統互動，避免既有包袱</li>
+					</ul>
+				</section>
+				<section data-background="20180328_tainan_city/ushahidi_posts.png">
+					<h2 style="background-color: white;"><a href="http://kiang.github.io/ushahidi_posts/" target="_blank">初步成果</a></h2>
+				</section>
+				<section>
+					<h2>操作說明</h2>
+					<ul>
+						<li class="fragment">進入畫面後隨機配發待孳清通報</li>
+						<li class="fragment">直接在地圖中拖曳圖示後點選儲存即可協助完成定位</li>
+						<li class="fragment">亦可運用 Google API 搜尋住址點位</li>
+						<li class="fragment">帶出鄰近已知點位，連結可能重複通報</li>
+					</ul>
+				</section>
+				<section data-background="20180328_tainan_city/ushahidi_map.png">
+					<h2 style="background-color: white;">運用 Ushahidi 呈現協作成果</h2>
+				</section>
+				<section>
+					<h2>未來延伸</h2>
+					<ul>
+						<li class="fragment">單一通報可能帶有多個位置</li>
+						<li class="fragment">已知點位可以讓使用者協助確認或票選正確性，提高可信度</li>
+						<li class="fragment">讓使用者可以記錄巡視情況，提高分工效率</li>
+						<li class="fragment">回饋產出資訊給官方，減少重複工作</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Q&A</h1>
+					<a href="https://kiang.github.io/slides/20180328_tainan_city.html" target="_blank"><img src="20180328_tainan_city/qrcode.png" width="500" /></a>
+				</section>
+				<section>
+					<img src="20180328_tainan_city/contact.png" />
+					<h1><a href="http://k.olc.tw/" target="_blank">江明宗</a></h1>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
