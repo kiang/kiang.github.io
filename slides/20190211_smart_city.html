@@ -24,6 +24,20 @@
 		  bottom: 50%;
 		  left: -50%;
 		}
+		.strikeout {
+			font-size: 4em;
+			line-height: 1em;
+			position: relative;
+		}
+		.strikeout::after {
+			border-bottom: 0.3em solid red;
+			content: "";
+			left: 0;
+			margin-top: calc(0.3em / 2 * -1);
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -49,12 +63,70 @@
 				<section>
 					<h1>台南智慧城市辦公室</h1>
 					<p>
-						<small>江明宗 @ 台南市政府 2019-02-11</small>
+						<small>江明宗 @ 台南市政府 2019-02-15</small>
 					</p>
 				</section>
 				<section>
 					<h1>智慧城市</h1>
 					<p>利用各種資訊科技或創新意念，整合都市的組成系統和服務，以提昇資源運用的效率，優化都市管理和服務，以及改善市民生活品質。(<a href="https://zh.wikipedia.org/zh-tw/%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82" target="_blank">wikipedia</a>)</p>
+				</section>
+				<section>
+					<h1>聊聊台南</h1>
+				</section>
+				<section>
+					<h1>一天多少案件？</h1>
+					<ul>
+						<li><p>一個實體窗口 => 每小時 10 件  * 8 = 80</p></li>
+						<li><p class="fragment">一個電話線路 => 每小時 15 件  * 24 = 360</p></li>
+						<li><p class="fragment">一個網路主機 => 每秒 100 件 * 86400 = 864 萬</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>一天處理能量</h1>
+					<ul>
+						<li><p>一個公務員 => 每小時 3 件  * 8 = 24</p></li>
+						<li><p class="fragment">市府所有人力 => 30378</p></li>
+						<li><p class="fragment">30378 * 24 = 73 萬</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1><span style="color: red;">864</span> 萬 <span style="font-size: 24px;">v.s.</span> <span style="color: red;">73</span> 萬</h1>
+				</section>
+				<section>
+					<h1>...怎麼辦？</h1>
+				</section>
+				<section>
+					<h1>解決不了問題</h1>
+					<h1 class="fragment strikeout">就解決提出問題的人</h1>
+				</section>
+				<section>
+					<a href="https://join.gov.tw/policies/detail/fd2d38e2-249b-4fc0-9e9e-f490707ca92e" target="_blank"><img src="20190211_smart_city/bad_example.png" /></a>
+				</section>
+				<section>
+					<h1 class="strikeout">解決不了問題</h1>
+					<h1 class="fragment">試試新方法吧！</h1>
+				</section>
+				<section>
+					<img src="20190211_smart_city/ai.jpg" />
+				</section>
+				<section>
+					<h1>AI 可以解決問題</h1>
+					<h1 class="fragment">只是，還沒準備好</h1>
+					<h1 class="fragment">---我們---</h1>
+				</section>
+				<section>
+					<h1>要準備什麼？</h1>
+					<ul>
+						<li><p>流程盡可能的數位化</p></li>
+						<li><p class="fragment">資料盡可能的保留</p></li>
+						<li><p class="fragment">市府同仁、民眾盡可能的熟悉數位服務</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>盡可能的</h1>
+				</section>
+				<section>
+					<h1>台南智慧城市</h1>
 				</section>
 				<section>
 					<h1>核心理念</h1>
@@ -104,20 +176,60 @@
 				<section data-background="20190211_smart_city/idea_map.png">
 					<br />
 				</section>
-				<section data-background="20190211_smart_city/figure1.png">
-					<br />
+				<section>
+					<img src="20190211_smart_city/figure1.png" />
 				</section>
-				<section data-background="20190211_smart_city/figure2.png">
-					<br />
+				<section>
+					<h1>地理資訊倉儲</h1>
+					<ul>
+						<li><p>透過共用節省個別局處授權費</p></li>
+						<li><p class="fragment">強化資料連結，減少重複工作</p></li>
+						<li><p class="fragment">透過國際標準整頓既有資料</p></li>
+					</ul>
 				</section>
-				<section data-background="20190211_smart_city/figure3.png">
-					<br />
+				<section>
+					<img src="20190211_smart_city/figure2.png" />
 				</section>
-				<section data-background="20190211_smart_city/figure4.png">
-					<br />
+				<section>
+					<h1>台南點</h1>
+					<ul>
+						<li><p>統整資料定位需求</p></li>
+						<li><p class="fragment">簡化通報流程</p></li>
+						<li><p class="fragment">跨局處加值與民眾共筆</p></li>
+					</ul>
 				</section>
-				<section data-background="20190211_smart_city/figure5.png">
-					<br />
+				<section>
+					<img src="20190211_smart_city/figure3.png" />
+				</section>
+				<section>
+					<h1>線上申辦</h1>
+					<ul>
+						<li><p>流程優化，擴大服務範疇</p></li>
+						<li><p class="fragment">申請過程就完成標準資料，減少人工整理需求</p></li>
+						<li><p class="fragment">減少重複性質入口，盡可能實現機器對機器資料交換</p></li>
+					</ul>
+				</section>
+				<section>
+					<img src="20190211_smart_city/figure4.png" />
+				</section>
+				<section>
+					<h1>科技預算</h1>
+					<ul>
+						<li><p>參與先期規劃，著重跨局處整合</p></li>
+						<li><p class="fragment">透過借調以局處經驗為主引導科技專案發展</p></li>
+						<li><p class="fragment">熱門競爭性質 APP 下架，聚焦提供穩定資料服務(API)</p></li>
+					</ul>
+				</section>
+				<section>
+					<img src="20190211_smart_city/figure5.png" />
+				</section>
+				<section>
+					<h1>IoT 基礎設施</h1>
+					<ul>
+						<li><p>透過基礎設施共享降低個別局處維運成本</p></li>
+						<li><p class="fragment">多目的運用蒐集資料，提高單位效益</p></li>
+						<li><p class="fragment">既有建設延伸實驗場域，攜手民間擴大服務範疇</p></li>
+					</ul>
 				</section>
 				<section>
 					<h1>Q&A</h1>
