@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>台南開放資料與智慧城市 @ 高雄大學開放資料課程</title>
+		<meta name="author" content="Finjon Kiang">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+		.slides .header{
+			position:absolute;
+		  top: -50%;
+		  left: -50%;
+		}
+		.slides .footer{
+		  position:absolute;
+		  bottom: 50%;
+		  left: -50%;
+		}
+		.strikeout {
+			font-size: 4em;
+			line-height: 1em;
+			position: relative;
+		}
+		.strikeout::after {
+			border-bottom: 0.3em solid red;
+			content: "";
+			left: 0;
+			margin-top: calc(0.3em / 2 * -1);
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>台南開放資料<br />與智慧城市</h1>
+					<p>
+						<small>江明宗 @ 高雄大學 2019-06-11</small>
+					</p>
+				</section>
+				<section>
+					<h1>kiang === 江明宗</h1>
+					<ul>
+						<li><p>2004 開始全職寫程式</p></li>
+						<li><p class="fragment">2009 成立工作室接案</p></li>
+						<li><p class="fragment">2016 首次進入台南市政府</p></li>
+						<li><p class="fragment">2018 再次進入台南市政府</p></li>
+						<li><p class="fragment">(...目前待的比上次久)</p></li>
+						<li><p class="fragment">(...只是已經很久沒寫程式了)</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>講講故事</h1>
+				</section>
+				<section>
+					<h1>登革熱地圖</h1>
+				</section>
+				<section data-background="20151227_reporter/nidss.png">
+					<h1 style="background-color: white;">2015搖滾區</h1>
+				</section>
+				<section>
+					<h1>生活...</h1>
+					<ul>
+						<li>早上起來，附近噴藥</li>
+						<li>去吃午餐，附近噴藥</li>
+						<li>出去散步，附近噴藥</li>
+						<li>晚上回家，通知明天噴藥</li>
+					</ul>
+				</section>
+				<section>
+					<h1><del>坐以待斃</del></h1>
+				</section>
+				<section data-background="20151227_reporter/KaohsiungDengueMap.png">
+					<h1 style="background-color: white;"><a href="http://lycheetw.github.io/KaohsiungDengueMap/" target="_blank">高雄登革熱地圖</a><br />@ 2014</h1>
+				</section>
+				<section data-background="20151227_reporter/xls.png">
+					<h1 style="background-color: white;">衛生局資料</h1>
+				</section>
+				<section data-background="20151227_reporter/cunli.png">
+					<h1 style="background-color: white;"><a href="https://data.gov.tw/dataset/7438" target="_blank">村里界圖</a></h1>
+				</section>
+				<section>
+				<section data-background="20151227_reporter/TainanDengueMap.png">
+					<h1 style="background-color: white;"><a href="http://kiang.github.io/TainanDengueMap/" target="_blank">台南登革熱地圖</a></h1>
+				</section>
+				<section data-background="20151227_reporter/TainanDengueMap-2.png">
+					<h1 style="background-color: white;"><a href="http://kiang.github.io/TainanDengueMap/" target="_blank">台南登革熱地圖</a></h1>
+				</section>
+				</section>
+				<section data-background="20151227_reporter/TainanDengueMap_news.png">
+					<h1 style="background-color: white;">上新聞</h1>
+				</section>
+				<section>
+					<h1>發酵</h1>
+				</section>
+				<section data-background="20151227_reporter/weoi.png">
+					<h2 style="background-color: white;"><a href="http://weoi.github.io/TainanDengueMap/" target="_blank">病媒蚊指數</a><br />forked by weoi</h2>
+				</section>
+				<section data-background="20151227_reporter/happychang.png">
+					<h2 style="background-color: white;"><a href="http://happychang.github.io/fever2/" target="_blank">登革熱密度地圖</a><br />forked by happychang</h2>
+				</section>
+				<section>
+					<h1>坑坑相連到天邊</h1>
+				</section>
+				<section data-background="20151227_reporter/blog_08.png">
+					<h1>哭腰</h1>
+				</section>
+				<section data-background="20151227_reporter/peggy.png">
+					<h1 style="background-color: white;"><a href="https://www.facebook.com/groups/odtwn/permalink/1302619713085777/" target="_blank">衛福部 Peggy</a></h1>
+				</section>
+				<section data-background="20151227_reporter/Dengue_Daily.png">
+					<h1 style="background-color: white;">疾管署<br />釋出全國資料</h1>
+				</section>
+				<section data-background="20151227_reporter/taiwan.png">
+					<h1 style="background-color: white;">全國版本</h1>
+				</section>
+				<section data-background="20151227_reporter/points.png">
+					<h1 style="background-color: white;"><a href="http://kiang.github.io/TainanDengueMap/taiwan/2015/points.html" target="_blank">病例分佈</a></h1>
+				</section>
+				<section data-background="20151227_reporter/cdcdengue.png">
+					<h1 style="background-color: white;"><a href="https://cdcdengue.azurewebsites.net/" target="_blank">疾管署替代役</a></h1>
+				</section>
+				<section>
+					<h1><del>技癢？</del> &gt;&gt;&gt; 分工</h1>
+				</section>
+				<section>
+					<h1>統計 v.s. 防疫</h1>
+				</section>
+				<section data-background="20151227_reporter/tw_population.png">
+					<h1 style="background-color: white;">老人</h1>
+				</section>
+				<section>
+					<ul>
+						<li><p class="fragment">戶籍資料 != 實際情況</p></li>
+						<li><p class="fragment">低度使用(用電)住宅 &gt; 無原始資料</p></li>
+						<li><p class="fragment">災害潛勢地圖 &gt; 同上，也太舊</p></li>
+						<li><p class="fragment">公共管線圖資 &gt; 殘缺不全</p></li>
+						<li><p class="fragment">違建資料 &gt; 有也不給</p></li>
+					</ul>
+				</section>
+				<section data-background="20151227_reporter/chemical.png">
+					<h1 style="background-color: white;">噴藥</h1>
+				</section>
+				<section>
+					<ul>
+						<li><p class="fragment">前一天晚上才能確定</p></li>
+						<li><p class="fragment">沒有行程細節</p></li>
+						<li><p class="fragment">現場狀況沒有稽核</p></li>
+						<li><p class="fragment">人力短缺且缺乏訓練</p></li>
+					</ul>
+				</section>
+				<section data-background="20151227_reporter/tracks.png">
+					<h1 style="background-color: white;">軌跡</h1>
+				</section>
+				<section>
+					<ul>
+						<li><p class="fragment">第一線抗拒使用</p></li>
+						<li><p class="fragment">設備誤差太大</p></li>
+						<li><p class="fragment">無法區分場次</p></li>
+						<li><p class="fragment">三分鐘熱度</p></li>
+					</ul>
+				</section>
+				<section data-background="20151227_reporter/ushahidi_posts.png">
+					<h1 style="background-color: white;">1999民眾回報</h1>
+				</section>
+				<section>
+					<ul>
+						<li><p class="fragment">需要人工過濾</p></li>
+						<li><p class="fragment">沒有狀態追蹤</p></li>
+						<li><p class="fragment">資料回饋不易</p></li>
+						<li><p class="fragment">缺少事前演練</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1 style="background-color: white;">台南也要特色公園</h1>
+				</section>
+				<section data-background="20171214_ncku/ParksAndPlaygroundsForChildrenByChildren.png">
+					<h1 style="background-color: white;"><a href="https://www.facebook.com/ParksAndPlaygroundsForChildrenByChildren/" target="_blank">還我特色公園行動聯盟（特公盟）</a></h1>
+				</section>
+				<section data-background="20171214_ncku/tainan_playgrounds.png">
+					<h1 style="background-color: white;"><a href="https://www.facebook.com/tainan.playground.park/" target="_blank">台南也要特色公園</a></h1>
+				</section>
+				<section data-background="20171214_ncku/opendata.png">
+					<h1 style="background-color: white;"><a href="http://data.tainan.gov.tw/dataset/park-facility" target="_blank">公園設施資料</a></h1>
+				</section>
+				<section>
+					<img src="20171214_ncku/app_001.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_002.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_003.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_004.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_005.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_006.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_007.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_008.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_009.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_010.png" />
+				</section>
+				<section>
+					<img src="20171214_ncku/app_011.png" />
+				</section>
+				<section>
+					<h1 style="background-color: white;">其他特別的資料</h1>
+				</section>
+				<section>
+					<h3><a href="https://wot.epa.gov.tw/" target="_blank">微型感測器</a></h3>
+					<img src="20190611_nuk/data-01.png" />
+				</section>
+				<section>
+					<h3><a href="https://kiang.github.io/tainan_basecode/factories/" target="_blank">農地工廠</a></h3>
+					<img src="20190611_nuk/data-02.png" />
+				</section>
+				<section>
+					<h3><a href="http://tainan-ovitrap.nmbdcrc.tw/" target="_blank">病媒蚊監控</a></h3>
+					<img src="20190611_nuk/data-03.png" />
+				</section>
+				<section>
+					<h1>智慧城市</h1>
+					<p>利用各種資訊科技或創新意念，整合都市的組成系統和服務，以提昇資源運用的效率，優化都市管理和服務，以及改善市民生活品質。(<a href="https://zh.wikipedia.org/zh-tw/%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82" target="_blank">wikipedia</a>)</p>
+				</section>
+				<section>
+					<h1>聊聊台南</h1>
+				</section>
+				<section>
+					<h1>一天多少案件？</h1>
+					<ul>
+						<li><p>一個實體窗口 => 每小時 10 件  * 8 = 80</p></li>
+						<li><p class="fragment">一個電話線路 => 每小時 15 件  * 24 = 360</p></li>
+						<li><p class="fragment">一個網路主機 => 每秒 100 件 * 86400 = 864 萬</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>一天處理能量</h1>
+					<ul>
+						<li><p>一個公務員 => 每小時 3 件  * 8 = 24</p></li>
+						<li><p class="fragment">市府所有人力 => 30378</p></li>
+						<li><p class="fragment">30378 * 24 = 73 萬</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1><span style="color: red;">864</span> 萬 <span style="font-size: 24px;">v.s.</span> <span style="color: red;">73</span> 萬</h1>
+				</section>
+				<section>
+					<h1>...怎麼辦？</h1>
+				</section>
+				<section>
+					<h1>解決不了問題</h1>
+					<h1 class="fragment strikeout">就解決提出問題的人</h1>
+				</section>
+				<section>
+					<a href="https://join.gov.tw/policies/detail/fd2d38e2-249b-4fc0-9e9e-f490707ca92e" target="_blank"><img src="20190211_smart_city/bad_example.png" /></a>
+				</section>
+				<section>
+					<h1 class="strikeout">解決不了問題</h1>
+					<h1 class="fragment">試試新方法吧！</h1>
+				</section>
+				<section>
+					<img src="20190211_smart_city/ai.jpg" />
+				</section>
+				<section>
+					<h1>AI 可以解決問題</h1>
+					<h1 class="fragment">只是，還沒準備好</h1>
+					<h1 class="fragment">---我們---</h1>
+				</section>
+				<section>
+					<h1>要準備什麼？</h1>
+					<ul>
+						<li><p>流程盡可能的數位化</p></li>
+						<li><p class="fragment">資料盡可能的保留</p></li>
+						<li><p class="fragment">市府同仁、民眾盡可能的熟悉數位服務</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>盡可能的</h1>
+				</section>
+				<section>
+					<h1>台南智慧城市</h1>
+				</section>
+				<section>
+					<h1>核心理念</h1>
+					<p>科技只是工具，讓台南成為<br />一個善用所有人智慧的城市</p>
+				</section>
+				<section>
+					<h1>三件事</h1>
+					<ul>
+						<li>對內服務局處</li>
+						<li>對外協助廠商</li>
+						<li>促進公民參與</li>
+					</ul>
+				</section>
+				<section>
+					<h1>對內服務局處</h1>
+				</section>
+				<section>
+					<ul>
+						<li><p>科技專案先期討論參與</p></li>
+						<li><p class="fragment">協助管控市府科技預算</p></li>
+						<li><p class="fragment">跨局處共用、共享、共好</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>對外協助廠商</h1>
+				</section>
+				<section>
+					<ul>
+						<li><p>受理科技服務商提案，打造實驗場域與協助跨局處溝通</p></li>
+						<li><p class="fragment">主動爭取外部合作，讓市府有更多機會嘗試與學習</p></li>
+						<li><p class="fragment">培植在地廠商，讓科技創新服務可以永續發展</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>促進公民參與</h1>
+				</section>
+				<section>
+					<ul>
+						<li><p>國發會公共政策參與平台</p></li>
+						<li><p class="fragment">優化民眾通報事件流程</p></li>
+						<li><p class="fragment">善用群眾外包強化服務量能</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1></h1>
+				</section>
+				<section data-background="20190211_smart_city/idea_map.png">
+					<br />
+				</section>
+				<section>
+					<img src="20190211_smart_city/figure1.png" />
+				</section>
+				<section>
+					<h1>地理資訊倉儲</h1>
+					<ul>
+						<li><p>透過共用節省個別局處授權費</p></li>
+						<li><p class="fragment">強化資料連結，減少重複工作</p></li>
+						<li><p class="fragment">透過國際標準整頓既有資料</p></li>
+					</ul>
+				</section>
+				<section>
+					<img src="20190211_smart_city/figure2.png" />
+				</section>
+				<section>
+					<h1>台南點</h1>
+					<ul>
+						<li><p>統整資料定位需求</p></li>
+						<li><p class="fragment">簡化通報流程</p></li>
+						<li><p class="fragment">跨局處加值與民眾共筆</p></li>
+					</ul>
+				</section>
+				<section>
+					<img src="20190211_smart_city/figure3.png" />
+				</section>
+				<section>
+					<h1>線上申辦</h1>
+					<ul>
+						<li><p>流程優化，擴大服務範疇</p></li>
+						<li><p class="fragment">申請過程就完成標準資料，減少人工整理需求</p></li>
+						<li><p class="fragment">減少重複性質入口，盡可能實現機器對機器資料交換</p></li>
+					</ul>
+				</section>
+				<section>
+					<img src="20190211_smart_city/figure4.png" />
+				</section>
+				<section>
+					<h1>科技預算</h1>
+					<ul>
+						<li><p>參與先期規劃，著重跨局處整合</p></li>
+						<li><p class="fragment">透過借調以局處經驗為主引導科技專案發展</p></li>
+						<li><p class="fragment">熱門競爭性質 APP 下架，聚焦提供穩定資料服務(API)</p></li>
+					</ul>
+				</section>
+				<section>
+					<img src="20190211_smart_city/figure5.png" />
+				</section>
+				<section>
+					<h1>IoT 基礎設施</h1>
+					<ul>
+						<li><p>透過基礎設施共享降低個別局處維運成本</p></li>
+						<li><p class="fragment">多目的運用蒐集資料，提高單位效益</p></li>
+						<li><p class="fragment">既有建設延伸實驗場域，攜手民間擴大服務範疇</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>Q&A</h1>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
