@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>reveal.js - The HTML Presentation Framework</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if (window.location.search.match(/print-pdf/gi)) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName('head')[0].appendChild(link);
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>選舉黃頁</h1>
+                    <h3><a href="http://k.olc.tw/elections/" target="_blank">http://k.olc.tw/elections/</a></h3>
+                    <p>
+                        <small>Created by <a href="http://k.olc.tw/" target="_blank">江明宗 . 政 . 路過</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <img src="kiang/frozengarlic.jpg" />
+                    <!-- from http://g0v.github.io/moc-license-center/ -->
+                </section>
+                <section>
+                    <img src="kiang/pig.jpg" />
+                    <!-- from http://upload.wikimedia.org/wikipedia/commons/1/12/Gloucester_Old_Spot_Boar,_England.jpg -->
+                </section>
+                <section>
+                    <img src="kiang/space.jpg" />
+                    <!-- from https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&docid=ZGMbJPh2oXonSM&tbnid=UruYnn0oeL_OsM:&ved=0CAMQjxw&url=http%3A%2F%2Fzh.wikipedia.org%2Fzh%2F%25E6%258C%2591%25E6%2588%25B0%25E8%2580%2585%25E8%2599%259F%25E5%25A4%25AA%25E7%25A9%25BA%25E6%25A2%25AD&ei=7lA5VKqtH5XV8gWm7YLoBg&psig=AFQjCNHBPO4QWcyX57-qwNfCKbnVIW5ZXg&ust=1413128811473663 -->
+                </section>
+                <section>
+                    <img src="kiang/cec01.png" />
+                </section>
+                <section>
+                    <img src="kiang/cec02.png" />
+                </section>
+                <section>
+                    <img src="kiang/k-election01.png" />
+                </section>
+                <section>
+                    <section>
+                        <h2>MPTT, Modified Preorder Tree Traversal</h2>
+                        <img src="kiang/tree2.png" />
+                        <!-- from http://p.blog.csdn.net/images/p_blog_csdn_net/wisewillpower/tree2.png -->
+                    </section>
+                    <section data-markdown>
+                        <h2>傳統樹狀查詢</h2>
+                        ```
+                        $first = 'SELECT * FROM areas WHERE parent_id = ?';
+                        foreach($first) {
+                        $second = 'SELECT * FROM areas WHERE parent_id = $first.id';
+                        foreach($second) {
+                        $third = 'SELECT * FROM areas WHERE parent_id = $second.id';
+                        }
+                        }
+                        ```
+                    </section>
+                    <section data-markdown>
+                        <h2>MPTT 找整棵樹</h2>
+                        ```
+                        $root = 'SELECT * FROM areas WHERE id = ? LIMIT 1';
+                        $tree = 'SELECT * FROM areas WHERE lft >= $root.lft AND rght <= $root.rght';
+                        ```
+                    </section>
+                    <section data-markdown>
+                        <h2>MPTT 做麵包屑</h2>
+                        ```
+                        SELECT * FROM areas WHERE lft <= $leaf.lft AND rght >= $leaf.rght
+                        ORDER BY lft ASC
+                        ```
+                        **** 只要一個查詢！ ****
+                    </section>
+                    <section>
+                        <img src="kiang/mptt_breadcrumb.png" />
+                    </section>
+                    <section>
+                        <h2>MPTT 問題</h2>
+                        <ul>
+                            <li>每次增刪單筆資料就需要所有的 lft & rght</li>
+                            <li>不適合異動頻繁的資料</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h1>選區 v.s. 行政區</h1>
+                    <hr />
+                    <p>ex. 臺南市議員第1選舉區 => 東山區、白河區、後壁區</p>
+                </section>
+                <section>
+                    <section>
+                        <h1>UUID as PK</h1>
+                        <hr />
+                        <ul>
+                            <li>姓名很容易重複！而且有改名的可能。</li>
+                            <li>中選會資料沒有可信賴的索引值</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img src="kiang/cec_mail.png" />
+                        <h1>經本會評估尚不適採行</h1>
+                    </section>
+                    <section>
+                        <h1>陳志明</h1>
+                        <hr />
+                        <ul>
+                            <li>[鄉鎮市民代表]宜蘭縣蘇澳鎮第4選舉區</li>
+                            <li>[村里長]臺北市松山區東昌里</li>
+                            <li>[村里長]臺北市士林區社新里</li>
+                            <li>[村里長]屏東縣屏東市大湖里</li>
+                            <li>[村里長]宜蘭縣羅東鎮國華里</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1><s>utf8</s> utf8mb4</h1>
+                        <hr />
+                        <p>ex. 石𥕢里, 𦰡拔里, 新竹市北區中興里 洪熒𤎌</p>
+                    </section>
+                    <section>
+                        <h1>RFC 3629</h1>
+                        <blockquote>
+                            In UTF-8, characters from the U+0000..U+10FFFF range are encoded using sequences of <span style="color: red;">1 to 4 octets</span>.
+                        </blockquote>
+                    </section>
+                    <section>
+                        <h1>MySQL</h1>
+                        <ul>
+                            <li>utf8 = 3-Byte UTF-8 Unicode Encoding</li>
+                            <li>utf8mb4 = 4-Byte UTF-8 Unicode Encoding (MySQL 5.5)</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>鄉鎮市民代表</h1>
+                        <hr />
+                        <p>選區資料不完整、圖片格式</p>
+                    </section>
+                    <section>
+                        <img src="kiang/ptt_call1.png" />
+                        <h3>有沒有鄉鎮市民代表選區的八卦啊？</h3>
+                    </section>
+                    <section>
+                        <img src="kiang/g0v_hackpad.png" />
+                        <h3>鄉民協作！</h3>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>資料來源</h1>
+                        <hr />
+                        <p>現任資料、使用者自行建立、中選會</p>
+                    </section>
+                    <section>
+                        <img src="kiang/page_edit.png" />
+                        <h3>任何人都可以編輯！</h3>
+                    </section>
+                    <section>
+                        <img src="kiang/page_approve.png" />
+                        <h3>審核介面</h3>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>地圖呈現</h1>
+                        <hr />
+                        <p></p>
+                    </section>
+                    <section>
+                        <img src="kiang/ronnywang_twgeojson.png" />
+                        <h3>ronnywang++</h3>
+                    </section>
+                    <section>
+                        <img src="kiang/google_map_api.png" />
+                        <h3>Google Maps JavaScript API v3</h3>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>API (alpha)</h1>
+                    </section>
+                    <section>
+                        <h3>/api/areas/index/(uuid)</h3>
+                        <ul>
+                            <li>取得單層行政區資料， index/ 後面可以接個別行政區 id 來取得下一層資料</li>
+                            <li>index/ 後面沒有參數會顯示最上層（目前是縣市）</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>/api/elections/index/(uuid)</h3>
+                        <ul>
+                            <li>取得單層選舉區資料，index/ 後面可以接個別選舉區 id 來取得下一層資料</li>
+                            <li>index/ 後面沒有參數會顯示最上層（目前是九種選舉類型）</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>/api/elections/candidates/(uuid)</h3>
+                        <ul>
+                            <li>取得個別選舉區下所有候選人資料</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>/api/elections/s/(keyword)</h3>
+                        <ul>
+                            <li>針對行政區名稱進行搜尋</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>/api/candidates/s/(keyword)</h3>
+                        <ul>
+                            <li>針對候選人名稱進行搜尋</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>/api/candidates/view/(uuid)</h3>
+                        <ul>
+                            <li>檢視特定候選人資料</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h1>離線版</h1>
+                    <img src="kiang/offline_version.png" />
+                </section>
+                <section>
+                    <h1>Google 爬蟲</h1>
+                    <img src="kiang/chhsiao1981.png" />
+                </section>
+                <section>
+                    <section>
+                        <h1>新聞集錦</h1>
+                        <hr />
+                        <p></p>
+                    </section>
+                    <section>
+                        <img src="kiang/newsdiff.png" />
+                        <h3>ronnywang++</h3>
+                    </section>
+                    <section>
+                        <img src="kiang/kcwu.png" />
+                        <h3>kcwu++</h3>
+                    </section>
+                    <section>
+                        <img src="kiang/news_page.png" />
+                        <h3>kiang++      (?)</h3>
+                    </section>
+                </section>
+                <section>
+                    <h1>Q & A</h1>
+                </section>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'lib/js/classList.js', condition: function () {
+                            return !document.body.classList;
+                        }},
+                    {src: 'plugin/markdown/marked.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/markdown/markdown.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'plugin/notes/notes.js', async: true, condition: function () {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
