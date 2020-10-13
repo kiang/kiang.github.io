@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8">
+		<title>從口罩地圖到公民參與 & 開源創新 @ 南臺科技大學多媒體與電腦娛樂科學系</title>
+		<meta name="author" content="Finjon Kiang">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+		.slides .header{
+			position:absolute;
+		  top: -50%;
+		  left: -50%;
+		}
+		.slides .footer{
+		  position:absolute;
+		  bottom: 50%;
+		  left: -50%;
+		}
+		.strikeout {
+			font-size: 4em;
+			line-height: 1em;
+			position: relative;
+		}
+		.strikeout::after {
+			border-bottom: 0.3em solid red;
+			content: "";
+			left: 0;
+			margin-top: calc(0.3em / 2 * -1);
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+	</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>從口罩地圖到<br />公民參與 & 開源創新</h1>
+					<p>
+						<small>kiang @ 南臺科技大學多媒體與電腦娛樂科學系 2020-10-13</small>
+					</p>
+				</section>
+				<section>
+					<h1>kiang === 江明宗</h1>
+					<ul>
+						<li><p>2004 開始全職寫程式</p></li>
+						<li><p class="fragment">2009 成立工作室接案</p></li>
+						<li><p class="fragment">2014 參選台南市議員</p></li>
+						<li><p class="fragment">2016-2018 台南市政府 => 經濟部 => 時代力量</p></li>
+						<li><p class="fragment">2018 再次進入台南市政府</p></li>
+						<li><p class="fragment">2020 回到靠接案過活</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>藥局口罩<br />採購地圖</h1>
+				</section>
+				<section data-background="20200427_moi/map_001.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">地圖呈現<br />即時庫存資訊</h1>
+				</section>
+				<section data-background="20200427_moi/map_002.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">自動定位到手機提供座標位置</h1>
+				</section>
+				<section data-background="20200427_moi/map_003.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">搜尋與行政區檢索</h1>
+				</section>
+				<section data-background="20200427_moi/map_004.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">結合多項開放資料</h1>
+				</section>
+				<section data-background="20200427_moi/map_005.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">開放原始碼</h1>
+				</section>
+				<section>
+					<h1>故事是這樣開始的...</h1>
+				</section>
+				<section data-background="20200427_moi/au.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">唐鳳政委<br />在聊天室提供資訊</h1>
+				</section>
+				<section data-background="20200427_moi/hackmd.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);"><span style="font-family:monospace">g0v</span> 開始協作</h1>
+				</section>
+				<section data-background="20200427_moi/pdis.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">政府網站連結</h1>
+				</section>
+				<section data-background="20200427_moi/fb_share.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">政府動員宣傳</h1>
+				</section>
+				<section>
+					<h1>大量民眾湧入</h1>
+					<img src="20200427_moi/analytics.png" />
+				</section>
+				<section data-background="20200427_moi/line.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);">排隊</h1>
+				</section>
+				<section data-background="20200427_moi/nhi.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">成功承載</h1>
+				</section>
+				<section data-background="20200427_moi/au_pr.png">
+					<h1 style="background-color: rgba(255,255,255,0.4);">唐鳳政委<br />直接幫忙改程式碼</h1>
+				</section>
+				<section data-background="20200427_moi/kr_map.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">韓國版<br />口罩地圖</h1>
+				</section>
+				<section>
+					<h1>挑戰：號碼牌</h1>
+				</section>
+				<section data-background="20200427_moi/no_card.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">庫存數字落差</h1>
+				</section>
+				<section data-background="20200427_moi/google_form.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">表單蒐集資料</h1>
+				</section>
+				<section data-background="20200427_moi/nhi_note.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">健保署<br />請藥局填寫備註</h1>
+				</section>
+				<section data-background="20200427_moi/nhi_sys.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">健保署<br />系統提供開關</h1>
+				</section>
+				<section>
+					<h1>看不到的辛酸(?)</h1>
+				</section>
+				<section data-background="20200427_moi/firewall.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">資料來源加入<br />新的安全防護</h1>
+				</section>
+				<section data-background="20200427_moi/health_center.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">健康服務中心</h1>
+				</section>
+				<section data-background="20200427_moi/rename.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">欄位、檔案名稱變更</h1>
+					<h1 style="background-color: rgba(255,255,255,0.7);">免費主機？</h1>
+				</section>
+				<section data-background="20200925_ndhu/chihiro018.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">這都是義務幫忙</h1>
+				</section>
+				<section data-background="20200925_ndhu/marnie025.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7); text-decoration:line-through; text-decoration-thickness: 15px; text-decoration-color: red;" class="fragment">接著聊聊怎麼賺錢</h1>
+				</section>
+				<section>
+					<h1>我，公民參與，故事</h1>
+				</section>
+				<section data-background="20200925_ndhu/20130131.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">2012 當了爸爸</h1>
+				</section>
+				<section data-background="20200925_ndhu/sunflower.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">2014.03.18</h1>
+				</section>
+				<section data-background="20200925_ndhu/nctu.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">我曾經以為自己活在民主國家</h1>
+				</section>
+				<section data-background="20200925_ndhu/etblue.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">後來發現</h1>
+				</section>
+				<section data-background="20200925_ndhu/frozengarlic.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">我曾經以為可以參選</h1>
+				</section>
+				<section>
+					<h1 style="background-color: rgba(255,255,255,0.7); position: absolute;">後來發現</h1>
+					<img src="20200925_ndhu/education-is-easier-when-you-have-money-steps-made-of-cash.jpg" style="height: 90%;" />
+				</section>
+				<section data-background="20200925_ndhu/coding-1853305_1280.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">不過我會寫點程式</h1>
+				</section>
+				<section data-background="20200925_ndhu/projects.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">所以就多寫了點程式</h1>
+				</section>
+				<section data-background="20170925_csd/case1_index.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);"><a href="http://elections.olc.tw/" target="_blank">選舉黃頁</a></h1>
+				</section>
+				<section data-background="20200323_nutn/TainanDengueMap.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);"><a href="http://kiang.github.io/TainanDengueMap/" target="_blank">登革熱地圖</a></h1>
+				</section>
+				<section data-background="20170925_csd/case3_index.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);"><a href="http://kiang.github.io/salary/map/" target="_blank">台灣所得地圖</a></h1>
+				</section>
+				<section data-background="20151228_mediatek/chimney_map.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);"><a href="https://www.facebook.com/k.olc.tw/posts/515147468658721" target="_blank">固定污染源地圖<br />管制地圖</a></h1>
+				</section>
+				<section data-background="20171209_punplace/factories.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);"><a href="https://kiang.github.io/tainan_basecode/factories/" target="_blank">台南市農地工廠</a></h1>
+				</section>
+				<section data-background="20200323_nutn/tainan-rails-underground.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">然後參加記者會</h1>
+				</section>
+				<section data-background="20200925_ndhu/trash.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">再參加記者會</h1>
+				</section>
+				<section data-background="20200925_ndhu/deep_hole.png">
+					<h1 style="background-color: rgba(255,255,255,0.7);">像掉進深坑一樣</h1>
+				</section>
+				<section>
+					<h1>接著跟大家介紹<span style="background-color: rgba(255,255,255,0.7); text-decoration:line-through; text-decoration-thickness: 15px; text-decoration-color: red;">深坑</span><br /> g0v 零時政府</h1>
+				</section>
+				<section data-background="20200925_ndhu/g0vdathon_og.jpg">
+					&nbsp;
+				</section>
+				<section data-background="20200925_ndhu/g0v-about.png">
+					&nbsp;
+				</section>
+				<section>
+					<h2>
+					<ul>
+						<li class="fragment">選一個<a href="https://opendefinition.org/od/2.1/zh-tw/" target="_blank">開放授權</a></li>
+						<li class="fragment">開一個<a href="https://g0v.hackmd.io/" target="_blank">協作頁面</a></li>
+						<li class="fragment"><a href="https://g0v.tw/zh-TW/join.html" target="_blank">聊天室</a>告訴大家</li>
+						<li class="fragment">開始行動</li>
+					</ul>
+					</h2>
+				</section>
+				<section data-background="20200925_ndhu/chihiro006.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">不然你以為多難？</h1>
+				</section>
+				<section data-background="20200925_ndhu/road-3112334_1280.jpg">
+					<h1 style="background-color: rgba(255,255,255,0.7);" class="fragment">難的一直是<br />持續前進</h1>
+				</section>
+				
+				<section>
+					<h1>Q&A</h1>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
