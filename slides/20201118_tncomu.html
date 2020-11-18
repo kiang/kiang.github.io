@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8">
+		<title>藥局口罩採購地圖背後的那些故事 @ 看南埕說書</title>
+		<meta name="author" content="Finjon Kiang">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+		.slides .header{
+			position:absolute;
+		  top: -50%;
+		  left: -50%;
+		}
+		.slides .footer{
+		  position:absolute;
+		  bottom: 50%;
+		  left: -50%;
+		}
+		.strikeout {
+			font-size: 4em;
+			line-height: 1em;
+			position: relative;
+		}
+		.strikeout::after {
+			border-bottom: 0.3em solid red;
+			content: "";
+			left: 0;
+			margin-top: calc(0.3em / 2 * -1);
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>藥局口罩採購地圖<br />背後的那些故事</h1>
+					<p>
+						<small>kiang @ 看南埕說書 2020-11-18</small>
+					</p>
+				</section>
+				<section>
+					<h1>kiang === 江明宗</h1>
+					<ul>
+						<li><p>2004 開始全職寫程式</p></li>
+						<li><p class="fragment">2009 成立工作室接案</p></li>
+						<li><p class="fragment">2014 參選台南市議員</p></li>
+						<li><p class="fragment">2016-2018 台南市政府 => 經濟部 => 時代力量</p></li>
+						<li><p class="fragment">2018 再次進入台南市政府</p></li>
+						<li><p class="fragment">2020 回到靠接案過活</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>藥局口罩<br />採購地圖</h1>
+				</section>
+				<section data-background="20200427_moi/map_001.png">
+					<h1 style="background-color: white;">地圖呈現<br />即時庫存資訊</h1>
+				</section>
+				<section data-background="20200427_moi/map_002.png">
+					<h1 style="background-color: white;">自動定位到手機提供座標位置</h1>
+				</section>
+				<section data-background="20200427_moi/map_003.png">
+					<h1 style="background-color: white;">搜尋與行政區檢索</h1>
+				</section>
+				<section data-background="20200427_moi/map_004.png">
+					<h1 style="background-color: white;">結合多項開放資料</h1>
+				</section>
+				<section data-background="20200427_moi/map_005.png">
+					<h1 style="background-color: white;">開放原始碼</h1>
+				</section>
+				<section>
+					<h1>故事是這樣開始的...</h1>
+				</section>
+				<section data-background="20200427_moi/au.png">
+					<h1 style="background-color: white;">唐鳳政委<br />在聊天室提供資訊</h1>
+				</section>
+				<section data-background="20200427_moi/hackmd.png">
+					<h1 style="background-color: white;"><span style="font-family:monospace">g0v</span> 開始協作</h1>
+				</section>
+				<section data-background="20200427_moi/pdis.png">
+					<h1 style="background-color: white;">政府網站連結</h1>
+				</section>
+				<section data-background="20200427_moi/fb_share.png">
+					<h1 style="background-color: white;">政府動員宣傳</h1>
+				</section>
+				<section>
+					<h1>大量民眾湧入</h1>
+					<img src="20200427_moi/analytics.png" />
+				</section>
+				<section data-background="20200427_moi/line.jpg">
+					<h1 style="background-color: white;">排隊</h1>
+				</section>
+				<section data-background="20200427_moi/nhi.png">
+					<h1 style="background-color: white;">成功承載</h1>
+				</section>
+				<section data-background="20200427_moi/au_pr.png">
+					<h1 style="background-color: rgba(255,255,255,0.4);">唐鳳政委<br />直接幫忙改程式碼</h1>
+				</section>
+				<section data-background="20200427_moi/kr_map.png">
+					<h1 style="background-color: white;">韓國版<br />口罩地圖</h1>
+				</section>
+				<section>
+					<h1>挑戰：號碼牌</h1>
+				</section>
+				<section data-background="20200427_moi/no_card.png">
+					<h1 style="background-color: white;">庫存數字落差</h1>
+				</section>
+				<section data-background="20200427_moi/google_form.png">
+					<h1 style="background-color: white;">表單蒐集資料</h1>
+				</section>
+				<section data-background="20200427_moi/nhi_note.png">
+					<h1 style="background-color: white;">健保署<br />請藥局填寫備註</h1>
+				</section>
+				<section data-background="20200427_moi/nhi_sys.png">
+					<h1 style="background-color: white;">健保署<br />系統提供開關</h1>
+				</section>
+				<section>
+					<h1>看不到的辛酸(?)</h1>
+				</section>
+				<section data-background="20200427_moi/firewall.png">
+					<h1 style="background-color: white;">資料來源加入<br />新的安全防護</h1>
+				</section>
+				<section data-background="20200427_moi/health_center.png">
+					<h1 style="background-color: white;">健康服務中心</h1>
+				</section>
+				<section data-background="20200427_moi/rename.png">
+					<h1 style="background-color: white;">欄位、檔案名稱變更</h1>
+					<h1 style="background-color: white;">免費主機？</h1>
+				</section>
+				<section>
+					<h1>心得與建議</h1>
+				</section>
+				<section>
+					<h1 style="color: red;">政委居中協調非常態</h1>
+				</section>
+				<section>
+					<h1>公私協力<br />需要培養更多默契</h1>
+				</section>
+				<section>
+					<h1 style="color: red;">階段性改進資料品質</h1>
+				</section>
+				<section>
+					<h1>使用的人多，資料<br />品質才會逐步提昇</h1>
+				</section>
+				<section>
+					<h1 style="color: red;">政府框架<br />不容易產出好應用</h1>
+				</section>
+				<section>
+					<h1>給好用的資料，<br />應用會自然發生</h1>
+					<h1 class="fragment" style="color: blue;">就熱門應用來說</h1>
+				</section>
+				<section>
+					<h1 style="color: red;">資料上線了<br />連結就會開始發生</h1>
+				</section>
+				<section>
+					<h1>謹慎處理既有連結，<br />改一個字連結就失效</h1>
+				</section>
+				<section>
+					<h1>Q&A</h1>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
