@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>台灣 COVID-19 本土病例地圖經驗談 @ 台灣地理資訊中心</title>
+
+		<meta name="author" content="Finjon Kiang">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+		.slides .header{
+			position:absolute;
+		  top: -50%;
+		  left: -50%;
+		}
+		.slides .footer{
+		  position:absolute;
+		  bottom: 50%;
+		  left: -50%;
+		}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>台灣 COVID-19 本土病例地圖經驗談</h1>
+					<p>
+						<small>江明宗 @ 台灣地理資訊中心 2021-10-06</small>
+					</p>
+				</section>
+				<section data-background="20211006_hitgic/kiang.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://www.youtube.com/watch?v=ShZTQWEmvHc" target="_blank">關於明宗</a></h1>
+				</section>
+				<section data-background="20211006_hitgic/projects.png">
+					<ul>
+						<li style="background-color: white;"><p class="fragment">軟體開發工程師</p></li>
+						<li style="background-color: white;"><p class="fragment">g0v 零時政府 參與者</p></li>
+						<li style="background-color: white;"><p class="fragment">前台南市政府智慧城市辦公室執行秘書</p></li>
+					</ul>
+				</section>
+				<section data-background="20211006_hitgic/covid19_map.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://kiang.github.io/covid19/" target="_blank">台灣 COVID-19 本土病例地圖</a></h1>
+				</section>
+				
+				<section data-background="20211006_hitgic/feature-1.png">
+					<h1 style="background-color: white;" class="fragment">地圖呈現<br />最新病例統計</h1>
+				</section>
+				<section data-background="20211006_hitgic/feature-2.png">
+					<h1 style="background-color: white;" class="fragment">按區、按日顯示<br />統計圖表</h1>
+				</section>
+				<section data-background="20211006_hitgic/feature-3.png">
+					<h1 style="background-color: white;" class="fragment">資料自動更新<br />保留版本記錄</h1>
+				</section>
+				<section data-background="20211006_hitgic/feature-4.png">
+					<h1 style="background-color: white;" class="fragment">開放原始碼<br />開放授權</h1>
+				</section>
+				<section data-background="20211006_hitgic/feature-5.png">
+					<h1 style="background-color: white;" class="fragment">最高單日<br />近百萬人使用</h1>
+				</section>
+				<section>
+					<h1>故事是這樣開始的...</h1>
+				</section>
+				<section data-background="20211006_hitgic/nidss.png">
+					<h1 style="background-color: white;" class="fragment">疾管署版本</h1>
+				</section>
+				<section data-background="20211006_hitgic/fb-feed.png">
+					<h1 style="background-color: white;" class="fragment">看到李醫師<br />轉發文章討論</h1>
+				</section>
+				<section>
+					<h1>想要一次看到<br />全國分佈情形</h1>
+				</section>
+				<section data-background="20211006_hitgic/version1.png">
+					<h1 style="background-color: white;" class="fragment">初版上線</h1>
+				</section>
+				<section data-background="20211006_hitgic/media-covers.png">
+					<h1 style="background-color: white;" class="fragment">媒體報導</h1>
+				</section>
+				<section data-background="20211006_hitgic/opendata.png">
+					<h1 style="background-color: white;" class="fragment">疾管署配合<br />釋出更多資料</h1>
+				</section>
+				<section data-background="20211006_hitgic/more-features.png">
+					<h1 style="background-color: white;" class="fragment">更多資料 = 更多功能</h1>
+				</section>
+				<section data-background="20211006_hitgic/feedbacks.png">
+					<h1 style="background-color: white;" class="fragment">民眾回饋<br />促成持續的維運</h1>
+				</section>
+				<section data-background="20211006_hitgic/trends.png">
+					<h1 style="background-color: white;" class="fragment">應用<br />期待不再被需要</h1>
+				</section>
+				<section>
+					<h1>但還是期待更多...</h1>
+				</section>
+				<section data-background="20211006_hitgic/businessman-gef584e628_1280.jpg">
+					<h1 style="background-color: white;" class="fragment">政府的包袱太多</h1>
+				</section>
+				<section data-background="20211006_hitgic/hand-g8180828c4_1280.jpg">
+					<h1 style="background-color: white;" class="fragment">民間苦無資料</h1>
+				</section>
+				<section data-background="20211006_hitgic/glass-g65332a736_1280.jpg">
+					<h1 style="background-color: white;" class="fragment">開放資料<br /> => 公私協力</h1>
+				</section>
+				<section data-background="20211006_hitgic/announcements.png">
+					<h1 style="background-color: white;" class="fragment">別再用舊思維<br />提供資料</h1>
+				</section>
+				<section data-background="20211006_hitgic/data_code.png">
+					<h1 style="background-color: white;" class="fragment">唯一編號很重要</h1>
+				</section>
+				<section data-background="20211006_hitgic/schema.png">
+					<h1 style="background-color: white;" class="fragment">標準很重要</h1>
+				</section>
+				<section data-background="20211006_hitgic/clock-gdc47069f2_1280.jpg">
+					<h1 style="background-color: white;" class="fragment">持續更新很重要</h1>
+				</section>
+				<section data-background="20211006_hitgic/pointing-g187d7fb04_1280.jpg">
+					<h1 style="background-color: white;" class="fragment">你的參與<br />也很重要</h1>
+				</section>
+				<section>
+					<h1>Q&A</h1>
+					<a href="https://kiang.github.io/slides/20211006_hitgic.html" target="_blank"><img src="20211006_hitgic/qrcode.png" width="500" /></a>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
