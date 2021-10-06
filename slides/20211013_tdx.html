@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>交通事故與人口關聯探索 @ TDX資料應用實戰班</title>
+
+		<meta name="author" content="Finjon Kiang">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+		.slides .header{
+			position:absolute;
+		  top: -50%;
+		  left: -50%;
+		}
+		.slides .footer{
+		  position:absolute;
+		  bottom: 50%;
+		  left: -50%;
+		}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>交通事故與人口關聯探索</h1>
+					<p>
+						<small>江明宗 @ TDX資料應用實戰班 2021-10-13</small>
+					</p>
+				</section>
+				<section data-background="20211006_hitgic/kiang.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://www.youtube.com/watch?v=ShZTQWEmvHc" target="_blank">關於明宗</a></h1>
+				</section>
+				<section data-background="20211006_hitgic/projects.png">
+					<ul>
+						<li style="background-color: white;"><p class="fragment">軟體開發工程師</p></li>
+						<li style="background-color: white;"><p class="fragment">g0v 零時政府 參與者</p></li>
+						<li style="background-color: white;"><p class="fragment">前台南市政府智慧城市辦公室執行秘書</p></li>
+					</ul>
+				</section>
+				<section>
+					<h1>今天進行方式</h1>
+					<ul>
+						<li class="fragment">你看我寫</li>
+						<li class="fragment">你問我寫</li>
+						<li class="fragment">你想我寫</li>
+					</ul>
+				</section>
+				<section>
+					<h1>是的，就我寫</h1>
+					<p class="fragment">4 小時學不完的，今天希望給真實世界的體驗</p>
+				</section>
+				<section data-background="20211013_tdx/form.png">
+					<h1 style="background-color: white;" class="fragment"><a href="20211013_tdx/form.pdf" target="_blank">道路交通事故調查報告表</a></h1>
+				</section>
+				<section data-background="20211013_tdx/ticp.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://ticp.motc.gov.tw/" target="_blank">交通部數據匯流平臺申請</a></h1>
+				</section>
+				<section data-background="20211013_tdx/data.png">
+					<h1 style="background-color: white;" class="fragment">取得資料</h1>
+				</section>
+				<section>
+					<h1>環境說明</h1>
+					<p>
+						<a href="https://www.ubuntu-tw.org/" target="_blank">Ubuntu Linux</a>、
+						<a href="http://linux.vbird.org/linux_server/0360apache.php" target="_blank">Apache</a>、
+						<a href="https://www.php.net/" target="_blank">PHP</a>、
+						<a href="https://github.com/" target="_blank">Github</a>、
+						<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>、
+						<a href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">JavaScript</a>、
+						<a href="https://openlayers.org/" target="_blank">OpenLayers</a>、...
+					</p>
+				</section>
+				<section>
+					<h1>001 透過 PHP 讀取 CSV 資料</h1>
+				</section>
+				<section>
+					<h1>002 以 "里代碼(VillageCode)" 歸納資料</h1>
+				</section>
+				<section>
+					<h1>003 透過村里界圖檢驗 "里代碼(VillageCode)"</h1>
+				</section>
+				<section>
+					<h1>004 把村里界圖與資料合併成新的 geojson 檔案(只取出台中部份)</h1>
+				</section>
+				<section>
+					<h1>005 透過 QGIS 預覽資料</h1>
+				</section>
+				<section>
+					<h1>006 建立 Github 專案準備存放程式與網頁</h1>
+				</section>
+				<section>
+					<h1>007 第一個 Hello World 網頁</h1>
+				</section>
+				<section>
+					<h1>008 取得與上傳網頁地圖樣板</h1>
+				</section>
+				<section>
+					<h1>009 把 geojson 檔案放進地圖呈現</h1>
+				</section>
+				<section>
+					<h1>010 地圖點擊展開資料</h1>
+				</section>
+				<section>
+					<h1>011 依據統計數字變化地圖顏色</h1>
+				</section>
+				<section>
+					<h1>012 以 PHP 產生個別村里的點資料 geojson</h1>
+				</section>
+				<section>
+					<h1>013 點擊個別村里後呈現點資料</h1>
+				</section>
+				<section>
+					<h1>014 點擊個別點後展開事件資料</h1>
+				</section>
+				<section>
+					<h1>015 加入資料過濾功能</h1>
+				</section>
+				<section>
+					<h1>01x 換大家說說看</h1>
+				</section>
+				<section>
+					<h1>Q&A</h1>
+					<a href="https://kiang.github.io/slides/20211013_tdx.html" target="_blank"><img src="20211013_tdx/qrcode.png" width="500" /></a>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
