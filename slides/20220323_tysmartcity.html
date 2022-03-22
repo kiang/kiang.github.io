@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8">
+		<title>台灣智慧城市技術的現在與未來 @ 桃客松出任務</title>
+		<meta name="author" content="Finjon Kiang">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+		.slides .header{
+			position:absolute;
+		  top: -50%;
+		  left: -50%;
+		}
+		.slides .footer{
+		  position:absolute;
+		  bottom: 50%;
+		  left: -50%;
+		}
+		.strikeout {
+			font-size: 4em;
+			line-height: 1em;
+			position: relative;
+		}
+		.strikeout::after {
+			border-bottom: 0.3em solid red;
+			content: "";
+			left: 0;
+			margin-top: calc(0.3em / 2 * -1);
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>台灣智慧城市技術的<br />現在與未來</h1>
+					<p>
+						<small>江明宗 @ 桃客松出任務 2022-03-23</small>
+					</p>
+				</section>
+				<section>
+					<h1>kiang === 江明宗</h1>
+					<ul>
+						<li><p>2004 開始全職寫程式</p></li>
+						<li><p class="fragment">2009 成立工作室接案</p></li>
+						<li><p class="fragment">2016 首次進入台南市政府</p></li>
+						<li><p class="fragment">2018 再次進入台南市政府</p></li>
+						<li><p class="fragment">2019 台南市政府智慧城市辦公室執行秘書</p></li>
+						<li><p class="fragment">2020 回到自由工作者</p></li>
+					</ul>
+				</section>
+				<section data-background="20220323_tysmartcity/satellite-3977165_1280.jpg">
+					<h1 style="background-color: white;" class="fragment">人在做，衛星在看</h1>
+				</section>
+				<section data-background="20220323_tysmartcity/landchg.png">
+					<h1 style="background-color: white;" class="fragment"><a href="http://www.landchg.org.tw/Module/RWD/Web/proc.aspx" target="_blank">國土利用監測作業</a></h1>
+				</section>
+				<section>
+					<h1>每月 >>> 每天</h1>
+				</section>
+				<section data-background="20220323_tysmartcity/planetlab.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://www.planet.com/products/monitoring/" target="_blank">Planet Labs</a></h1>
+				</section>
+				<section data-background="20220323_tysmartcity/disasterdata.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://www.planet.com/disasterdata/datasets/" target="_blank">救災開放資料</a></h1>
+				</section>
+				<section>
+					<h1 style="background-color: white;">人在做， AI 在看</h1>
+					<img src="20220323_tysmartcity/ai_camera.jpg" style="height: 500px;" />
+				</section>
+				<section data-background="20220323_tysmartcity/car_plate.jpg">
+					<h1 style="background-color: white;" class="fragment"><a href="http://blog.udn.com/yccsonar/123450509" target="_blank">道路車牌辨識</a></h1>
+				</section>
+				<section data-background="20220323_tysmartcity/ai_camera_list.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://www.bot.com.tw/Procurement/Procure_supply/Supply_index/Pages/Police_Resource.aspx" target="_blank">交通科技執法設備</a></h1>
+				</section>
+				<section>
+					<h1>交通感測</h1>
+				</section>
+				<section data-background="20220323_tysmartcity/tdx.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://tdx.transportdata.tw/" target="_blank">運輸資料流通服務</a></h1>
+				</section>
+				<section data-background="20220323_tysmartcity/parking.jpg">
+					<h1 style="background-color: white;" class="fragment"><a href="https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=7640218" target="_blank">智慧路邊停車(台南)</a></h1>
+				</section>
+				<section>
+					<h1>環境感測</h1>
+				</section>
+				<section data-background="20220323_tysmartcity/taiwan_ci.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://ci.taiwan.gov.tw/dsp/dataset_air.aspx" target="_blank">民生公共物聯網</a></h1>
+				</section>
+				<section>
+					<h1>無人駕駛</h1>
+				</section>
+				<section data-background="20220323_tysmartcity/bus.jpg">
+					<h1 style="background-color: white;" class="fragment"><a href="https://www.tycg.gov.tw/ch/home.jsp?id=10412&parentpath=0,10401&mcustomize=news_view.jsp&dataserno=202110060003&aplistdn=ou=news,ou=chinese,ou=ap_root,o=tycg,c=tw&toolsflag=Y" target="_blank">自駕巴士</a></h1>
+				</section>
+				<section data-background="20220323_tysmartcity/tesla_waymo.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://www.youtube.com/watch?v=1BsWFzgUBQY" target="_blank">自駕計程車</a></h1>
+				</section>
+				<section>
+					<h1>案例分享</h1>
+				</section>
+				<section data-background="20211006_hitgic/covid19_map.png">
+					<h1 style="background-color: white;" class="fragment"><a href="https://kiang.github.io/covid19/" target="_blank">台灣 COVID-19 本土病例地圖</a></h1>
+				</section>
+				<section data-background="20211006_hitgic/feature-1.png">
+					<h1 style="background-color: white;" class="fragment">地圖呈現<br />最新病例統計</h1>
+				</section>
+				<section data-background="20211006_hitgic/feature-2.png">
+					<h1 style="background-color: white;" class="fragment">按區、按日顯示<br />統計圖表</h1>
+				</section>
+				<section data-background="20211006_hitgic/feature-3.png">
+					<h1 style="background-color: white;" class="fragment">資料自動更新<br />保留版本記錄</h1>
+				</section>
+				<section data-background="20211006_hitgic/feature-4.png">
+					<h1 style="background-color: white;" class="fragment">開放原始碼<br />開放授權</h1>
+				</section>
+				<section data-background="20211006_hitgic/feature-5.png">
+					<h1 style="background-color: white;" class="fragment">最高單日<br />近百萬人使用</h1>
+				</section>
+				<section>
+					<h1>故事是這樣開始的...</h1>
+				</section>
+				<section data-background="20211006_hitgic/nidss.png">
+					<h1 style="background-color: white;" class="fragment">疾管署版本</h1>
+				</section>
+				<section data-background="20211006_hitgic/fb-feed.png">
+					<h1 style="background-color: white;" class="fragment">看到李醫師<br />轉發文章討論</h1>
+				</section>
+				<section>
+					<h1>想要一次看到<br />全國分佈情形</h1>
+				</section>
+				<section data-background="20211006_hitgic/version1.png">
+					<h1 style="background-color: white;" class="fragment">初版上線</h1>
+				</section>
+				<section data-background="20211006_hitgic/media-covers.png">
+					<h1 style="background-color: white;" class="fragment">媒體報導</h1>
+				</section>
+				<section data-background="20211006_hitgic/opendata.png">
+					<h1 style="background-color: white;" class="fragment">疾管署配合<br />釋出更多資料</h1>
+				</section>
+				<section data-background="20211006_hitgic/more-features.png">
+					<h1 style="background-color: white;" class="fragment">更多資料 = 更多功能</h1>
+				</section>
+				<section data-background="20211006_hitgic/feedbacks.png">
+					<h1 style="background-color: white;" class="fragment">民眾回饋<br />促成持續的維運</h1>
+				</section>
+				<section>
+					<h1>藥局口罩<br />採購地圖</h1>
+				</section>
+				<section data-background="20200427_moi/map_001.png">
+					<h1 style="background-color: white;">地圖呈現<br />即時庫存資訊</h1>
+				</section>
+				<section data-background="20200427_moi/map_002.png">
+					<h1 style="background-color: white;">自動定位到手機提供座標位置</h1>
+				</section>
+				<section data-background="20200427_moi/map_003.png">
+					<h1 style="background-color: white;">搜尋與行政區檢索</h1>
+				</section>
+				<section data-background="20200427_moi/map_004.png">
+					<h1 style="background-color: white;">結合多項開放資料</h1>
+				</section>
+				<section data-background="20200427_moi/map_005.png">
+					<h1 style="background-color: white;">開放原始碼</h1>
+				</section>
+				<section>
+					<h1>故事是這樣開始的...</h1>
+				</section>
+				<section data-background="20200427_moi/au.png">
+					<h1 style="background-color: white;">唐鳳政委<br />在聊天室提供資訊</h1>
+				</section>
+				<section data-background="20200427_moi/hackmd.png">
+					<h1 style="background-color: white;"><span style="font-family:monospace">g0v</span> 開始協作</h1>
+				</section>
+				<section data-background="20200427_moi/pdis.png">
+					<h1 style="background-color: white;">政府網站連結</h1>
+				</section>
+				<section data-background="20200427_moi/fb_share.png">
+					<h1 style="background-color: white;">政府動員宣傳</h1>
+				</section>
+				<section>
+					<h1>大量民眾湧入</h1>
+					<img src="20200427_moi/analytics.png" />
+				</section>
+				<section data-background="20200427_moi/line.jpg">
+					<h1 style="background-color: white;">排隊</h1>
+				</section>
+				<section data-background="20200427_moi/nhi.png">
+					<h1 style="background-color: white;">成功承載</h1>
+				</section>
+				<section data-background="20200427_moi/au_pr.png">
+					<h1 style="background-color: rgba(255,255,255,0.4);">唐鳳政委<br />直接幫忙改程式碼</h1>
+				</section>
+				<section data-background="20200427_moi/kr_map.png">
+					<h1 style="background-color: white;">韓國版<br />口罩地圖</h1>
+				</section>
+				<section>
+					<h1>挑戰：號碼牌</h1>
+				</section>
+				<section data-background="20200427_moi/no_card.png">
+					<h1 style="background-color: white;">庫存數字落差</h1>
+				</section>
+				<section data-background="20200427_moi/google_form.png">
+					<h1 style="background-color: white;">表單蒐集資料</h1>
+				</section>
+				<section data-background="20200427_moi/nhi_note.png">
+					<h1 style="background-color: white;">健保署<br />請藥局填寫備註</h1>
+				</section>
+				<section data-background="20200427_moi/nhi_sys.png">
+					<h1 style="background-color: white;">健保署<br />系統提供開關</h1>
+				</section>
+				<section>
+					<h1>看不到的辛酸(?)</h1>
+				</section>
+				<section data-background="20200427_moi/firewall.png">
+					<h1 style="background-color: white;">資料來源加入<br />新的安全防護</h1>
+				</section>
+				<section data-background="20200427_moi/health_center.png">
+					<h1 style="background-color: white;">健康服務中心</h1>
+				</section>
+				<section data-background="20200427_moi/rename.png">
+					<h1 style="background-color: white;">欄位、檔案名稱變更</h1>
+					<h1 style="background-color: white;">免費主機？</h1>
+				</section>
+				<section>
+					<h1>登革熱地圖</h1>
+				</section>
+				<section data-background="20151227_reporter/KaohsiungDengueMap.png">
+					<h1 style="background-color: white;">高雄登革熱地圖<br />@ 2014</h1>
+				</section>
+				<section data-background="20151227_reporter/xls.png">
+					<h1 style="background-color: white;">衛生局資料</h1>
+				</section>
+				<section data-background="20151227_reporter/cunli.png">
+					<h1 style="background-color: white;">村里界圖</h1>
+				</section>
+				<section>
+				<section data-background="20151227_reporter/TainanDengueMap.png">
+					<h1 style="background-color: white;">台南登革熱地圖</h1>
+				</section>
+				<section data-background="20151227_reporter/TainanDengueMap-2.png">
+					<h1 style="background-color: white;">台南登革熱地圖</h1>
+				</section>
+				</section>
+				<section data-background="20151227_reporter/TainanDengueMap_news.png">
+					<h1 style="background-color: white;">上新聞</h1>
+				</section>
+				<section>
+					<h1>發酵</h1>
+				</section>
+				<section data-background="20151227_reporter/weoi.png">
+					<h2 style="background-color: white;">病媒蚊指數<br />forked by weoi</h2>
+				</section>
+				<section data-background="20151227_reporter/happychang.png">
+					<h2 style="background-color: white;">登革熱密度地圖<br />forked by happychang</h2>
+				</section>
+				<section>
+					<h1>坑坑相連到天邊</h1>
+				</section>
+				<section data-background="20151227_reporter/blog_08.png">
+					<h1>哭腰</h1>
+				</section>
+				<section data-background="20151227_reporter/peggy.png">
+					<h1 style="background-color: white;">Magic Peggy</h1>
+				</section>
+				<section data-background="20151227_reporter/Dengue_Daily.png">
+					<h1 style="background-color: white;">疾管署<br />釋出全國資料</h1>
+				</section>
+				<section data-background="20151227_reporter/taiwan.png">
+					<h1 style="background-color: white;">全國版本</h1>
+				</section>
+				<section data-background="20151227_reporter/points.png">
+					<h1 style="background-color: white;">病例分佈</h1>
+				</section>
+				<section data-background="20151227_reporter/cdcdengue.png">
+					<h1 style="background-color: white;">疾管署替代役</h1>
+				</section>
+				<section>
+					<h1>下一個換你</h1>
+				</section>
+				<section>
+					<h1>Q&A</h1>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
