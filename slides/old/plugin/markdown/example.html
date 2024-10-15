@@ -118,7 +118,7 @@
 					{ src: '../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: '../highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../highlight/highlight.js', async: true },
 					{ src: '../notes/notes.js' }
 				]
 			});

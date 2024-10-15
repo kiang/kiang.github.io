@@ -204,10 +204,10 @@ Reveal.initialize({
 		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 
 		// Syntax highlight for <code> elements
-		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/highlight/highlight.js', async: true },
 
 		// Zoom in and out with Alt+click
-		{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		{ src: 'plugin/zoom/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 
 		// Speaker notes
 		{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
