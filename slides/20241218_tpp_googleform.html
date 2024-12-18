@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>線上表單 @ 公民科技工作坊</title>
+
+	<meta name="author" content="Finjon Kiang">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+	<style>
+		.slides .header {
+			position: absolute;
+			top: -50%;
+			left: -50%;
+		}
+
+		.slides .footer {
+			position: absolute;
+			bottom: 50%;
+			left: -50%;
+		}
+	</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>線上表單</h1>
+				<p>
+					<small>江明宗 @ 公民科技工作坊 2024-12-18</small>
+				</p>
+			</section>
+			<section>
+				<h1>關於明宗</h1>
+			</section>
+			<section>
+				<ul>
+					<li>
+						<p>台灣民眾黨台南黨代表</p>
+					</li>
+					<li>
+						<p class="fragment">2022 台南議員參選人</p>
+					</li>
+					<li>
+						<p class="fragment">公民科技創作者</p>
+					</li>
+					<li>
+						<p class="fragment">兩個孩子的爸</p>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h1><a href="https://docs.google.com/forms/u/0/" target="_blank">建立兩個文字欄位表單</a>：姓名、網址</h1>
+			</section>
+			<section>
+				<h1><a href="https://goqr.me/" target="_blank">產生 QRCode</a></h1>
+			</section>
+			<section>
+				<h1>檢視大家提供資料</h1>
+			</section>
+			<section>
+				<h1>HYPERLINK() 函式</h1>
+			</section>
+			<section>
+				<h1>發布成網頁</h1>
+			</section>
+			<section>
+				<h1>收集電子郵件</h1>
+			</section>
+			<section>
+				<h1>傳送表單副本</h1>
+			</section>
+			<section>
+				<h1>加入上傳檔案、經緯度欄位</h1>
+			</section>
+			<section>
+				<h1>建立區段</h1>
+			</section>
+			<section>
+				<h1>根據答案前往相關區段</h1>
+			</section>
+			<section>
+				<h1>預先填寫表單</h1>
+			</section>
+			<section>
+				<h1>[小心]查看結果摘要</h1>
+			</section>
+			<section data-background="20230426_npust/thanks-g057664a0f_1280.jpg">
+				&nbsp;
+			</section>
+			<section>
+				<h1>Q&A</h1>
+				<a href="https://kiang.github.io/slides/20241218_tpp_googleform.html" target="_blank"><img
+						src="20241218_tpp_googleform/qrcode.png" width="500" /></a>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+	<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+</body>
+
+</html>
