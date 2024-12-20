@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>地圖製作分享會 @ 民眾黨全台志工共識營</title>
+
+	<meta name="author" content="Finjon Kiang">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+	<style>
+		.slides .header {
+			position: absolute;
+			top: -50%;
+			left: -50%;
+		}
+
+		.slides .footer {
+			position: absolute;
+			bottom: 50%;
+			left: -50%;
+		}
+	</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>地圖製作分享會</h1>
+				<p>
+					<small>江明宗 @ 民眾黨全台志工共識營 2024-12-20</small>
+				</p>
+			</section>
+			<section>
+				<h1>關於明宗</h1>
+			</section>
+			<section>
+				<ul>
+					<li>
+						<p>台灣民眾黨台南黨代表</p>
+					</li>
+					<li>
+						<p class="fragment">2022 台南議員參選人</p>
+					</li>
+					<li>
+						<p class="fragment">公民科技創作者</p>
+					</li>
+					<li>
+						<p class="fragment">兩個孩子的爸</p>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h1>基礎知識</h1>
+			</section>
+			<section data-background="20241211_tpp_map/gps.jpg">
+				<h1 style="background-color: white;" class="fragment">GPS 三角定位</h1>
+			</section>
+			<section>
+				<h1>GPS 注意事項</h1>
+				<ul>
+					<li>
+						<p>會有 3~20 公尺誤差</p>
+					</li>
+					<li>
+						<p class="fragment">會有訊號阻擋或反彈問題</p>
+					</li>
+					<li>
+						<p class="fragment">太陽磁暴等環境影響</p>
+					</li>
+					<li>
+						<p class="fragment">衛星數量越多越精準</p>
+					</li>
+				</ul>
+			</section>
+			<section data-background="20241211_tpp_map/gps_devices.jpg">
+				<h1 style="background-color: white;" class="fragment">手機 > 專用設備</h1>
+			</section>
+			<section>
+				<h1>手機輔助定位</h1>
+				<ul>
+					<li>
+						<p>Wi-Fi 訊號</p>
+					</li>
+					<li>
+						<p class="fragment">電信基地台, 20000 公里 v.s. 10 公里</p>
+					</li>
+					<li>
+						<p class="fragment">Beacons 藍牙定位</p>
+					</li>
+					<li>
+						<p class="fragment">其他體感設備</p>
+					</li>
+				</ul>
+			</section>
+			<section data-background="20241211_tpp_map/googlemap.png">
+				<h1 style="background-color: white;" class="fragment">座標系統</h1>
+			</section>
+			<section>
+				<ul>
+					<li>
+						<p>WGS84, EPSG:4326 - 120.186649,22.992909</p>
+					</li>
+					<li>
+						<p class="fragment">TWD97, EPSG:3824 - 166615.2175,2543729.1450</p>
+					</li>
+					<li>
+						<p class="fragment">TWD67, EPSG:3821 - 165788.249,2543937.227</p>
+					</li>
+				</ul>
+			</section>
+			<section data-background="20241220_tpp_map/wgs84.png">
+				<h1 style="background-color: white;" class="fragment">WGS84 地球質心角度位置</h1>
+			</section>
+			<section data-background="20241211_tpp_map/point_polyline.jpg">
+				<h1 style="background-color: white;" class="fragment">地圖基本組成</h1>
+			</section>
+			<section>
+				<ul>
+					<li>
+						<p>底圖</p>
+					</li>
+					<li>
+						<p class="fragment">點位標記 - Point</p>
+					</li>
+					<li>
+						<p class="fragment">路徑 - Polyline</p>
+					</li>
+					<li>
+						<p class="fragment">區塊 - Polygon</p>
+					</li>
+				</ul>
+			</section>
+			<section data-background="20241211_tpp_map/google_mymaps.png">
+				<h1 style="background-color: white;" class="fragment"><a href="https://www.google.com/mymaps" target="_blank">做中學</a></h1>
+			</section>
+			<section>
+				<h1>點, 一個台南人的口袋美食</h1>
+			</section>
+			<section>
+				<h1>線, 台南自行車路線</h1>
+			</section>
+			<section>
+				<h1>面, 活動現場安排</h1>
+			</section>
+			<section>
+				<h1>資料夾, 多天行程</h1>
+			</section>
+			<section>
+				<h1>成果展示</h1>
+				<img src="20241211_tpp_map/qrcode_sample1.png" width="500">
+			</section>
+			<section>
+				<h1>使用 Google MyMaps 的注意事項</h1>
+			</section>
+			<section>
+				<ul>
+					<li>
+						<p>資料自由度</p>
+					</li>
+					<li>
+						<p class="fragment">實驗性，未來不一定長期保留</p>
+					</li>
+					<li>
+						<p class="fragment">政治正確問題</p>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h1>更開放的選擇</h1>
+				<h1><a href="https://geojson.io/">geojson.io</a></h1>
+			</section>
+			<section>
+				<h1>下載到手機使用</h1>
+				<h1><a href="https://geo-tracker.org/">geo-tracker.org</a></h1>
+			</section>
+			<section>
+				<h1>如果會寫點程式</h1>
+			</section>
+			<section>
+				<h1>台南看板地圖</h1>
+				<a href="https://tainan.olc.tw/p/tainan2026/" target="_blank"><img src="20241220_tpp_map/qrcode_sample1.png" width="500"></a>
+			</section>
+			<section data-background="20230426_npust/thanks-g057664a0f_1280.jpg">
+				&nbsp;
+			</section>
+			<section>
+				<h1>Q&A</h1>
+				<a href="https://kiang.github.io/slides/20241220_tpp_map.html" target="_blank"><img
+						src="20241220_tpp_map/qrcode.png" width="500" /></a>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+	<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+</body>
+
+</html>
