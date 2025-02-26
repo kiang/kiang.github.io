@@ -44,23 +44,30 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #f6f8fa 0%, #f1f4f6 100%);
-    padding: calc(var(--section-padding) + 2rem) 0;
-    min-height: calc(100vh - var(--navbar-height));
+    position: relative;
+    min-height: 100vh;
+    padding: 100px 0;
+    background-color: #f8f9fa;
     display: flex;
     align-items: center;
 }
 
-.hero-section h1 {
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
-.hero-section .lead {
-    font-size: 1.25rem;
-    color: #666;
-    margin-bottom: 2rem;
+.hero-text {
+    flex: 1;
+}
+
+.chinese-name {
+    display: block;
+    font-size: 0.8em;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    font-weight: normal;
 }
 
 /* Section Styles */
@@ -170,17 +177,43 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .hero-section {
-        min-height: 40vh;
+    .hero-content {
+        flex-direction: column-reverse;
         text-align: center;
     }
-
-    .section-padding {
-        padding: 3rem 0;
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1rem;
     }
-
-    .table-responsive {
-        margin: 0 -15px;
+    .chinese-name {
+        margin-top: 0.3rem;
+    }
+    #social-links, #footer-social-links {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    #social-links {
+        max-width: 250px;
+    }
+    #social-links a, #footer-social-links a {
+        font-size: 1.25rem;
+        width: 35px;
+        height: 35px;
+    }
+    #footer-social-links {
+        margin-top: 1rem;
+    }
+    .achievements-scroll-container {
+        margin: 0 -10px;
+    }
+    .scroll-arrow {
+        width: 28px;
+        height: 28px;
+    }
+    .modal-nav {
+        width: 32px;
+        height: 32px;
     }
 }
 
@@ -483,4 +516,243 @@ footer {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+/* Social Links Styles */
+#social-links, #footer-social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#social-links {
+    justify-content: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+#footer-social-links {
+    justify-content: flex-end;
+}
+#social-links a, #footer-social-links a {
+    color: #495057;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+#social-links a:hover, #footer-social-links a:hover {
+    color: #0d6efd;
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Profile Photo Styles */
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-photo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Image Placeholder Styles */
+.image-placeholder {
+    width: 100%;
+    min-height: 300px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.placeholder-content {
+    text-align: center;
+    color: #6c757d;
+}
+.placeholder-content i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.placeholder-content p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Project Media Scrolling Styles */
+.project-media-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.project-media-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 15px;
+    padding: 5px 15px;
+    scroll-behavior: smooth;
+    flex: 1;
+}
+.project-media-scroll::-webkit-scrollbar {
+    display: none;
+}
+.project-media-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: transform 0.3s ease;
+}
+.project-media-item:hover {
+    transform: translateY(-2px);
+}
+.media-date {
+    color: #6c757d;
+    font-size: 0.85em;
+    margin-left: 8px;
+}
+
+/* Scroll Arrow Styles */
+.scroll-arrow {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    color: #495057;
+    padding: 0;
+    margin: 0 5px;
+}
+.scroll-arrow:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    color: #000;
+}
+.scroll-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.scroll-arrow i {
+    font-size: 0.8rem;
+}
+
+/* Achievement Gallery Scrolling Styles */
+.achievements-scroll-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.achievements-scroll-area {
+    flex: 1;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+.achievements-scroll-area::-webkit-scrollbar {
+    display: none;
+}
+.achievements-row {
+    flex-wrap: nowrap;
+    margin: 0;
+}
+.achievement-col {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+/* Modal Navigation Styles */
+.modal-body {
+    position: relative;
+}
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1060;
+    background: rgba(255, 255, 255, 0.9);
+    width: 40px;
+    height: 40px;
+}
+.modal-prev {
+    left: 10px;
+}
+.modal-next {
+    right: 10px;
+}
+.achievement-full-image {
+    max-height: 80vh;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+    .chinese-name {
+        margin-top: 0.3rem;
+    }
+    #social-links, #footer-social-links {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    #social-links {
+        max-width: 250px;
+    }
+    #social-links a, #footer-social-links a {
+        font-size: 1.25rem;
+        width: 35px;
+        height: 35px;
+    }
+    #footer-social-links {
+        margin-top: 1rem;
+    }
+    .achievements-scroll-container {
+        margin: 0 -10px;
+    }
+    .scroll-arrow {
+        width: 28px;
+        height: 28px;
+    }
+    .modal-nav {
+        width: 32px;
+        height: 32px;
+    }
 } 
