@@ -1,0 +1,14 @@
+{
+  "links": [
+    {
+      "icon": "fa-globe",
+      "url": "http://k.olc.tw/",
+      "title": "Website"
+    },
+    {
+      "icon": "fa-github",
+      "url": "https://github.com/kiang",
+      "title": "GitHub"
+    }
+  ]
+} 
