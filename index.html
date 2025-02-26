@@ -5,109 +5,198 @@
 	<meta charset="utf-8">
 	<title>Finjon Kiang</title>
 	<meta name="author" content="Finjon Kiang">
+	<meta name="description" content="Personal portfolio and achievements of Finjon Kiang">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css">
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
 	<link rel="stylesheet" href="css/main.css">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	
+	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GE076J7DJ"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'G-3GE076J7DJ');
 	</script>
 </head>
 
 <body>
-	<div class="container-fluid">
-		<h1><a href="http://k.olc.tw/" target="_blank">Finjon Kiang</a></h1>
-	</div>
-
-	<!-- Talks Section -->
-	<section class="talks-section">
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 		<div class="container">
-			<h2 class="section-title">Talks</h2>
-			<div class="table-responsive">
-				<table class="table table-bordered table-secondary table-sm">
-					<thead>
-						<tr>
-							<th>Title (Slides)</th>
-							<th>Event</th>
-							<th>Date</th>
-							<th>Links</th>
-						</tr>
-					</thead>
-					<tbody id="talks-container" class="loading">
-						<!-- Talks will be loaded here -->
-					</tbody>
-				</table>
+			<a class="navbar-brand" href="/">Finjon Kiang</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#talks">Talks</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#links">Links</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#projects">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#achievements">Achievements</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-	</section>
+	</nav>
 
-	<!-- Links Section -->
-	<section class="links-section">
-		<div class="container">
-			<h2 class="section-title">Links</h2>
-			<div class="table-responsive">
-				<table class="table table-bordered table-secondary table-sm">
-					<thead>
-						<tr>
-							<th>Title</th>
-							<th>Date</th>
-						</tr>
-					</thead>
-					<tbody id="links-container" class="loading">
-						<!-- Links will be loaded here -->
-					</tbody>
-				</table>
+	<!-- Hero Section -->
+	<header class="hero-section">
+		<div class="container h-100">
+			<div class="row h-100 align-items-center">
+				<div class="col-12 text-center">
+					<h1 class="display-4">Finjon Kiang</h1>
+					<p class="lead">Developer • Speaker • Open Source Contributor</p>
+					<div id="hero-social-links" class="mt-4">
+						<!-- Social links will be loaded here -->
+					</div>
+				</div>
 			</div>
 		</div>
-	</section>
+	</header>
 
-	<!-- Projects Section -->
-	<section class="project-section">
-		<div class="container">
-			<h2 class="section-title">Featured Projects</h2>
-			<div id="projects-container" class="row loading">
-				<!-- Projects will be loaded here -->
+	<!-- Main Content -->
+	<main>
+		<!-- Talks Section -->
+		<section id="talks" class="section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="section-title text-center mb-5">Recent Talks</h2>
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead class="table-light">
+									<tr>
+										<th>Title (Slides)</th>
+										<th>Event</th>
+										<th>Date</th>
+										<th>Links</th>
+									</tr>
+								</thead>
+								<tbody id="talks-container" class="loading">
+									<!-- Talks will be loaded here -->
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- Badges Section -->
-	<section class="badge-section">
-		<div class="container">
-			<h2 class="section-title">Achievements</h2>
-			<div id="badges-container" class="loading">
-				<!-- Badges will be loaded here -->
+		<!-- Links Section -->
+		<section id="links" class="section-padding bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="section-title text-center mb-5">Featured Links</h2>
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead class="table-light">
+									<tr>
+										<th>Title</th>
+										<th>Date</th>
+									</tr>
+								</thead>
+								<tbody id="links-container" class="loading">
+									<!-- Links will be loaded here -->
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="section-padding">
+			<div class="container">
+				<h2 class="section-title text-center mb-5">Featured Projects</h2>
+				<div id="projects-container" class="row g-4 loading">
+					<!-- Projects will be loaded here -->
+				</div>
+			</div>
+		</section>
+
+		<!-- Achievements Section -->
+		<section id="achievements" class="section-padding bg-light">
+			<div class="container">
+				<h2 class="section-title text-center mb-5">Achievements</h2>
+				<div class="achievements-gallery">
+					<div id="badges-container" class="row g-4 justify-content-center loading">
+						<!-- Badges will be loaded here dynamically -->
+						<!-- Each badge will be wrapped in:
+						<div class="col-6 col-md-4 col-lg-3">
+							<div class="achievement-item">
+								<div class="achievement-content">
+									<img src="..." alt="..." class="achievement-thumbnail" data-bs-toggle="modal" data-bs-target="#achievementModal">
+									<div class="achievement-overlay">
+										<h3>Title</h3>
+										<p>Description</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						-->
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 
 	<!-- Footer -->
-	<footer>
-		<div class="container text-center">
-			<div id="social-links" class="social-links mb-4">
-				<!-- Social links will be loaded here -->
+	<footer class="footer py-4">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 text-lg-start">
+					<p class="mb-lg-0">&copy; 2024 Finjon Kiang. All rights reserved.</p>
+				</div>
+				<div class="col-lg-6 text-lg-end">
+					<div id="social-links" class="social-links">
+						<!-- Social links will be loaded here -->
+					</div>
+				</div>
 			</div>
-			<p class="mb-0">&copy; 2024 Finjon Kiang. All rights reserved.</p>
 		</div>
 	</footer>
 
 	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/js/mdb.min.js"></script>
-	
-	<!-- Add dynamic loading script -->
 	<script src="js/main.js"></script>
+
+	<!-- Achievement Modal -->
+	<div class="modal fade" id="achievementModal" tabindex="-1" aria-labelledby="achievementModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<h5 class="modal-title" id="achievementModalLabel"></h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center p-0">
+					<img src="" alt="" class="achievement-full-image img-fluid">
+				</div>
+				<div class="modal-footer border-0">
+					<p class="achievement-description w-100 text-center mb-0"></p>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
