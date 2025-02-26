@@ -18,3 +18,14 @@ foreach($pool AS $badge) {
     ];
 }
 file_put_contents($basePath . '/data/badges.json', json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+/**
+,
+    {
+      "title": "",
+      "image": "",
+      "url": "",
+      "sourceCode": "",
+      "media": []
+    }
+ */

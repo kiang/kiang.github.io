@@ -39,6 +39,111 @@
       ]
     },
     {
+      "title": "重度級急救責任醫院急診狀態地圖",
+      "image": "img/er.png",
+      "url": "https://tainan.olc.tw/p/er/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "臺南市公共化幼兒園招生地圖",
+      "image": "img/tainan_preschool.png",
+      "url": "https://tainan.olc.tw/p/preschool/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "2025 大罷免",
+      "image": "img/2025.png",
+      "url": "https://tainan.olc.tw/p/2025/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "臺南市國中小學區地圖",
+      "image": "img/tainan_school.png",
+      "url": "https://tainan.olc.tw/p/school/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "0121震災地圖",
+      "image": "img/earthquake0121.png",
+      "url": "https://tainan.olc.tw/p/earthquake0121/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "台南 YouBike",
+      "image": "img/youbike.png",
+      "url": "https://tainan.olc.tw/p/youbike/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "台電系統各機組發電量",
+      "image": "img/taipower_daily.png",
+      "url": "https://tainan.olc.tw/p/taipower/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "太陽光電設施地圖",
+      "image": "img/solar.png",
+      "url": "https://tainan.olc.tw/p/solar/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "台灣人行道地圖",
+      "image": "img/sidewalk.png",
+      "url": "https://tainan.olc.tw/p/sidewalk/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "台南光電地圖",
+      "image": "img/reip.png",
+      "url": "https://tainan.olc.tw/p/reip/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "醫院掛號費地圖",
+      "image": "img/nhi.png",
+      "url": "https://tainan.olc.tw/p/nhi/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "綠鬣蜥追蹤地圖",
+      "image": "img/iguana.png",
+      "url": "https://tainan.olc.tw/p/iguana/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "台南容積研究",
+      "image": "img/floor_area.png",
+      "url": "https://tainan.olc.tw/p/floor_area/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "台灣登革熱本土病例地圖",
+      "image": "img/dengue.png",
+      "url": "https://tainan.olc.tw/p/dengue/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": "台南社區營造地圖",
+      "image": "img/community.png",
+      "url": "https://tainan.olc.tw/p/community/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
       "title": "政治獻金捐款人索引",
       "image": "img/ardata.png",
       "url": "https://tainan.olc.tw/p/ardata/",
@@ -1527,13 +1632,6 @@
       "image": "img/thb-traffic.png",
       "url": "https://kiang.github.io/thb-traffic/",
       "sourceCode": "https://github.com/kiang/thb-traffic/",
-      "media": []
-    },
-    {
-      "title": "",
-      "image": "",
-      "url": "",
-      "sourceCode": "",
       "media": []
     }
   ]
