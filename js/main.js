@@ -277,13 +277,6 @@ async function initializePage() {
 
     // Load badges as gallery
     await loadBadges();
-
-    // Load social links
-    const socialData = await loadJSON('data/social.json');
-    if (socialData) {
-        const socialContainer = document.getElementById('social-links');
-        socialContainer.innerHTML = socialData.links.map(createSocialLink).join('');
-    }
 }
 
 // Initialize the page when DOM is loaded
@@ -411,9 +404,110 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add CSS styles for the placeholder and project media scrolling
+// Add CSS styles
 const style = document.createElement('style');
 style.textContent = `
+    /* Hero Section Styles */
+    .hero-section {
+        position: relative;
+        min-height: 100vh;
+        padding: 100px 0;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+    }
+    .hero-content {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .hero-text {
+        flex: 1;
+    }
+    .chinese-name {
+        display: block;
+        font-size: 0.8em;
+        color: #6c757d;
+        margin-top: 0.5rem;
+        font-weight: normal;
+    }
+    /* Social Links Styles */
+    #social-links, #footer-social-links {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #social-links {
+        justify-content: center;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    #footer-social-links {
+        justify-content: flex-end;
+    }
+    #social-links a, #footer-social-links a {
+        color: #495057;
+        font-size: 1.5rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    #social-links a:hover, #footer-social-links a:hover {
+        color: #0d6efd;
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 768px) {
+        #social-links, #footer-social-links {
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        #social-links {
+            max-width: 250px;
+        }
+        #social-links a, #footer-social-links a {
+            font-size: 1.25rem;
+            width: 35px;
+            height: 35px;
+        }
+        #footer-social-links {
+            margin-top: 1rem;
+        }
+    }
+    .profile-photo {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile-photo:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+        .hero-content {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 1rem;
+        }
+        .chinese-name {
+            margin-top: 0.3rem;
+        }
+    }
+
+    /* Existing styles... */
     .image-placeholder {
         width: 100%;
         min-height: 300px;
