@@ -55,7 +55,7 @@ function createProjectCard(project) {
         <div class="col-lg-6">
             <div class="card card-cascade">
                 <div class="view overlay">
-                    <img src="${project.image}" class="img-fluid" alt="${project.title}">
+                    <img src="${project.image}" class="img-fluid" alt="${project.title}" onerror="console.error('Failed to load project image:', '${project.image}', 'for project:', '${project.title}'); this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100%25\\' height=\\'200\\' viewBox=\\'0 0 300 200\\'%3E%3Crect width=\\'100%25\\' height=\\'100%25\\' fill=\\'%23f8f9fa\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' font-family=\\'sans-serif\\' font-size=\\'14\\' fill=\\'%236c757d\\'%3ENo Image%3C/text%3E%3C/svg%3E';"
                     <a href="${project.url}" target="_blank">
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -113,6 +113,13 @@ async function loadBadges() {
         const badgesContainer = document.getElementById('badges-container');
         badgesContainer.classList.remove('loading');
         
+        // Log badges with missing image paths
+        badgesData.badges.forEach((badge, index) => {
+            if (!badge.image) {
+                console.log(`Badge ${index + 1} has no image path:`, badge);
+            }
+        });
+        
         // Sort badges by date in descending order
         const sortedBadges = badgesData.badges.sort((a, b) => 
             new Date(b.date) - new Date(a.date)
@@ -126,9 +133,14 @@ async function loadBadges() {
                 </button>
                 <div class="achievements-scroll-area">
                     <div class="row g-4 achievements-row">
-                        ${sortedBadges.map(badge => {
-                            const thumbnailPath = badge.thumbnail || badge.image;
-                            const fullImagePath = badge.image;
+                        ${sortedBadges.map((badge, index) => {
+                            const thumbnailPath = badge.thumbnail || badge.image || '';
+                            const fullImagePath = badge.image || '';
+                            
+                            // Debug: log badges with missing images
+                            if (!badge.image || badge.image.trim() === '') {
+                                console.warn(`Badge ${index} missing image:`, badge);
+                            }
                             
                             return `
                                 <div class="col-6 col-md-4 col-lg-3 achievement-col">
@@ -140,7 +152,7 @@ async function loadBadges() {
                                                  data-bs-toggle="modal"
                                                  data-bs-target="#achievementModal"
                                                  data-fullsize="${fullImagePath}"
-                                                 onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 300\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23f8f9fa\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'14\' fill=\'%236c757d\'%3ENo Image%3C/text%3E%3C/svg%3E';">
+                                                 onerror="console.error('Failed to load badge thumbnail:', '${thumbnailPath}', 'full image:', '${fullImagePath}', 'badge index:', ${index}); this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 300\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23f8f9fa\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'14\' fill=\'%236c757d\'%3ENo Image%3C/text%3E%3C/svg%3E';">
                                             <div class="achievement-overlay">
                                                 <h3>${badge.title || 'Achievement'}</h3>
                                                 <p>${badge.date}${badge.description ? ' - ' + badge.description : ''}</p>
@@ -247,6 +259,14 @@ async function initializePage() {
     if (projectsData) {
         const projectsContainer = document.getElementById('projects-container');
         projectsContainer.classList.remove('loading');
+        
+        // Log only projects with no image path
+        projectsData.projects.forEach((project, index) => {
+            if (!project.image) {
+                console.log(`Project ${index + 1} has no image path:`, project.title);
+            }
+        });
+        
         projectsContainer.innerHTML = projectsData.projects.map(createProjectCard).join('');
         
         // Initialize scroll buttons after projects are loaded
@@ -320,6 +340,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const title = achievementItem.querySelector('h3').textContent;
         const description = achievementItem.querySelector('p').textContent;
         const fullSizeImage = achievementItem.querySelector('.achievement-thumbnail').dataset.fullsize;
+        
+        console.log('updateModalContent called with:', {
+            title: title,
+            description: description,
+            fullSizeImage: fullSizeImage,
+            thumbnailSrc: achievementItem.querySelector('.achievement-thumbnail').src
+        });
 
         // Remove any existing placeholder
         const existingPlaceholder = modalImage.parentNode.querySelector('.image-placeholder');
@@ -329,7 +356,16 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Reset modal image display
         modalImage.style.display = 'block';
-        modalImage.src = fullSizeImage;
+        console.log('Loading modal image:', fullSizeImage, 'for title:', title);
+        
+        // Only set image source if we have a valid path
+        if (fullSizeImage && fullSizeImage.trim() !== '') {
+            modalImage.src = fullSizeImage;
+        } else {
+            console.warn('No valid image path for modal, using placeholder');
+            modalImage.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23f8f9fa\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' font-size=\'16\' fill=\'%236c757d\'%3ENo Image Available%3C/text%3E%3C/svg%3E';
+        }
+        
         modalTitle.textContent = title;
         modalDescription.textContent = description;
 
@@ -343,6 +379,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('achievement-thumbnail')) {
             const achievementItem = e.target.closest('.achievement-item');
+            const fullSizeData = e.target.dataset.fullsize;
+            console.log('Clicked achievement thumbnail with data-fullsize:', fullSizeData);
             updateModalContent(achievementItem);
         }
     });
@@ -381,7 +419,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Reset modal content when closed
     achievementModal.addEventListener('hidden.bs.modal', function() {
-        modalImage.src = '';
+        // Clear image src properly to prevent error
+        modalImage.removeAttribute('src');
         modalTitle.textContent = '';
         modalDescription.textContent = '';
         currentAchievementItem = null;
@@ -398,7 +437,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Handle image loading errors
     modalImage.addEventListener('error', function(e) {
-        console.error('Failed to load image:', this.src);
+        // Skip logging if the error is from base URL (empty src issue)
+        if (this.src && this.src.endsWith('kiang.github.io/') && !this.src.includes('badge/')) {
+            console.warn('Skipping error for base URL (empty src):', this.src);
+            return;
+        }
+        
+        console.error('Failed to load modal image:', this.src);
+        console.error('Modal image error details:', {
+            src: this.src,
+            alt: this.alt,
+            naturalWidth: this.naturalWidth,
+            naturalHeight: this.naturalHeight,
+            complete: this.complete
+        });
         // Only show placeholder if image actually fails to load
         if (!this.src || this.src === 'null' || this.src === 'undefined') {
             this.style.display = 'none';
