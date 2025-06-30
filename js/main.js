@@ -60,19 +60,37 @@ function createProjectCard(project) {
                         <div class="mask rgba-white-slight"></div>
                     </a>
                 </div>
-                <div class="card-body text-center">
-                    <h4 class="card-title">
-                        <a href="${project.url}" target="_blank"><strong>${project.title}</strong></a>
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <h4 class="card-title mb-2">
+                            <a href="${project.url}" target="_blank" class="text-decoration-none">
+                                <strong>${project.title}</strong>
+                            </a>
+                        </h4>
                         ${project.sourceCode ? `
-                            <br />
                             <a type="button" class="btn-floating btn-small btn-tw" 
-                               href="${project.sourceCode}" target="_blank">
+                               href="${project.sourceCode}" target="_blank" title="View Source Code">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                         ` : ''}
-                    </h4>
-                    ${project.description ? `<p class="card-text">${project.description}</p>` : ''}
-                    ${mediaList}
+                    </div>
+                    ${project.description ? `
+                        <div class="project-description">
+                            <div class="d-flex align-items-start mb-2">
+                                <i class="fas fa-info-circle text-primary me-2 mt-1"></i>
+                                <p class="card-text mb-0 text-start">${project.description}</p>
+                            </div>
+                        </div>
+                    ` : ''}
+                    ${mediaList ? `
+                        <div class="project-media-section mt-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-newspaper text-success me-2"></i>
+                                <small class="text-muted"><strong>Media Coverage</strong></small>
+                            </div>
+                            ${mediaList}
+                        </div>
+                    ` : ''}
                 </div>
             </div>
         </div>
