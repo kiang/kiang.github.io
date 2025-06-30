@@ -524,7 +524,7 @@ const translations = {
         'nav-projects': 'Projects',
         'nav-talks': 'Talks',
         'nav-achievements': 'Achievements',
-        'lang-toggle': 'English',
+        'lang-toggle': '中文',
         
         // Hero Section
         'hero-subtitle': 'Developer • Speaker • Open Source Contributor',
