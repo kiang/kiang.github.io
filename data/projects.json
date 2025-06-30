@@ -108,7 +108,28 @@
       "image": "img/taipower_daily.png",
       "url": "https://tainan.olc.tw/p/taipower/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
-      "media": []
+      "media": [
+        {
+          "title": "台媒：“为弥补供电缺口，台电屡次启动已废止许可证的燃煤机组发电”，台中市数名民意代表怒批岛内能源政策",
+          "url": "https://hqtime.huanqiu.com/article/4NDzdinp0fJ",
+          "date": "20250624"
+        },
+        {
+          "title": "台媒：台核三厂紧急燃油发电机被发现“突然启动2小时”，岛内网友称“就是缺电”",
+          "url": "https://hqtime.huanqiu.com/article/4N7s9KKiPAL",
+          "date": "20250617"
+        },
+        {
+          "title": "核三廠「這機組」突啟動！網友抓包狂酸：絕對不缺電",
+          "url": "https://ctinews.com/news/items/8knJLzE8ao",
+          "date": "20250616"
+        },
+        {
+          "title": "核三廠這機組「突啟動2小時」！網見天氣喊：就是缺電",
+          "url": "https://www.chinatimes.com/realtimenews/20250616004014-260407",
+          "date": "20250616"
+        }
+      ]
     },
     {
       "title": "太陽光電設施地圖",
@@ -116,7 +137,13 @@
       "image": "img/solar.png",
       "url": "https://tainan.olc.tw/p/solar/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
-      "media": []
+      "media": [
+        {
+          "title": "民間特偵組/麻豆光電板下魚塭「一片慘綠」滋養蚊蟲　台南市府回應了",
+          "url": "https://ctinews.com/news/items/2BnEGeD4aJ",
+          "date": "20250628"
+        }
+      ]
     },
     {
       "title": "台灣人行道地圖",
