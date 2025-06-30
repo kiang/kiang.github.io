@@ -8,20 +8,33 @@ async function loadJSON(url) {
     }
 }
 
+function getLocalizedText(textObj) {
+    if (typeof textObj === 'string') {
+        return textObj;
+    }
+    if (typeof textObj === 'object' && textObj !== null) {
+        return textObj[currentLang] || textObj['en'] || textObj['zh'] || '';
+    }
+    return '';
+}
+
 function createTalkRow(talk) {
+    const title = getLocalizedText(talk.title);
+    const event = getLocalizedText(talk.event);
+    
     return `
         <tr>
             <td>
                 ${talk.slides ? 
-                    `<a href="${talk.slides}" target="_blank" class="btn btn-default">${talk.title}</a>` :
-                    talk.title
+                    `<a href="${talk.slides}" target="_blank" class="btn btn-default">${title}</a>` :
+                    title
                 }
             </td>
-            <td>${talk.event}</td>
+            <td>${event}</td>
             <td>${talk.date}</td>
             <td>
                 ${talk.links ? talk.links.map(link => 
-                    `<a href="${link.url}" target="_blank" class="btn btn-primary">${link.title}</a>`
+                    `<a href="${link.url}" target="_blank" class="btn btn-primary">${getLocalizedText(link.title)}</a>`
                 ).join(' ') : ''}
             </td>
         </tr>
@@ -29,6 +42,9 @@ function createTalkRow(talk) {
 }
 
 function createProjectCard(project) {
+    const title = getLocalizedText(project.title);
+    const description = getLocalizedText(project.description);
+    
     let mediaList = '';
     if (project.media && project.media.length > 0) {
         mediaList = `
@@ -55,7 +71,7 @@ function createProjectCard(project) {
         <div class="col-lg-6">
             <div class="card card-cascade">
                 <div class="view overlay">
-                    <img src="${project.image}" class="img-fluid" alt="${project.title}" onerror="console.error('Failed to load project image:', '${project.image}', 'for project:', '${project.title}'); this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100%25\\' height=\\'200\\' viewBox=\\'0 0 300 200\\'%3E%3Crect width=\\'100%25\\' height=\\'100%25\\' fill=\\'%23f8f9fa\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' font-family=\\'sans-serif\\' font-size=\\'14\\' fill=\\'%236c757d\\'%3ENo Image%3C/text%3E%3C/svg%3E';"
+                    <img src="${project.image}" class="img-fluid" alt="${title}" onerror="console.error('Failed to load project image:', '${project.image}', 'for project:', '${title}'); this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100%25\\' height=\\'200\\' viewBox=\\'0 0 300 200\\'%3E%3Crect width=\\'100%25\\' height=\\'100%25\\' fill=\\'%23f8f9fa\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' font-family=\\'sans-serif\\' font-size=\\'14\\' fill=\\'%236c757d\\'%3ENo Image%3C/text%3E%3C/svg%3E';"
                     <a href="${project.url}" target="_blank">
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -64,7 +80,7 @@ function createProjectCard(project) {
                     <div class="text-center mb-3">
                         <h4 class="card-title mb-2">
                             <a href="${project.url}" target="_blank" class="text-decoration-none">
-                                <strong>${project.title}</strong>
+                                <strong>${title}</strong>
                             </a>
                         </h4>
                         ${project.sourceCode ? `
@@ -74,11 +90,11 @@ function createProjectCard(project) {
                             </a>
                         ` : ''}
                     </div>
-                    ${project.description ? `
+                    ${description ? `
                         <div class="project-description">
                             <div class="d-flex align-items-start mb-2">
                                 <i class="fas fa-info-circle text-primary me-2 mt-1"></i>
-                                <p class="card-text mb-0 text-start">${project.description}</p>
+                                <p class="card-text mb-0 text-start">${description}</p>
                             </div>
                         </div>
                     ` : ''}
@@ -86,7 +102,7 @@ function createProjectCard(project) {
                         <div class="project-media-section mt-3">
                             <div class="d-flex align-items-center mb-2">
                                 <i class="fas fa-newspaper text-success me-2"></i>
-                                <small class="text-muted"><strong>Media Coverage</strong></small>
+                                <small class="text-muted"><strong>${currentLang === 'zh' ? '媒體報導' : 'Media Coverage'}</strong></small>
                             </div>
                             ${mediaList}
                         </div>
@@ -98,9 +114,10 @@ function createProjectCard(project) {
 }
 
 function createLinkRow(link) {
+    const title = getLocalizedText(link.title);
     return `
         <tr>
-            <td><a href="${link.url}" target="_blank">${link.title}</a></td>
+            <td><a href="${link.url}" target="_blank">${title}</a></td>
             <td>${link.date}</td>
         </tr>
     `;
@@ -465,6 +482,209 @@ document.addEventListener('DOMContentLoaded', function() {
             this.parentNode.insertBefore(placeholder, this);
         }
     });
+});
+
+// Language Toggle Functionality
+const translations = {
+    en: {
+        // Navigation
+        'nav-about': 'About',
+        'nav-experience': 'Experience',
+        'nav-skills': 'Skills',
+        'nav-education': 'Education',
+        'nav-projects': 'Projects',
+        'nav-talks': 'Talks',
+        'nav-achievements': 'Achievements',
+        'lang-toggle': 'English',
+        
+        // Hero Section
+        'hero-subtitle': 'Developer • Speaker • Open Source Contributor',
+        'hero-motto': 'somebody as a nobody, nobody as a somebody',
+        
+        // About Section
+        'section-about': 'About',
+        'about-description': 'Experienced developer, speaker, and open source contributor with expertise in web development, cybersecurity, and application architecture. Based in Tainan City, Taiwan, with a passion for technology and community engagement.',
+        
+        // Experience Section
+        'section-experience': 'Professional Experience',
+        
+        // Skills Section
+        'section-skills': 'Top Skills',
+        
+        // Education Section
+        'section-education': 'Education',
+        
+        // Languages Section
+        'section-languages': 'Languages',
+        
+        // Projects Section
+        'section-projects': 'Featured Projects',
+        
+        // Talks Section
+        'section-talks': 'Recent Talks',
+        'table-title': 'Title (Slides)',
+        'table-event': 'Event',
+        'table-date': 'Date',
+        'table-links': 'Links',
+        
+        // Links Section
+        'section-links': 'Featured Links',
+        
+        // Achievements Section
+        'section-achievements': 'Achievements',
+        
+        // Footer
+        'footer-copyright': '© 2024 Finjon Kiang. All rights reserved.'
+    },
+    zh: {
+        // Navigation
+        'nav-about': '關於',
+        'nav-experience': '經歷',
+        'nav-skills': '技能',
+        'nav-education': '學歷',
+        'nav-projects': '專案',
+        'nav-talks': '演講',
+        'nav-achievements': '成就',
+        'lang-toggle': 'English',
+        
+        // Hero Section
+        'hero-subtitle': '開發者 • 講師 • 開源貢獻者',
+        'hero-motto': '有人當無人，無人當有人',
+        
+        // About Section
+        'section-about': '關於我',
+        'about-description': '經驗豐富的開發者、講師和開源貢獻者，專精於網頁開發、資訊安全和應用架構。居住於台灣台南市，對技術和社群參與充滿熱忱。',
+        
+        // Experience Section
+        'section-experience': '專業經歷',
+        
+        // Skills Section
+        'section-skills': '核心技能',
+        
+        // Education Section
+        'section-education': '學歷',
+        
+        // Languages Section
+        'section-languages': '語言能力',
+        
+        // Projects Section
+        'section-projects': '精選專案',
+        
+        // Talks Section
+        'section-talks': '近期演講',
+        'table-title': '標題（投影片）',
+        'table-event': '活動',
+        'table-date': '日期',
+        'table-links': '連結',
+        
+        // Links Section
+        'section-links': '精選連結',
+        
+        // Achievements Section
+        'section-achievements': '成就',
+        
+        // Footer
+        'footer-copyright': '© 2024 江明宗。版權所有。'
+    }
+};
+
+let currentLang = 'en';
+
+function updateLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('language', lang);
+    
+    // Update all elements with data-translate attributes
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+    
+    // Update lang attribute
+    document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+    
+    // Reload dynamic content with new language
+    reloadDynamicContent();
+}
+
+async function reloadDynamicContent() {
+    // Reload talks
+    const talksData = await loadJSON('data/talks.json');
+    if (talksData) {
+        const talksContainer = document.getElementById('talks-container');
+        if (talksContainer) {
+            talksContainer.innerHTML = talksData.talks.map(createTalkRow).join('');
+        }
+    }
+
+    // Reload links
+    const linksData = await loadJSON('data/links.json');
+    if (linksData) {
+        const linksContainer = document.getElementById('links-container');
+        if (linksContainer) {
+            linksContainer.innerHTML = linksData.map(createLinkRow).join('');
+        }
+    }
+
+    // Reload projects
+    const projectsData = await loadJSON('data/projects.json');
+    if (projectsData) {
+        const projectsContainer = document.getElementById('projects-container');
+        if (projectsContainer) {
+            projectsContainer.innerHTML = projectsData.projects.map(createProjectCard).join('');
+            
+            // Reinitialize scroll buttons after projects are reloaded
+            document.querySelectorAll('.project-media-container').forEach(container => {
+                const scrollArea = container.querySelector('.project-media-scroll');
+                const leftBtn = container.querySelector('.scroll-left');
+                const rightBtn = container.querySelector('.scroll-right');
+
+                function updateScrollButtons() {
+                    leftBtn.disabled = scrollArea.scrollLeft <= 0;
+                    rightBtn.disabled = scrollArea.scrollLeft + scrollArea.clientWidth >= scrollArea.scrollWidth;
+                }
+
+                updateScrollButtons();
+                scrollArea.addEventListener('scroll', updateScrollButtons);
+
+                leftBtn.addEventListener('click', () => {
+                    const itemWidth = scrollArea.querySelector('.project-media-item').offsetWidth;
+                    scrollArea.scrollBy({
+                        left: -itemWidth,
+                        behavior: 'smooth'
+                    });
+                });
+
+                rightBtn.addEventListener('click', () => {
+                    const itemWidth = scrollArea.querySelector('.project-media-item').offsetWidth;
+                    scrollArea.scrollBy({
+                        left: itemWidth,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+    }
+}
+
+// Initialize language toggle
+document.addEventListener('DOMContentLoaded', function() {
+    // Load saved language or default to English
+    const savedLang = localStorage.getItem('language') || 'en';
+    
+    // Set up language toggle button
+    const langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', function() {
+            const newLang = currentLang === 'en' ? 'zh' : 'en';
+            updateLanguage(newLang);
+        });
+    }
+    
+    // Apply saved language
+    updateLanguage(savedLang);
 });
 
 // Remove the duplicate scroll functionality initialization

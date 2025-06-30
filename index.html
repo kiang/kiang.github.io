@@ -42,25 +42,28 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a>
+						<a class="nav-link" href="#about" data-translate="nav-about">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#experience">Experience</a>
+						<a class="nav-link" href="#experience" data-translate="nav-experience">Experience</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#skills">Skills</a>
+						<a class="nav-link" href="#skills" data-translate="nav-skills">Skills</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#education">Education</a>
+						<a class="nav-link" href="#education" data-translate="nav-education">Education</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#projects">Projects</a>
+						<a class="nav-link" href="#projects" data-translate="nav-projects">Projects</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#talks">Talks</a>
+						<a class="nav-link" href="#talks" data-translate="nav-talks">Talks</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#achievements">Achievements</a>
+						<a class="nav-link" href="#achievements" data-translate="nav-achievements">Achievements</a>
+					</li>
+					<li class="nav-item">
+						<button class="btn btn-outline-primary btn-sm ms-2" id="lang-toggle">中文</button>
 					</li>
 				</ul>
 			</div>
@@ -76,8 +79,8 @@
 						Finjon Kiang
 						<span class="chinese-name">江明宗</span>
 					</h1>
-					<p class="lead">Developer • Speaker • Open Source Contributor</p>
-					<div class="hero-summary">somebody as a nobody, nobody as a somebody</div>
+					<p class="lead" data-translate="hero-subtitle">Developer • Speaker • Open Source Contributor</p>
+					<div class="hero-summary" data-translate="hero-motto">somebody as a nobody, nobody as a somebody</div>
 					<div id="social-links" class="mt-4">
 						<a href="mailto:service@olc.tw" title="Email" aria-label="Email">
 							<i class="fas fa-envelope"></i>
@@ -119,10 +122,10 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-lg-8">
-						<h2 class="section-title text-center mb-5">About</h2>
+						<h2 class="section-title text-center mb-5" data-translate="section-about">About</h2>
 						<div class="text-center">
-							<p class="lead">somebody as a nobody, nobody as a somebody</p>
-							<p>Experienced developer, speaker, and open source contributor with expertise in web development, cybersecurity, and application architecture. Based in Tainan City, Taiwan, with a passion for technology and community engagement.</p>
+							<p class="lead" data-translate="hero-motto">somebody as a nobody, nobody as a somebody</p>
+							<p data-translate="about-description">Experienced developer, speaker, and open source contributor with expertise in web development, cybersecurity, and application architecture. Based in Tainan City, Taiwan, with a passion for technology and community engagement.</p>
 						</div>
 					</div>
 				</div>
@@ -132,7 +135,7 @@
 		<!-- Experience Section -->
 		<section id="experience" class="section-padding bg-light">
 			<div class="container">
-				<h2 class="section-title text-center mb-5">Professional Experience</h2>
+				<h2 class="section-title text-center mb-5" data-translate="section-experience">Professional Experience</h2>
 				<div class="timeline">
 					<div class="timeline-item">
 						<div class="timeline-date">Apr 2023 - Apr 2025</div>
@@ -240,7 +243,7 @@
 		<!-- Skills Section -->
 		<section id="skills" class="section-padding">
 			<div class="container">
-				<h2 class="section-title text-center mb-5">Top Skills</h2>
+				<h2 class="section-title text-center mb-5" data-translate="section-skills">Top Skills</h2>
 				<div class="row justify-content-center">
 					<div class="col-md-8">
 						<div class="skills-grid">
@@ -277,7 +280,7 @@
 		<!-- Education Section -->
 		<section id="education" class="section-padding bg-light">
 			<div class="container">
-				<h2 class="section-title text-center mb-5">Education</h2>
+				<h2 class="section-title text-center mb-5" data-translate="section-education">Education</h2>
 				<div class="row justify-content-center">
 					<div class="col-md-8">
 						<div class="education-item">
@@ -293,7 +296,7 @@
 		<!-- Languages Section -->
 		<section id="languages" class="section-padding">
 			<div class="container">
-				<h2 class="section-title text-center mb-5">Languages</h2>
+				<h2 class="section-title text-center mb-5" data-translate="section-languages">Languages</h2>
 				<div class="row justify-content-center">
 					<div class="col-md-6">
 						<div class="languages-list">
@@ -312,7 +315,7 @@
 		<!-- Projects Section -->
 		<section id="projects" class="section-padding bg-light">
 			<div class="container">
-				<h2 class="section-title text-center mb-5">Featured Projects</h2>
+				<h2 class="section-title text-center mb-5" data-translate="section-projects">Featured Projects</h2>
 				<div id="projects-container" class="row g-4 loading">
 					<!-- Projects will be loaded here -->
 				</div>
@@ -324,15 +327,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="section-title text-center mb-5">Recent Talks</h2>
+						<h2 class="section-title text-center mb-5" data-translate="section-talks">Recent Talks</h2>
 						<div class="table-responsive">
 							<table class="table table-hover">
 								<thead class="table-light">
 									<tr>
-										<th>Title (Slides)</th>
-										<th>Event</th>
-										<th>Date</th>
-										<th>Links</th>
+										<th data-translate="table-title">Title (Slides)</th>
+										<th data-translate="table-event">Event</th>
+										<th data-translate="table-date">Date</th>
+										<th data-translate="table-links">Links</th>
 									</tr>
 								</thead>
 								<tbody id="talks-container" class="loading">
@@ -350,13 +353,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2 class="section-title text-center mb-5">Featured Links</h2>
+						<h2 class="section-title text-center mb-5" data-translate="section-links">Featured Links</h2>
 						<div class="table-responsive">
 							<table class="table table-hover">
 								<thead class="table-light">
 									<tr>
-										<th>Title</th>
-										<th>Date</th>
+										<th data-translate="table-title">Title</th>
+										<th data-translate="table-date">Date</th>
 									</tr>
 								</thead>
 								<tbody id="links-container" class="loading">
@@ -372,7 +375,7 @@
 		<!-- Achievements Section -->
 		<section id="achievements" class="section-padding bg-light">
 			<div class="container">
-				<h2 class="section-title text-center mb-5">Achievements</h2>
+				<h2 class="section-title text-center mb-5" data-translate="section-achievements">Achievements</h2>
 				<div class="achievements-gallery">
 					<div id="badges-container" class="row g-4 justify-content-center loading">
 						<!-- Badges will be loaded here dynamically -->
@@ -400,7 +403,7 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-6 text-lg-start">
-					<p class="mb-lg-0">&copy; 2024 Finjon Kiang. All rights reserved.</p>
+					<p class="mb-lg-0" data-translate="footer-copyright">&copy; 2024 Finjon Kiang. All rights reserved.</p>
 				</div>
 				<div class="col-lg-6 text-lg-end">
 					<div id="footer-social-links" class="social-links">
