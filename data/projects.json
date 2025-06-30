@@ -2,6 +2,7 @@
   "projects": [
     {
       "title": "台南看板地圖",
+      "description": "Interactive map tracking political campaign signage locations in Tainan City, providing transparency on electoral advertising distribution and coverage.",
       "image": "img/tainan2026.png",
       "url": "https://tainan.olc.tw/p/tainan2026/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw/",
@@ -55,6 +56,7 @@
     },
     {
       "title": "重度級急救責任醫院急診狀態地圖",
+      "description": "Real-time emergency room status dashboard for major hospitals in Taiwan, helping citizens find available emergency medical services quickly.",
       "image": "img/er.png",
       "url": "https://tainan.olc.tw/p/er/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -62,6 +64,7 @@
     },
     {
       "title": "臺南市公共化幼兒園招生地圖",
+      "description": "Comprehensive map of public preschool enrollment information in Tainan City, helping parents locate and understand admission processes for public kindergartens.",
       "image": "img/tainan_preschool.png",
       "url": "https://tainan.olc.tw/p/preschool/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -69,6 +72,7 @@
     },
     {
       "title": "2025 大罷免",
+      "description": "Information platform tracking recall elections and political accountability initiatives in Taiwan's democratic process.",
       "image": "img/2025.png",
       "url": "https://tainan.olc.tw/p/2025/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -76,6 +80,7 @@
     },
     {
       "title": "臺南市國中小學區地圖",
+      "description": "Interactive school district map for Tainan City elementary and junior high schools, helping families identify their designated school zones.",
       "image": "img/tainan_school.png",
       "url": "https://tainan.olc.tw/p/school/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -83,6 +88,7 @@
     },
     {
       "title": "0121震災地圖",
+      "description": "Emergency response map documenting earthquake damage and relief efforts, providing critical information during disaster recovery operations.",
       "image": "img/earthquake0121.png",
       "url": "https://tainan.olc.tw/p/earthquake0121/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -90,6 +96,7 @@
     },
     {
       "title": "台南 YouBike",
+      "description": "Real-time bike sharing station status map for Tainan City's YouBike system, showing bike availability and station locations.",
       "image": "img/youbike.png",
       "url": "https://tainan.olc.tw/p/youbike/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -97,6 +104,7 @@
     },
     {
       "title": "台電系統各機組發電量",
+      "description": "Daily power generation monitoring dashboard tracking Taiwan Power Company's generating units, providing transparency in energy production data.",
       "image": "img/taipower_daily.png",
       "url": "https://tainan.olc.tw/p/taipower/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -104,6 +112,7 @@
     },
     {
       "title": "太陽光電設施地圖",
+      "description": "Comprehensive mapping of solar power installations across Taiwan, promoting renewable energy awareness and development tracking.",
       "image": "img/solar.png",
       "url": "https://tainan.olc.tw/p/solar/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -111,6 +120,7 @@
     },
     {
       "title": "台灣人行道地圖",
+      "description": "Pedestrian infrastructure mapping project documenting sidewalk accessibility and walkability conditions across Taiwan's cities.",
       "image": "img/sidewalk.png",
       "url": "https://tainan.olc.tw/p/sidewalk/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -118,6 +128,7 @@
     },
     {
       "title": "台南光電地圖",
+      "description": "Detailed mapping of photovoltaic installations in Tainan City, supporting renewable energy policy planning and community awareness.",
       "image": "img/reip.png",
       "url": "https://tainan.olc.tw/p/reip/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -125,6 +136,7 @@
     },
     {
       "title": "醫院掛號費地圖",
+      "description": "Healthcare cost transparency tool showing registration fees across hospitals, helping patients make informed medical care decisions.",
       "image": "img/nhi.png",
       "url": "https://tainan.olc.tw/p/nhi/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -132,6 +144,7 @@
     },
     {
       "title": "綠鬣蜥追蹤地圖",
+      "description": "Invasive species monitoring system tracking green iguana populations and control efforts in Taiwan's ecological management.",
       "image": "img/iguana.png",
       "url": "https://tainan.olc.tw/p/iguana/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -139,6 +152,7 @@
     },
     {
       "title": "台南容積研究",
+      "description": "Urban development analysis examining floor area ratios and building density patterns in Tainan City for planning insights.",
       "image": "img/floor_area.png",
       "url": "https://tainan.olc.tw/p/floor_area/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -146,6 +160,7 @@
     },
     {
       "title": "台灣登革熱本土病例地圖",
+      "description": "Public health surveillance tool mapping dengue fever cases across Taiwan, supporting disease prevention and outbreak response.",
       "image": "img/dengue.png",
       "url": "https://tainan.olc.tw/p/dengue/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -153,6 +168,7 @@
     },
     {
       "title": "台南社區營造地圖",
+      "description": "Community development project mapping showcasing grassroots initiatives and neighborhood improvement efforts in Tainan City.",
       "image": "img/community.png",
       "url": "https://tainan.olc.tw/p/community/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw",
@@ -160,6 +176,7 @@
     },
     {
       "title": "政治獻金捐款人索引",
+      "description": "Political donation transparency database providing searchable access to campaign finance records and donor information.",
       "image": "img/ardata.png",
       "url": "https://tainan.olc.tw/p/ardata/",
       "sourceCode": "https://github.com/kiang/ardata/",
@@ -167,6 +184,7 @@
     },
     {
       "title": "托嬰中心地圖",
+      "description": "Childcare facility locator helping parents find licensed daycare centers and infant care services in their area.",
       "image": "img/babycare.png",
       "url": "https://tainan.olc.tw/p/babycare/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw/",
@@ -174,6 +192,7 @@
     },
     {
       "title": "DearNaNa-扛阿北守台灣",
+      "description": "Political support campaign platform showcasing civic engagement and grassroots movement activities for democratic participation.",
       "image": "img/dearnana.png",
       "url": "https://tainan.olc.tw/p/dearnana/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw/",
@@ -181,6 +200,7 @@
     },
     {
       "title": "蛋蛋前線支援地圖",
+      "description": "Real-time egg shortage tracking system helping citizens locate available eggs during Taiwan's 2023 supply crisis, with crowdsourced updates.",
       "image": "img/egg.png",
       "url": "https://tainan.olc.tw/p/egg/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw/",
@@ -339,6 +359,7 @@
     },
     {
       "title": "國土利用監測地圖",
+      "description": "Land use monitoring system tracking changes in Taiwan's territorial development and environmental conservation areas.",
       "image": "img/landchg.png",
       "url": "https://tainan.olc.tw/p/landchg/",
       "sourceCode": "https://github.com/kiang/tainan.olc.tw/",
@@ -346,6 +367,7 @@
     },
     {
       "title": "台灣 Covid-19 本土病例地圖",
+      "description": "COVID-19 domestic case tracking and visualization platform providing real-time pandemic data across Taiwan's regions.",
       "image": "img/covid19.png",
       "url": "https://kiang.github.io/covid19/",
       "sourceCode": "https://github.com/kiang/covid19/",
@@ -489,6 +511,7 @@
     },
     {
       "title": "藥局口罩採購地圖",
+      "description": "Real-time mask availability tracking system helping citizens locate pharmacies with mask inventory during Taiwan's early COVID-19 response.",
       "image": "img/pharmacies.png",
       "url": "https://kiang.github.io/pharmacies/",
       "sourceCode": "https://github.com/kiang/pharmacies/",
@@ -873,6 +896,7 @@
     },
     {
       "title": "台灣所得地圖",
+      "description": "Income distribution visualization mapping salary levels across Taiwan's regions, providing transparency in economic data.",
       "image": "img/salary.png",
       "url": "https://kiang.github.io/salary/map/",
       "sourceCode": "https://github.com/kiang/salary/",
@@ -926,6 +950,7 @@
     },
     {
       "title": "防空疏散避難地圖",
+      "description": "Civil defense shelter locator helping citizens identify nearby air raid shelters and emergency evacuation facilities.",
       "image": "img/air_raid_shelter.png",
       "url": "https://kiang.github.io/air_raid_shelter/",
       "sourceCode": "https://github.com/kiang/air_raid_shelter/",
@@ -1004,6 +1029,7 @@
     },
     {
       "title": "台灣幼兒園地圖",
+      "description": "Comprehensive preschool database with safety records, fees, and regulatory compliance information helping parents choose quality childcare.",
       "image": "img/preschools.jpeg",
       "url": "https://kiang.github.io/preschools/",
       "sourceCode": "https://github.com/kiang/preschools/",
@@ -1153,6 +1179,7 @@
     },
     {
       "title": "台灣賄選實價登錄地圖",
+      "description": "Electoral corruption tracking system monitoring bribery cases and providing transparency in Taiwan's democratic processes.",
       "image": "img/bribes.png",
       "url": "https://kiang.github.io/bribes_map/",
       "sourceCode": "https://github.com/kiang/bribes_map/",
@@ -1171,6 +1198,7 @@
     },
     {
       "title": "固定污染源管制地圖",
+      "description": "Environmental monitoring system tracking stationary pollution sources and air quality management across Taiwan.",
       "image": "img/chimney_map.png",
       "url": "https://kiang.github.io/chimney_map/",
       "sourceCode": "https://github.com/kiang/chimney_map/",
@@ -1194,6 +1222,7 @@
     },
     {
       "title": "登革熱地圖",
+      "description": "Disease surveillance mapping system for dengue fever outbreaks in Tainan, supporting public health response efforts.",
       "image": "img/TainanDengueMap.png",
       "url": "https://kiang.github.io/TainanDengueMap/",
       "sourceCode": "https://github.com/kiang/TainanDengueMap/",
@@ -1240,6 +1269,7 @@
     },
     {
       "title": "鉛管分佈地圖",
+      "description": "Public health infrastructure mapping showing lead pipe distribution in water systems for safety assessment.",
       "image": "img/lead_pipes.png",
       "url": "https://kiang.github.io/lead_pipes/",
       "sourceCode": "https://github.com/kiang/lead_pipes/",
@@ -1273,6 +1303,7 @@
     },
     {
       "title": "選舉黃頁",
+      "description": "Comprehensive electoral information directory providing candidate and voting data for Taiwan's democratic elections.",
       "image": "img/elections.png",
       "url": "http://k.olc.tw/elections/",
       "sourceCode": "https://github.com/kiang/elections",
@@ -1306,6 +1337,7 @@
     },
     {
       "title": "臺灣淹水地圖",
+      "description": "Flood monitoring and early warning system mapping inundation risks and water level data across Taiwan's vulnerable areas.",
       "image": "img/flooding.png",
       "url": "https://kiang.github.io/flooding/",
       "sourceCode": "https://github.com/kiang/flooding/",
@@ -1333,6 +1365,7 @@
     },
     {
       "title": "台南夜市地圖",
+      "description": "Cultural and culinary guide mapping Tainan's traditional night markets with schedules and vendor information.",
       "image": "img/tainan_nightmarket.png",
       "url": "https://kiang.github.io/tainan_basecode/nightmarket/",
       "sourceCode": "https://github.com/kiang/tainan_basecode/",
@@ -1340,6 +1373,7 @@
     },
     {
       "title": "台灣用電地圖",
+      "description": "Real-time electricity consumption visualization tracking power usage patterns across Taiwan's regions and sectors.",
       "image": "img/taipower.png",
       "url": "https://kiang.github.io/taipower/",
       "sourceCode": "https://github.com/kiang/taipower/",
@@ -1347,6 +1381,7 @@
     },
     {
       "title": "台南市垃圾清運地圖",
+      "description": "Municipal waste management system showing garbage collection schedules and routes for Tainan City residents.",
       "image": "img/tainan-garbage-truck.png",
       "url": "https://kiang.github.io/tainan-garbage-truck/",
       "sourceCode": "https://github.com/kiang/tainan-garbage-truck/",
@@ -1354,6 +1389,7 @@
     },
     {
       "title": "2016立法委員政治獻金地圖",
+      "description": "Campaign finance transparency tool mapping 2016 legislative election donations and political funding sources.",
       "image": "img/sunshine.png",
       "url": "https://kiang.github.io/sunshine.cy.gov.tw/",
       "sourceCode": "https://github.com/kiang/sunshine.cy.gov.tw/",
@@ -1361,6 +1397,7 @@
     },
     {
       "title": "再生能源可併網容量",
+      "description": "Renewable energy grid integration tracking available capacity for solar and wind power connections.",
       "image": "img/taipower_feeder.png",
       "url": "https://kiang.github.io/taipower_feeder/",
       "sourceCode": "https://github.com/kiang/taipower_feeder/",
@@ -1368,6 +1405,7 @@
     },
     {
       "title": "2016台水用水地圖",
+      "description": "Water consumption analysis mapping Taiwan Water Corporation usage patterns and distribution data from 2016.",
       "image": "img/taiwater.png",
       "url": "https://kiang.github.io/taiwater/",
       "sourceCode": "https://github.com/kiang/taiwater/",
@@ -1375,6 +1413,7 @@
     },
     {
       "title": "臨登工廠地圖",
+      "description": "Temporary factory registration tracking system monitoring industrial compliance and development patterns.",
       "image": "img/factory_data.png",
       "url": "https://kiang.github.io/factory_data/",
       "sourceCode": "https://github.com/kiang/factory_data/",
@@ -1382,6 +1421,7 @@
     },
     {
       "title": "台灣公有土地地圖",
+      "description": "Public land inventory mapping government-owned properties and land use planning information.",
       "image": "img/pub_lands.png",
       "url": "https://kiang.github.io/pub_lands/",
       "sourceCode": "https://github.com/kiang/pub_lands/",
@@ -1389,6 +1429,7 @@
     },
     {
       "title": "台灣糖業公司 可供出租土地資訊",
+      "description": "Taiwan Sugar Corporation land rental database showing available properties for lease and development.",
       "image": "img/taisugar_lands.png",
       "url": "https://kiang.github.io/taisugar_lands/",
       "sourceCode": "https://github.com/kiang/taisugar_lands/",
@@ -1603,6 +1644,7 @@
     },
     {
       "title": "台灣短期補習班地圖",
+      "description": "Comprehensive mapping of cram schools and after-school programs across Taiwan, helping parents find educational resources.",
       "image": "img/afterschools.png",
       "url": "https://kiang.github.io/afterschools/",
       "sourceCode": "https://github.com/kiang/afterschools",
@@ -1610,6 +1652,7 @@
     },
     {
       "title": "藥要看",
+      "description": "Comprehensive drug and medication database providing detailed pharmaceutical information and safety data for Taiwan.",
       "image": "img/drugs.png",
       "url": "http://drugs.olc.tw/",
       "sourceCode": "https://github.com/kiang/drugs",
@@ -1623,6 +1666,7 @@
     },
     {
       "title": "校樹地圖",
+      "description": "Interactive map documenting trees and green spaces within school campuses, promoting environmental awareness in education.",
       "image": "img/school_tree.png",
       "url": "https://kiang.github.io/school_tree/",
       "sourceCode": "https://github.com/kiang/school_tree/",
@@ -1630,6 +1674,7 @@
     },
     {
       "title": "台南1999地圖",
+      "description": "Citizen service request tracking system visualizing 1999 hotline reports and municipal service responses in Tainan City.",
       "image": "img/tainan_1999_map.png",
       "url": "https://kiang.github.io/tainan_1999_map/",
       "sourceCode": "https://github.com/kiang/tainan_1999_map/",
@@ -1637,6 +1682,7 @@
     },
     {
       "title": "2021 公民投票村里地圖",
+      "description": "Detailed village-level mapping of 2021 referendum results, providing granular analysis of democratic participation patterns.",
       "image": "img/referendums2021.png",
       "url": "https://kiang.github.io/referendums2021/",
       "sourceCode": "https://github.com/kiang/referendums2021/",
@@ -1644,6 +1690,7 @@
     },
     {
       "title": "公路交通量調查統計地圖",
+      "description": "Roads traffic volume analysis and visualization tool using government transportation survey data for infrastructure planning.",
       "image": "img/thb-traffic.png",
       "url": "https://kiang.github.io/thb-traffic/",
       "sourceCode": "https://github.com/kiang/thb-traffic/",

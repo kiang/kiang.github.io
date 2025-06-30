@@ -71,6 +71,7 @@ function createProjectCard(project) {
                             </a>
                         ` : ''}
                     </h4>
+                    ${project.description ? `<p class="card-text">${project.description}</p>` : ''}
                     ${mediaList}
                 </div>
             </div>
