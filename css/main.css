@@ -862,9 +862,17 @@ p {
     }
     
     /* Fix table backgrounds */
-    .table-light > th {
+    .table-light > th,
+    .table-light th {
         background-color: var(--gray-700) !important;
-        color: var(--gray-100);
+        color: var(--gray-100) !important;
+    }
+    
+    /* Ensure table-light headers have proper contrast in dark mode */
+    .table thead.table-light th {
+        background: linear-gradient(135deg, var(--gray-700), var(--gray-600)) !important;
+        color: var(--gray-100) !important;
+        border-color: var(--gray-600) !important;
     }
     
     /* Fix form controls if any */
