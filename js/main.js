@@ -729,4 +729,32 @@ document.addEventListener('DOMContentLoaded', function() {
 const existingScrollFunctionality = document.querySelector('script[data-scroll-functionality]');
 if (existingScrollFunctionality) {
     existingScrollFunctionality.remove();
-} 
+}
+
+// Menu collapse functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Close menu when clicking on navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Only close menu if it's currently open (on mobile)
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        });
+    });
+    
+    // Close menu when clicking on language toggle button
+    const langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', function() {
+            // Only close menu if it's currently open (on mobile)
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        });
+    }
+}); 

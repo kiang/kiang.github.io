@@ -107,6 +107,18 @@ p {
     transition: all 0.3s ease;
 }
 
+/* Navbar collapse on mobile */
+@media (max-width: 991.98px) {
+    .navbar-collapse.show {
+        background: var(--bg-primary);
+        border-radius: var(--radius-md);
+        margin-top: 1rem;
+        padding: 1rem;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--border-color);
+    }
+}
+
 .navbar-brand {
     font-weight: 800;
     font-size: 1.5rem;
@@ -711,11 +723,233 @@ p {
     :root {
         --bg-primary: var(--gray-900);
         --bg-secondary: var(--gray-800);
-        --bg-accent: var(--gray-800);
-        --text-primary: var(--gray-100);
-        --text-secondary: var(--gray-300);
-        --text-muted: var(--gray-400);
-        --border-color: var(--gray-700);
+        --bg-accent: var(--gray-700);
+        --text-primary: var(--gray-50);
+        --text-secondary: var(--gray-200);
+        --text-muted: var(--gray-300);
+        --border-color: var(--gray-600);
+    }
+    
+    /* Better contrast for dark mode navigation */
+    .navbar {
+        background: rgba(17, 24, 39, 0.95) !important;
+        border-bottom: 1px solid var(--gray-600);
+    }
+    
+    .navbar-brand {
+        color: var(--primary-400) !important;
+    }
+    
+    .nav-link {
+        color: var(--gray-100) !important;
+    }
+    
+    .nav-link:hover {
+        color: var(--primary-300) !important;
+        background-color: var(--gray-700);
+    }
+    
+    /* Better contrast for buttons */
+    .btn-outline-primary {
+        color: var(--primary-300);
+        border-color: var(--primary-400);
+    }
+    
+    .btn-outline-primary:hover {
+        background-color: var(--primary-600);
+        border-color: var(--primary-500);
+        color: white;
+    }
+    
+    /* Better contrast for hero section */
+    .hero-section {
+        background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-700) 100%);
+    }
+    
+    .chinese-name {
+        color: var(--gray-300);
+    }
+    
+    .hero-summary {
+        color: var(--gray-200);
+        background: rgba(31, 41, 55, 0.8);
+        border-left: 4px solid var(--primary-400);
+    }
+    
+    /* Better contrast for cards */
+    .card {
+        background: var(--gray-800);
+        border: 1px solid var(--gray-700);
+    }
+    
+    .card-title {
+        color: var(--gray-100);
+    }
+    
+    .card-text {
+        color: var(--gray-300);
+    }
+    
+    /* Better contrast for tables */
+    .table {
+        color: var(--gray-200);
+        --bs-table-bg: var(--gray-800);
+    }
+    
+    .table thead th {
+        background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+        color: white;
+    }
+    
+    .table tbody td {
+        border-color: var(--gray-600);
+        color: var(--gray-200);
+    }
+    
+    .table tbody tr:hover {
+        background-color: var(--gray-700);
+    }
+    
+    /* Better contrast for project descriptions */
+    .project-description {
+        background: linear-gradient(135deg, var(--gray-700), var(--gray-600));
+        border-left: 4px solid var(--primary-400);
+    }
+    
+    .project-description .card-text {
+        color: var(--gray-200);
+    }
+    
+    /* Better contrast for achievement overlays */
+    .achievement-overlay {
+        background: linear-gradient(transparent, rgba(0,0,0,0.9));
+        color: var(--gray-100);
+    }
+    
+    .achievement-overlay h3 {
+        color: var(--gray-100);
+    }
+    
+    .achievement-overlay p {
+        color: var(--gray-300);
+    }
+    
+    /* Better contrast for social links */
+    #social-links a, #footer-social-links a {
+        background: var(--gray-700);
+        color: var(--gray-200);
+        border: 1px solid var(--gray-600);
+    }
+    
+    #social-links a:hover, #footer-social-links a:hover {
+        background: var(--gray-600);
+        color: var(--primary-300);
+        border-color: var(--primary-400);
+    }
+    
+    /* Fix white background sections */
+    body {
+        background-color: var(--bg-primary);
+    }
+    
+    .bg-light {
+        background-color: var(--gray-800) !important;
+    }
+    
+    /* Fix section backgrounds */
+    section {
+        background-color: inherit;
+    }
+    
+    /* Fix table backgrounds */
+    .table-light > th {
+        background-color: var(--gray-700) !important;
+        color: var(--gray-100);
+    }
+    
+    /* Fix form controls if any */
+    .form-control {
+        background-color: var(--gray-700);
+        border-color: var(--gray-600);
+        color: var(--gray-100);
+    }
+    
+    .form-control:focus {
+        background-color: var(--gray-700);
+        border-color: var(--primary-400);
+        color: var(--gray-100);
+        box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+    }
+    
+    /* Fix skill items */
+    .skill-item {
+        background-color: var(--gray-700);
+        color: var(--gray-200);
+        border: 1px solid var(--gray-600);
+    }
+    
+    .skill-item i {
+        color: var(--primary-400);
+    }
+    
+    /* Fix education and language items */
+    .education-item,
+    .language-item {
+        background-color: var(--gray-700);
+        color: var(--gray-200);
+        border: 1px solid var(--gray-600);
+        border-radius: var(--radius-md);
+        padding: 1rem;
+    }
+    
+    .education-item h4,
+    .education-item h5 {
+        color: var(--gray-100);
+    }
+    
+    .timeline-date {
+        color: var(--gray-400);
+    }
+    
+    /* Fix modal backgrounds */
+    .modal-content {
+        background-color: var(--gray-800);
+        border: 1px solid var(--gray-600);
+    }
+    
+    .modal-header {
+        border-bottom-color: var(--gray-600);
+    }
+    
+    .modal-footer {
+        border-top-color: var(--gray-600);
+    }
+    
+    .modal-title {
+        color: var(--gray-100);
+    }
+    
+    .btn-close {
+        filter: invert(1);
+    }
+    
+    /* Fix navbar toggler (hamburger menu) contrast */
+    .navbar-toggler {
+        border-color: var(--gray-400);
+        background-color: var(--gray-700);
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28243, 244, 246, 0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    .navbar-toggler:hover {
+        background-color: var(--gray-600);
+        border-color: var(--gray-300);
     }
 }
 
