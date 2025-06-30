@@ -123,6 +123,25 @@ function createLinkRow(link) {
     `;
 }
 
+function createExperienceItem(experience) {
+    const position = getLocalizedText(experience.position);
+    const company = getLocalizedText(experience.company);
+    const description = getLocalizedText(experience.description);
+    const location = getLocalizedText(experience.location);
+    
+    return `
+        <div class="timeline-item">
+            <div class="timeline-date">${experience.dateRange}</div>
+            <div class="timeline-content">
+                <h4>${position}</h4>
+                <h5>${company}</h5>
+                <p class="description">${description}</p>
+                <p class="location">${location}</p>
+            </div>
+        </div>
+    `;
+}
+
 // Load badges
 async function loadBadges() {
     const badgesData = await loadJSON('data/badges.json');
@@ -255,6 +274,16 @@ async function loadBadges() {
 }
 
 async function initializePage() {
+    // Load experience
+    const experienceData = await loadJSON('data/experience.json');
+    if (experienceData) {
+        const experienceContainer = document.getElementById('experience-container');
+        if (experienceContainer) {
+            experienceContainer.classList.remove('loading');
+            experienceContainer.innerHTML = experienceData.experiences.map(createExperienceItem).join('');
+        }
+    }
+
     // Load talks
     const talksData = await loadJSON('data/talks.json');
     if (talksData) {
@@ -610,6 +639,15 @@ function updateLanguage(lang) {
 }
 
 async function reloadDynamicContent() {
+    // Reload experience
+    const experienceData = await loadJSON('data/experience.json');
+    if (experienceData) {
+        const experienceContainer = document.getElementById('experience-container');
+        if (experienceContainer) {
+            experienceContainer.innerHTML = experienceData.experiences.map(createExperienceItem).join('');
+        }
+    }
+
     // Reload talks
     const talksData = await loadJSON('data/talks.json');
     if (talksData) {

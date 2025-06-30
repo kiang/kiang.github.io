@@ -1,0 +1,213 @@
+{
+  "experiences": [
+    {
+      "dateRange": "Apr 2023 - Apr 2025",
+      "position": {
+        "zh": "應用架構首席顧問",
+        "en": "Head Consultant, Application Architecture"
+      },
+      "company": {
+        "zh": "國家資安研究院",
+        "en": "National Institute of Cyber Security"
+      },
+      "description": {
+        "zh": "專注於政府資訊系統的數位韌性。訪談系統相關人員並基於產業最佳實務提供建議。",
+        "en": "Focused on digital resilience of government information system. Interviewed with people around the systems and provide advice based on industrial best practices."
+      },
+      "location": {
+        "zh": "台灣台南市",
+        "en": "Tainan City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Jan 2020 - Dec 2024",
+      "position": {
+        "zh": "程式設計顧問",
+        "en": "Programmer Consultant"
+      },
+      "company": {
+        "zh": "愛譜樂思科技股份有限公司",
+        "en": "AIPLUX Technology Co., Ltd."
+      },
+      "description": {
+        "zh": "重構商標註冊自動化系統並與AI團隊合作。",
+        "en": "Refactor the trademarks registration automation system and connected with AI team."
+      },
+      "location": {
+        "zh": "台灣台北市",
+        "en": "Taipei City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Jul 2019 - Dec 2019",
+      "position": {
+        "zh": "執行秘書",
+        "en": "Executive Secretary"
+      },
+      "company": {
+        "zh": "台南市政府智慧城市辦公室",
+        "en": "Tainan City Government Smart City Office"
+      },
+      "description": {
+        "zh": "發掘智慧城市案例並致力於推廣它們。",
+        "en": "Discovered smart city cases and worked to promote them"
+      },
+      "location": {
+        "zh": "台灣台南市",
+        "en": "Tainan City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Dec 2018 - Jul 2019",
+      "position": {
+        "zh": "秘書",
+        "en": "Secretary"
+      },
+      "company": {
+        "zh": "台南市政府市長室",
+        "en": "Tainan City Government Mayor Office"
+      },
+      "description": {
+        "zh": "安排市長行程並研究台南市民生活議題。",
+        "en": "Arranged the mayor's schedule and studied Tainan citizens' livelihood issues"
+      },
+      "location": {
+        "zh": "台灣台南市",
+        "en": "Tainan City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Sep 2018 - Dec 2018",
+      "position": {
+        "zh": "政策分析師",
+        "en": "Policy Analyst"
+      },
+      "company": {
+        "zh": "黃偉哲競選總部",
+        "en": "Huang Wei-che Election Campaign Office"
+      },
+      "description": {
+        "zh": "參與競選政策研究。",
+        "en": "Participated in campaign policy research"
+      },
+      "location": {
+        "zh": "台灣台南市",
+        "en": "Tainan City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Aug 2016 - Aug 2017",
+      "position": {
+        "zh": "研究員",
+        "en": "Researcher"
+      },
+      "company": {
+        "zh": "經濟部",
+        "en": "Ministry of Economic Affairs, Taiwan"
+      },
+      "description": {
+        "zh": "為國營企業提供開放資料政策技術支援，包括台電、台水和台糖。",
+        "en": "Offered technical support to stated-owned enterprises on opendata policies. Including Taipower, Taiwater and Taisugar."
+      },
+      "location": {
+        "zh": "台灣台北市",
+        "en": "Taipei City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Feb 2009 - Feb 2016",
+      "position": {
+        "zh": "負責人",
+        "en": "Owner"
+      },
+      "company": {
+        "zh": "就是電腦工作室",
+        "en": "Just This Computer Studio"
+      },
+      "description": {
+        "zh": "提供基於網頁的應用程式開發和客製化服務，主要使用CakePHP框架。",
+        "en": "Provided web-based application development and customization, primarily using CakePHP framework."
+      },
+      "location": {
+        "zh": "台灣台南市",
+        "en": "Tainan City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Oct 2007 - Jan 2009",
+      "position": {
+        "zh": "資深PHP開發者",
+        "en": "Senior PHP Developer"
+      },
+      "company": {
+        "zh": "基路客",
+        "en": "Geelook"
+      },
+      "description": {
+        "zh": "領導小型研發團隊（3-4人）使用CakePHP和Flex技術從零開始開發網站，為台灣市場提供類似cafepress.com的服務。",
+        "en": "Led a small R&D team (3-4 members) developing website from scratch using CakePHP and Flex technologies, providing services similar to cafepress.com for Taiwan market."
+      },
+      "location": {
+        "zh": "台灣台北市",
+        "en": "Taipei City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Sep 2006 - Oct 2007",
+      "position": {
+        "zh": "義務役士兵",
+        "en": "Duty Soldier"
+      },
+      "company": {
+        "zh": "國防部",
+        "en": "Ministry of National Defense, R.O.C"
+      },
+      "description": {
+        "zh": "使用CakePHP框架為IT支援部門開發票務系統。",
+        "en": "Developed a ticket system for IT support department using CakePHP framework."
+      },
+      "location": {
+        "zh": "台灣台北市",
+        "en": "Taipei City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Sep 2005 - Aug 2006",
+      "position": {
+        "zh": "網站工程師",
+        "en": "Website Engineer"
+      },
+      "company": {
+        "zh": "開源軟體菁英學院股份有限公司",
+        "en": "OSS Integral Institute Co., Ltd"
+      },
+      "description": {
+        "zh": "專精於PHP開發和使用XOOPS、OSCommerce等開源專案的現有應用程式客製化。",
+        "en": "Specialized in PHP development and customization of existing applications using open source projects like XOOPS and OSCommerce."
+      },
+      "location": {
+        "zh": "台灣台北市",
+        "en": "Taipei City, Taiwan"
+      }
+    },
+    {
+      "dateRange": "Jul 2004 - Aug 2005",
+      "position": {
+        "zh": "網頁開發者",
+        "en": "Web Developer"
+      },
+      "company": {
+        "zh": "旭報行銷股份有限公司",
+        "en": "Xbook Marketing Co., Ltd."
+      },
+      "description": {
+        "zh": "將網站從靜態HTML遷移到使用PHP的資料庫驅動系統，開發銷售和教育用途的私有系統。",
+        "en": "Migrated website from static HTML to database-driven system using PHP, developed private systems for sales and educational purposes."
+      },
+      "location": {
+        "zh": "台灣台北市",
+        "en": "Taipei City, Taiwan"
+      }
+    }
+  ]
+}
