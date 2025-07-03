@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>開放資料與API入門 @ 高雄市政府公務人力發展中心</title>
+
+	<meta name="author" content="Finjon Kiang">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+	<style>
+		.slides .header {
+			position: absolute;
+			top: -50%;
+			left: -50%;
+		}
+
+		.slides .footer {
+			position: absolute;
+			bottom: 50%;
+			left: -50%;
+		}
+	</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>開放資料與API入門</h1>
+				<p>
+					<small>江明宗 @ 高雄市政府公務人力發展中心 2025-07-07</small>
+				</p>
+			</section>
+			<section>
+				<h1>關於明宗</h1>
+			</section>
+			<section>
+				<ul>
+					<li>
+						<p>獨立軟體工程師</p>
+					</li>
+					<li>
+						<p class="fragment">g0v 零時政府 參與者</p>
+					</li>
+					<li>
+						<p class="fragment">開放資料、開放原始碼 支持者</p>
+					</li>
+					<li>
+						<p class="fragment">兩個孩子的爸</p>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<img src="20250707_khhrdi/qa_slido.png" style="width: 50%;" />
+				<h1>QA 與資料網址</h1>
+			</section>
+			<section>
+				<h1>開放資料</h1>
+			</section>
+			<section data-background="20250707_khhrdi/preschools.png">
+				<h1 style="background-color: white;" class="fragment"><a href="https://kiang.github.io/preschools/" target="_blank">台灣幼兒園地圖<br />為例</a></h1>
+			</section>
+			<section data-background="20250707_khhrdi/star_1.png">
+				<h1 style="background-color: white;" class="fragment">開放授權(OL)</h1>
+			</section>
+			<section data-background="20250707_khhrdi/star_2.png">
+				<h1 style="background-color: white;" class="fragment">結構化資料(RE)</h1>
+			</section>
+			<section data-background="20250707_khhrdi/star_3.png">
+				<h1 style="background-color: white;" class="fragment">開放格式(OF)</h1>
+			</section>
+			<section data-background="20250707_khhrdi/star_4.png">
+				<h1 style="background-color: white;" class="fragment">唯一網址(URI)</h1>
+			</section>
+			<section data-background="20250707_khhrdi/star_5.png">
+				<h1 style="background-color: white;" class="fragment">資料連結(LD)</h1>
+			</section>
+			<section>
+				<h1>最佳組合<br />政府：資料<br />民間：應用</h1>
+			</section>
+			<section>
+				<img src="20250707_khhrdi/reviews.png" style="width: 50%;" />
+				<h1 style="background-color: white;" class="fragment">這就原因</h1>
+			</section>
+			<section>
+				<h1>API = <br />應用程式介面</h1>
+			</section>
+			<section>
+				<h1>給機器用的<br />不要用 Excel 開</h1>
+			</section>
+			<section data-background="20250707_khhrdi/tdx.png">
+				<h1 style="background-color: white;" class="fragment"><a href="https://tdx.transportdata.tw/api-service/swagger" target="_blank">理想： TDX</a></h1>
+			</section>
+			<section data-background="20250707_khhrdi/header.png">
+				<h1 style="background-color: white;" class="fragment">直接打開</h1>
+			</section>
+			<section>
+				<h1>台灣幼兒園地圖<br />使用了哪些資料</h1>
+			</section>
+			<section data-background="20250707_khhrdi/preschool_data1.png">
+				<h1 style="background-color: white;" class="fragment">教保網基本資料</h1>
+			</section>
+			<section data-background="20250707_khhrdi/preschool_data2.png">
+				<h1 style="background-color: white;" class="fragment">教保網地圖</h1>
+			</section>
+			<section data-background="20250707_khhrdi/preschool_data3.png">
+				<h1 style="background-color: white;" class="fragment">裁罰查詢</h1>
+			</section>
+			<section data-background="20250707_khhrdi/preschool_data4.png">
+				<h1 style="background-color: white;" class="fragment">幼童專用車查詢</h1>
+			</section>
+			<section>
+				<h1>部份開放資料<br />部份爬蟲</h1>
+			</section>
+			<section>
+				<h1>網路爬蟲<br />Web Crawler</h1>
+			</section>
+			<section data-background="20250707_khhrdi/html_source.png">
+				<h1 style="background-color: white;" class="fragment">網頁原始碼</h1>
+			</section>
+			<section data-background="20250707_khhrdi/github_commit.png">
+				<h1 style="background-color: white;" class="fragment">清理成資料</h1>
+			</section>
+			<section>
+				<h1>網路爬蟲的問題</h1>
+			</section>
+			<section data-background="20250707_khhrdi/html_source_part.png">
+				<h1 style="background-color: white;" class="fragment">你累<br />我也累</h1>
+			</section>
+			<section data-background="20250707_khhrdi/timelines.png">
+				<h1 style="background-color: white;" class="fragment">時間差</h1>
+			</section>
+			<section data-background="20250707_khhrdi/preschool_captcha.jpg">
+				<h1 style="background-color: white;" class="fragment">衝突與對立</h1>
+			</section>
+			<section data-background="20250707_khhrdi/grey_area.png">
+				<h1 style="background-color: white;" class="fragment">模糊的灰色地帶</h1>
+			</section>
+			<section data-background="20250707_khhrdi/legal.png">
+				<h1 style="background-color: white;" class="fragment">法規解讀落差</h1>
+			</section>
+			<section>
+				<h1>公私協力</h1>
+			</section>
+			<section data-background="20250707_khhrdi/demand_supply.png">
+				<h1 style="background-color: white;" class="fragment">各取所需</h1>
+			</section>
+			<section>
+				<h1>實做</h1>
+			</section>
+			<section data-background="20230426_npust/thanks-g057664a0f_1280.jpg">
+				&nbsp;
+			</section>
+			<section>
+				<h1>Q&A</h1>
+				<a href="https://kiang.github.io/slides/20231209_pingtungsw.html" target="_blank"><img
+						src="20250707_khhrdi/qrcode.png" width="500" /></a>
+			</section>
+		</div>
+	</div>
+	
+	<script src="js/reveal.js"></script>
+	<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+</body>
+
+</html>
