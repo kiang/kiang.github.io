@@ -2,6 +2,26 @@
     "projects": [
         {
             "title": {
+                "zh": "EMIC 災情地圖",
+                "en": "EMIC Disaster Map"
+            },
+            "description": {
+                "zh": "互動地圖介面顯示丹娜絲颱風期間所有通報的災情資訊，提供災害分佈和影響範圍的即時資訊。",
+                "en": "Interactive map interface showing all reported disasters during Typhoon Danas, providing real-time information on disaster distribution and impact areas."
+            },
+            "image": "img/emic.jpg",
+            "url": "https://tainan.olc.tw/p/emic/",
+            "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+            "media": [
+                {
+                    "title": "「災情地圖」上網 讓大家上傳查閱、減少第一線救災人員負擔",
+                    "url": "https:\/\/newtalk.tw\/news\/view\/2025-07-07\/980299",
+                    "date": "20250707"
+                }
+            ]
+        },
+        {
+            "title": {
                 "zh": "台南看板地圖",
                 "en": "Tainan Campaign Signage Map"
             },
