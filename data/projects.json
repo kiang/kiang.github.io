@@ -22,6 +22,342 @@
         },
         {
             "title": {
+                "zh": "勞動法令裁罰資料站",
+                "en": "Labor Law Violation Penalty Database"
+            },
+            "description": {
+                "zh": "提供541,009筆違反勞動法令裁罰記錄，協助勞工了解雇主是否曾違反勞動法規，促進勞動權益透明化。",
+                "en": "Database of 541,009 labor law violation penalty records to help workers understand if employers have violated labor regulations, promoting labor rights transparency."
+            },
+            "image": "img/labor.png",
+            "url": "https://labor.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "孩子的遊戲場",
+                "en": "Children's Playground Finder"
+            },
+            "description": {
+                "zh": "互動式地圖服務，幫助使用者探索和發現台灣各地的公園遊戲場，提供位置查詢、照片回報和詳細資訊。",
+                "en": "Interactive mapping service to help users explore and discover playgrounds in parks across Taiwan, providing location search, photo reporting, and detailed information."
+            },
+            "image": "img/playground.png",
+            "url": "https://playground.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "補習班資料站",
+                "en": "Afterschool Center Information Hub"
+            },
+            "description": {
+                "zh": "提供台灣各地補習班資訊查詢服務的綜合地圖平台，協助家長查找適合的課後輔導機構。",
+                "en": "Comprehensive map-based platform providing afterschool tutoring center information query services across Taiwan, helping parents find suitable supplementary education institutions."
+            },
+            "image": "img/afterschools_site.png",
+            "url": "https://afterschools.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "政治獻金透明化平台",
+                "en": "Political Donation Transparency Platform"
+            },
+            "description": {
+                "zh": "提供政黨和候選人政治獻金帳戶報告的公開查詢，促進選舉資金透明化和政治問責。",
+                "en": "Public access platform for political party and candidate donation account reports, promoting electoral finance transparency and political accountability."
+            },
+            "image": "img/ardata_site.png",
+            "url": "https://ardata.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "托嬰中心資料站",
+                "en": "Baby Care Center Selection Guide"
+            },
+            "description": {
+                "zh": "協助家長為寶寶選擇最適合的托嬰中心，提供互動地圖、費用資訊、評等和空位狀況查詢。",
+                "en": "Interactive platform helping parents choose the most suitable daycare centers for their babies, featuring maps, fee information, ratings, and availability status."
+            },
+            "image": "img/babycare_site.png",
+            "url": "https://babycare.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "統一編號檢索系統",
+                "en": "Unified Business Number Lookup System"
+            },
+            "description": {
+                "zh": "台灣企業統一編號查詢工具，提供公司、商業和其他組織的基本資料檢索服務。",
+                "en": "Taiwan business unified number lookup tool providing basic information retrieval services for companies, businesses, and other organizations."
+            },
+            "image": "img/biz.png",
+            "url": "https://biz.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "兒少福利機構裁罰追蹤",
+                "en": "Child Welfare Institution Penalty Tracker"
+            },
+            "description": {
+                "zh": "查詢兒童及少年福利機構違規裁罰紀錄，保護兒少權益，提供1,463筆裁罰記錄供公眾監督。",
+                "en": "Database tracking child and youth welfare institution violation penalties to protect children's rights, providing 1,463 penalty records for public oversight."
+            },
+            "image": "img/crc.png",
+            "url": "https://crc.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "金管會裁罰資料庫",
+                "en": "Financial Supervisory Commission Penalty Database"
+            },
+            "description": {
+                "zh": "提供金融監理機關對銀行、保險、證券等金融機構的裁罰案件查詢，促進金融監管透明化。",
+                "en": "Searchable database of Financial Supervisory Commission penalty cases against banking, insurance, and securities institutions, promoting financial regulatory transparency."
+            },
+            "image": "img/fsc.png",
+            "url": "https://fsc.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "土地利用變化監測",
+                "en": "Land Use Change Monitoring"
+            },
+            "description": {
+                "zh": "提供透明、易用的土地變化監測資訊，協助公眾了解各地區的土地利用現況與變化趨勢。",
+                "en": "Transparent and user-friendly land change monitoring information to help the public understand land use status and trends across different regions."
+            },
+            "image": "img/landchg_site.png",
+            "url": "https://landchg.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "台灣醫療機構資訊網",
+                "en": "Taiwan Medical Institution Information Network"
+            },
+            "description": {
+                "zh": "提供台灣地區醫療機構的公開資訊，包含105,169家醫療機構的基本資料、診療科別和醫事人員資訊。",
+                "en": "Comprehensive database of Taiwan's medical institutions, providing public information on 105,169 medical facilities including basic data, medical departments, and healthcare personnel."
+            },
+            "image": "img/ma.png",
+            "url": "https://ma.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "2018年交通事故統計",
+                "en": "2018 Traffic Accident Statistics"
+            },
+            "description": {
+                "zh": "台灣2018年交通事故資料統計分析平台，提供320,241件事故、1,493件死亡、427,952件受傷的詳細統計。",
+                "en": "Taiwan traffic accident statistical analysis platform for 2018, providing detailed statistics on 320,241 accidents, 1,493 fatalities, and 427,952 injuries."
+            },
+            "image": "img/npa_site.png",
+            "url": "https://npa2018.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "2019年交通事故統計",
+                "en": "2019 Traffic Accident Statistics"
+            },
+            "description": {
+                "zh": "台灣2019年交通事故資料統計分析平台，提供341,906件事故、1,849件死亡、456,285件受傷的詳細統計。",
+                "en": "Taiwan traffic accident statistical analysis platform for 2019, providing detailed statistics on 341,906 accidents, 1,849 fatalities, and 456,285 injuries."
+            },
+            "image": "img/npa_site.png",
+            "url": "https://npa2019.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "2020年交通事故統計",
+                "en": "2020 Traffic Accident Statistics"
+            },
+            "description": {
+                "zh": "台灣2020年交通事故資料統計分析平台，提供362,318件事故、1,851件死亡、483,307件受傷的詳細統計。",
+                "en": "Taiwan traffic accident statistical analysis platform for 2020, providing detailed statistics on 362,318 accidents, 1,851 fatalities, and 483,307 injuries."
+            },
+            "image": "img/npa_site.png",
+            "url": "https://npa2020.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "2021年交通事故統計",
+                "en": "2021 Traffic Accident Statistics"
+            },
+            "description": {
+                "zh": "台灣2021年交通事故資料統計分析平台，提供358,172件事故、1,860件死亡、477,290件受傷的詳細統計。",
+                "en": "Taiwan traffic accident statistical analysis platform for 2021, providing detailed statistics on 358,172 accidents, 1,860 fatalities, and 477,290 injuries."
+            },
+            "image": "img/npa_site.png",
+            "url": "https://npa2021.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "2022年交通事故統計",
+                "en": "2022 Traffic Accident Statistics"
+            },
+            "description": {
+                "zh": "台灣2022年交通事故資料統計分析平台，提供375,788件事故、1,846件死亡、500,262件受傷的詳細統計。",
+                "en": "Taiwan traffic accident statistical analysis platform for 2022, providing detailed statistics on 375,788 accidents, 1,846 fatalities, and 500,262 injuries."
+            },
+            "image": "img/npa_site.png",
+            "url": "https://npa2022.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "2023年交通事故統計",
+                "en": "2023 Traffic Accident Statistics"
+            },
+            "description": {
+                "zh": "台灣2023年交通事故資料統計分析平台，提供402,966件事故、1,799件死亡、540,761件受傷的詳細統計。",
+                "en": "Taiwan traffic accident statistical analysis platform for 2023, providing detailed statistics on 402,966 accidents, 1,799 fatalities, and 540,761 injuries."
+            },
+            "image": "img/npa_site.png",
+            "url": "https://npa2023.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "2024年交通事故統計",
+                "en": "2024 Traffic Accident Statistics"
+            },
+            "description": {
+                "zh": "台灣2024年交通事故資料統計分析平台，提供393,807件事故、1,715件死亡、525,502件受傷的詳細統計。",
+                "en": "Taiwan traffic accident statistical analysis platform for 2024, providing detailed statistics on 393,807 accidents, 1,715 fatalities, and 525,502 injuries."
+            },
+            "image": "img/npa_site.png",
+            "url": "https://npa2024.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "2025年交通事故統計",
+                "en": "2025 Traffic Accident Statistics"
+            },
+            "description": {
+                "zh": "台灣2025年交通事故資料統計分析平台，提供175,142件事故、853件死亡、233,415件受傷的詳細統計。",
+                "en": "Taiwan traffic accident statistical analysis platform for 2025, providing detailed statistics on 175,142 accidents, 853 fatalities, and 233,415 injuries."
+            },
+            "image": "img/npa_site.png",
+            "url": "https://npa2025.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "台灣村里人口統計",
+                "en": "Taiwan Village Population Statistics"
+            },
+            "description": {
+                "zh": "探索台灣村里社區人口統計資料，涵蓋22縣市16,281個村里的詳細人口統計和排名資訊。",
+                "en": "Explore population statistics for Taiwan's villages and communities, covering detailed demographic data and rankings for 16,281 villages across 22 counties and cities."
+            },
+            "image": "img/population.png",
+            "url": "https://population.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "幼兒園資訊地圖",
+                "en": "Preschool Information Map"
+            },
+            "description": {
+                "zh": "台灣幼兒園資訊互動地圖，提供公立、半公共、私立、非營利幼兒園的位置、費用和裁罰記錄查詢。",
+                "en": "Interactive map of Taiwan's preschools, providing location, fee estimates, and penalty records for public, semi-public, private, and non-profit kindergartens."
+            },
+            "image": "img/preschools.png",
+            "url": "https://preschools.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "環保裁罰資料站",
+                "en": "Environmental Penalty Database"
+            },
+            "description": {
+                "zh": "提供環境部污染列管網站的382,715筆裁罰資料查詢服務，促進環境違規案件透明化監督。",
+                "en": "Comprehensive database of 382,715 environmental violation penalty records from EPA pollution management system, promoting transparency in environmental enforcement."
+            },
+            "image": "img/prtr.png",
+            "url": "https://prtr.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "台灣宗教場所資訊網",
+                "en": "Taiwan Religious Sites Information Network"
+            },
+            "description": {
+                "zh": "彙整台灣各地11,757個宗教場所的詳細資訊，包含位置、聯絡方式、主祀神祇等完整資料。",
+                "en": "Comprehensive database of 11,757 religious sites across Taiwan, including detailed information on locations, contact details, and primary deities."
+            },
+            "image": "img/religion.png",
+            "url": "https://religion.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "台灣薪資收入統計",
+                "en": "Taiwan Salary and Income Statistics"
+            },
+            "description": {
+                "zh": "台灣薪資收入資料網站，提供2011-2023年全國7,764個村里的詳細薪資和收入統計資料。",
+                "en": "Comprehensive Taiwan salary and income data platform, providing detailed salary statistics for 7,764 villages across Taiwan from 2011-2023."
+            },
+            "image": "img/salary_site.png",
+            "url": "https://salary.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
+                "zh": "台南市政府資訊整合平台",
+                "en": "Tainan City Government Information Platform"
+            },
+            "description": {
+                "zh": "整合台南市政府和議會的公開資訊，提供統一查詢介面，方便民眾查閱市政新聞和公告。",
+                "en": "Unified information portal integrating Tainan City government and council public information, providing centralized access to municipal news and announcements."
+            },
+            "image": "img/tn.png",
+            "url": "https://tn.olc.tw/",
+            "sourceCode": "https://github.com/kiang/olc.tw",
+            "media": []
+        },
+        {
+            "title": {
                 "zh": "台南看板地圖",
                 "en": "Tainan Campaign Signage Map"
             },
@@ -1573,7 +1909,7 @@
                 "en": "Comprehensive electoral information directory providing candidate and voting data for Taiwan's democratic elections."
             },
             "image": "img\/elections.png",
-            "url": "http:\/\/k.olc.tw\/elections\/",
+            "url": "http:\/\/elections.olc.tw\/",
             "sourceCode": "https:\/\/github.com\/kiang\/elections",
             "media": [
                 {
@@ -1855,7 +2191,7 @@
                 "en": "Community advocacy platform promoting inclusive playground development and accessible park design in Tainan City."
             },
             "image": "img\/parks.png",
-            "url": "https:\/\/parks.olc.tw\/",
+            "url": "https:\/\/playground.olc.tw\/",
             "sourceCode": "https:\/\/github.com\/kiang\/ParkPoi",
             "media": []
         },
@@ -2009,7 +2345,7 @@
                 "en": "Municipal council transparency platform monitoring Tainan City councilor activities, voting records, and public accountability."
             },
             "image": "img\/tncc.png",
-            "url": "http:\/\/k.olc.tw\/tncc\/",
+            "url": "http:\/\/tncc.olc.tw\/",
             "sourceCode": "https:\/\/github.com\/kiang\/parliamentary\/",
             "media": []
         },
