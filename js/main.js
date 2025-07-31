@@ -273,6 +273,54 @@ async function loadBadges() {
     }
 }
 
+async function loadMediaCoverage() {
+    const projectsData = await loadJSON('data/projects.json');
+    if (projectsData) {
+        const mediaContainer = document.getElementById('media-container');
+        mediaContainer.classList.remove('loading');
+        
+        // Collect all media items from all projects
+        const allMedia = [];
+        projectsData.projects.forEach(project => {
+            if (project.media && project.media.length > 0) {
+                project.media.forEach(item => {
+                    allMedia.push({
+                        ...item,
+                        projectTitle: getLocalizedText(project.title),
+                        projectUrl: project.url
+                    });
+                });
+            }
+        });
+        
+        // Sort by date in descending order
+        allMedia.sort((a, b) => {
+            const dateA = parseInt(a.date || '0');
+            const dateB = parseInt(b.date || '0');
+            return dateB - dateA;
+        });
+        
+        // Format date for display
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            // Convert YYYYMMDD to YYYY-MM-DD
+            if (dateStr.length === 8) {
+                return `${dateStr.substr(0, 4)}-${dateStr.substr(4, 2)}-${dateStr.substr(6, 2)}`;
+            }
+            return dateStr;
+        }
+        
+        // Create table rows
+        mediaContainer.innerHTML = allMedia.map(item => `
+            <tr>
+                <td>${formatDate(item.date)}</td>
+                <td><a href="${item.url}" target="_blank">${item.title}</a></td>
+                <td><a href="${item.projectUrl}" target="_blank">${item.projectTitle}</a></td>
+            </tr>
+        `).join('');
+    }
+}
+
 async function initializePage() {
     // Load experience
     const experienceData = await loadJSON('data/experience.json');
@@ -354,6 +402,9 @@ async function initializePage() {
 
     // Load badges as gallery
     await loadBadges();
+    
+    // Load media coverage
+    await loadMediaCoverage();
 }
 
 // Initialize the page when DOM is loaded
@@ -522,6 +573,7 @@ const translations = {
         'nav-skills': 'Skills',
         'nav-education': 'Education',
         'nav-projects': 'Projects',
+        'nav-media': 'Media',
         'nav-talks': 'Talks',
         'nav-achievements': 'Achievements',
         'lang-toggle': '中文',
@@ -549,6 +601,10 @@ const translations = {
         // Projects Section
         'section-projects': 'Featured Projects',
         
+        // Media Coverage Section
+        'section-media': 'Media Coverage',
+        'table-project': 'Project',
+        
         // Talks Section
         'section-talks': 'Recent Talks',
         'table-title': 'Title (Slides)',
@@ -572,6 +628,7 @@ const translations = {
         'nav-skills': '技能',
         'nav-education': '學歷',
         'nav-projects': '專案',
+        'nav-media': '媒體報導',
         'nav-talks': '演講',
         'nav-achievements': '成就',
         'lang-toggle': 'English',
@@ -598,6 +655,10 @@ const translations = {
         
         // Projects Section
         'section-projects': '精選專案',
+        
+        // Media Coverage Section
+        'section-media': '媒體報導',
+        'table-project': '專案',
         
         // Talks Section
         'section-talks': '近期演講',
