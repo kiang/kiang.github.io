@@ -2,6 +2,20 @@
     "projects": [
         {
             "title": {
+                "zh": "美國互惠關稅地圖",
+                "en": "US Reciprocal Tariff Map"
+            },
+            "description": {
+                "zh": "互動式世界地圖顯示2025年美國對69個國家的互惠關稅稅率，基於白宮行政命令提供視覺化的國際貿易政策資訊。",
+                "en": "Interactive world map displaying US reciprocal tariff rates for 69 countries in 2025, providing visual international trade policy information based on White House executive order."
+            },
+            "image": "img/us-tariff.png",
+            "url": "https://tainan.olc.tw/p/us-tariff/",
+            "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+            "media": []
+        },
+        {
+            "title": {
                 "zh": "EMIC 災情地圖",
                 "en": "EMIC Disaster Map"
             },
