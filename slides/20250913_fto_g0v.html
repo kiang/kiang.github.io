@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>g0v 開放政府與公民科技 @ FTO</title>
+
+	<meta name="author" content="Finjon Kiang">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+	<style>
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.05);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		@keyframes glow {
+			from {
+				text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00ff88, 0 0 40px #00ff88, 0 0 50px #00ff88;
+			}
+			to {
+				text-shadow: 0 0 20px #fff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff;
+			}
+		}
+
+		@keyframes rotate3d {
+			from {
+				transform: rotate3d(0, 1, 0, 0deg);
+			}
+			to {
+				transform: rotate3d(0, 1, 0, 360deg);
+			}
+		}
+
+		@keyframes gradient {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+
+		.slides .header {
+			position: absolute;
+			top: -50%;
+			left: -50%;
+		}
+
+		.slides .footer {
+			position: absolute;
+			bottom: 50%;
+			left: -50%;
+		}
+
+		.reveal h1, .reveal h2, .reveal h3 {
+			color: #fff;
+			text-transform: none;
+			line-height: 1.2;
+		}
+
+		.reveal .animated-title {
+			animation: fadeInUp 1.5s ease-out, pulse 2s ease-in-out infinite;
+			background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+			background-size: 400% 400%;
+			animation: gradient 15s ease infinite, fadeInUp 1.5s ease-out;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+
+		.reveal .glow-text {
+			animation: glow 2s ease-in-out infinite alternate;
+		}
+
+		.reveal .rotate-3d {
+			animation: rotate3d 10s linear infinite;
+			display: inline-block;
+		}
+
+		.reveal .slide-in-left {
+			animation: slideInLeft 1s ease-out;
+		}
+
+		@keyframes slideInLeft {
+			from {
+				transform: translateX(-100%);
+				opacity: 0;
+			}
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		.reveal .slide-in-right {
+			animation: slideInRight 1s ease-out;
+		}
+
+		@keyframes slideInRight {
+			from {
+				transform: translateX(100%);
+				opacity: 0;
+			}
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		.reveal .typing-effect {
+			overflow: hidden;
+			border-right: .15em solid orange;
+			white-space: nowrap;
+			margin: 0 auto;
+			letter-spacing: .15em;
+			animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+		}
+
+		@keyframes typing {
+			from { width: 0 }
+			to { width: 100% }
+		}
+
+		@keyframes blink-caret {
+			from, to { border-color: transparent }
+			50% { border-color: orange; }
+		}
+
+		.reveal .particle-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			z-index: -1;
+		}
+
+		.particle {
+			position: absolute;
+			background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(0,255,136,0.6) 100%);
+			border-radius: 50%;
+			pointer-events: none;
+			animation: float 20s infinite;
+		}
+
+		@keyframes float {
+			0%, 100% {
+				transform: translateY(0) translateX(0) scale(1);
+				opacity: 0;
+			}
+			10% {
+				opacity: 1;
+			}
+			90% {
+				opacity: 1;
+			}
+			100% {
+				transform: translateY(-100vh) translateX(100px) scale(0.5);
+				opacity: 0;
+			}
+		}
+
+		.reveal .hover-scale {
+			transition: transform 0.3s ease;
+		}
+
+		.reveal .hover-scale:hover {
+			transform: scale(1.1);
+		}
+
+		.reveal .neon-border {
+			border: 2px solid #fff;
+			box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88, inset 0 0 10px #00ff88;
+			padding: 20px;
+			border-radius: 10px;
+		}
+
+		.reveal .gradient-text {
+			background: linear-gradient(45deg, #f093fb 0%, #f5576c 25%, #4facfe 50%, #00f2fe 75%, #43e97b 100%);
+			background-size: 200% auto;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			animation: shine 3s linear infinite;
+		}
+
+		@keyframes shine {
+			to {
+				background-position: 200% center;
+			}
+		}
+
+		.reveal .zoom-in {
+			animation: zoomIn 1s ease-out;
+		}
+
+		@keyframes zoomIn {
+			from {
+				opacity: 0;
+				transform: scale(0.3);
+			}
+			to {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+
+		.reveal section[data-background] h1,
+		.reveal section[data-background] h2 {
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 20px;
+			border-radius: 10px;
+			backdrop-filter: blur(5px);
+		}
+
+		.reveal .progress {
+			color: #00ff88;
+		}
+
+		.reveal .controls {
+			color: #00ff88;
+		}
+
+		.reveal .cyber-list {
+			list-style: none;
+			padding: 0;
+		}
+
+		.reveal .cyber-list li {
+			position: relative;
+			padding-left: 30px;
+			margin: 20px 0;
+		}
+
+		.reveal .cyber-list li:before {
+			content: "▶";
+			position: absolute;
+			left: 0;
+			color: #00ff88;
+			animation: blink 1s infinite;
+		}
+
+		@keyframes blink {
+			0%, 50%, 100% { opacity: 1; }
+			25%, 75% { opacity: 0; }
+		}
+
+		.reveal .matrix-rain {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			overflow: hidden;
+			z-index: -1;
+		}
+
+		.matrix-drop {
+			position: absolute;
+			color: #00ff88;
+			font-family: monospace;
+			font-size: 20px;
+			animation: matrix-fall linear infinite;
+		}
+
+		@keyframes matrix-fall {
+			to {
+				transform: translateY(100vh);
+			}
+		}
+	</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section data-transition="zoom">
+				<div class="particle-bg" id="particles"></div>
+				<h1 class="animated-title">Crowdsourcing in disasters</h1>
+				<p class="typing-effect">
+					<small>kiang @ FTO 2025-09-13</small>
+				</p>
+			</section>
+
+			<section data-transition="zoom">
+				<h1 class="rotate-3d gradient-text">What we have in Taiwan</h1>
+			</section>
+
+			<section data-background-gradient="linear-gradient(45deg, #667eea 0%, #764ba2 100%)">
+				<img src="20250913_fto_g0v/emic.png" class="hover-scale zoom-in" style="max-width: 70%; max-height: 40vh; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 30px rgba(0,255,136,0.6);" />
+				<div class="neon-border">
+					<h2>EMIC</h2>
+					<p class="fragment fade-up">integrated different sources</p>
+					<p class="fragment fade-up">WGS84 coordinates</p>
+				</div>
+			</section>
+
+			<section data-transition="slide">
+				<h1 class="glow-text">What we don't have</h1>
+				<div class="fragment zoom-in">
+					<h3 class="gradient-text">Can't stop duplicated reports</h3>
+				</div>
+				<div class="fragment zoom-in">
+					<h3 class="gradient-text">Limited information</h3>
+				</div>
+				<div class="fragment zoom-in">
+					<h3 class="gradient-text">No photos</h3>
+				</div>
+			</section>
+
+			<section data-background-gradient="radial-gradient(circle, #667eea 0%, #764ba2 100%)" data-background="20250913_fto_g0v/fb.png" >
+				<h1 class="animated-title fragment">Some missing pieces can be found in social media</h1>
+			</section>
+
+			<section data-transition="convex" data-background="20250913_fto_g0v/code.png">
+				<h2 class="gradient-text fragment">But, it's not easy</h2>
+			</section>
+
+			<section data-transition="slide">
+				<h2 class="glow-text">The needs...</h2>
+				<p class="fragment slide-in-left">Experiences in your countries</p>
+				<p class="fragment slide-in-right">Google chrome developer</p>
+				<p class="fragment slide-in-right">Crawler developer</p>
+			</section>
+
+			<section data-background="20230426_npust/thanks-g057664a0f_1280.jpg">
+				<h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Thank you</h1>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+	<script>
+		// Create particle effect
+		function createParticles() {
+			const container = document.getElementById('particles');
+			if (container) {
+				for (let i = 0; i < 20; i++) {
+					const particle = document.createElement('div');
+					particle.className = 'particle';
+					particle.style.width = Math.random() * 10 + 5 + 'px';
+					particle.style.height = particle.style.width;
+					particle.style.left = Math.random() * 100 + '%';
+					particle.style.animationDelay = Math.random() * 20 + 's';
+					particle.style.animationDuration = (Math.random() * 10 + 20) + 's';
+					container.appendChild(particle);
+				}
+			}
+		}
+
+		// Create matrix rain effect
+		function createMatrixRain() {
+			const container = document.getElementById('matrix');
+			if (container) {
+				const chars = '01';
+				for (let i = 0; i < 30; i++) {
+					const drop = document.createElement('div');
+					drop.className = 'matrix-drop';
+					drop.style.left = Math.random() * 100 + '%';
+					drop.style.animationDuration = (Math.random() * 3 + 2) + 's';
+					drop.style.animationDelay = Math.random() * 5 + 's';
+					drop.style.opacity = Math.random() * 0.5 + 0.5;
+					drop.textContent = chars[Math.floor(Math.random() * chars.length)];
+					container.appendChild(drop);
+				}
+			}
+		}
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+			backgroundTransition: 'fade',
+
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+		// Initialize effects after reveal is ready
+		Reveal.addEventListener('ready', function() {
+			createParticles();
+			createMatrixRain();
+		});
+
+	</script>
+</body>
+
+</html>
