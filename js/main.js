@@ -360,8 +360,15 @@ async function initializePage() {
                 console.log(`Project ${index + 1} has no image path:`, project.title);
             }
         });
-        
-        projectsContainer.innerHTML = projectsData.projects.map(createProjectCard).join('');
+
+        // Sort projects by media count in descending order
+        const sortedProjects = projectsData.projects.sort((a, b) => {
+            const aMediaCount = (a.media && a.media.length) || 0;
+            const bMediaCount = (b.media && b.media.length) || 0;
+            return bMediaCount - aMediaCount;
+        });
+
+        projectsContainer.innerHTML = sortedProjects.map(createProjectCard).join('');
         
         // Initialize scroll buttons after projects are loaded
         document.querySelectorAll('.project-media-container').forEach(container => {
@@ -732,7 +739,14 @@ async function reloadDynamicContent() {
     if (projectsData) {
         const projectsContainer = document.getElementById('projects-container');
         if (projectsContainer) {
-            projectsContainer.innerHTML = projectsData.projects.map(createProjectCard).join('');
+            // Sort projects by media count in descending order
+            const sortedProjects = projectsData.projects.sort((a, b) => {
+                const aMediaCount = (a.media && a.media.length) || 0;
+                const bMediaCount = (b.media && b.media.length) || 0;
+                return bMediaCount - aMediaCount;
+            });
+
+            projectsContainer.innerHTML = sortedProjects.map(createProjectCard).join('');
             
             // Reinitialize scroll buttons after projects are reloaded
             document.querySelectorAll('.project-media-container').forEach(container => {
