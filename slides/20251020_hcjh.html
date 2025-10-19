@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8">
+		<title>軟體開發者的世界 @ 國中職涯分享</title>
+		<meta name="author" content="Finjon Kiang">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<style>
+		body {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		}
+		.reveal {
+			font-family: 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
+		}
+		.reveal h1, .reveal h2, .reveal h3 {
+			text-transform: none;
+			font-weight: bold;
+		}
+		.reveal h1 {
+			font-size: 3em;
+			text-shadow: 0 0 20px rgba(255,255,255,0.3);
+		}
+		.reveal section {
+			text-align: left;
+		}
+		.reveal .center-content {
+			text-align: center;
+		}
+		.slides .header{
+			position:absolute;
+		  top: -50%;
+		  left: -50%;
+		}
+		.slides .footer{
+		  position:absolute;
+		  bottom: 50%;
+		  left: -50%;
+		}
+		.highlight-box {
+			background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+			padding: 30px;
+			border-radius: 20px;
+			margin: 20px 0;
+			border: 2px solid rgba(255,255,255,0.2);
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		}
+		.code-box {
+			background: #1e1e1e;
+			padding: 25px;
+			border-radius: 15px;
+			border-left: 5px solid #00ff88;
+			box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+		}
+		.emoji-large {
+			font-size: 4em;
+			display: inline-block;
+			margin: 20px;
+		}
+		.gradient-text {
+			background: linear-gradient(90deg, #00ff88, #00d4ff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			font-weight: bold;
+		}
+		.salary-card {
+			background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+			padding: 20px;
+			border-radius: 15px;
+			margin: 10px 0;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+		}
+		.skill-badge {
+			display: inline-block;
+			background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+			padding: 10px 20px;
+			border-radius: 25px;
+			margin: 5px;
+			font-weight: bold;
+			box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+		}
+		.tech-card {
+			background: rgba(255,255,255,0.1);
+			padding: 20px;
+			border-radius: 15px;
+			margin: 15px 0;
+			border: 2px solid rgba(0, 255, 136, 0.3);
+			transition: all 0.3s ease;
+		}
+		.neon-text {
+			color: #00ff88;
+			text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88;
+			font-weight: bold;
+		}
+		.reveal ul, .reveal ol {
+			list-style: none;
+		}
+		.reveal li {
+			margin: 15px 0;
+			padding-left: 30px;
+			position: relative;
+		}
+		.reveal ul li:before {
+			content: "▸";
+			position: absolute;
+			left: 0;
+			color: #00ff88;
+			font-weight: bold;
+		}
+		.big-number {
+			font-size: 4em;
+			font-weight: bold;
+			color: #00ff88;
+			text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+		}
+		.flex-container {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		.flex-item {
+			flex: 1;
+			min-width: 200px;
+			margin: 10px;
+		}
+	</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="center-content" data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+					<h1 class="gradient-text">💻 軟體開發者的世界</h1>
+					<h2>寫程式是怎麼回事？</h2>
+					<p style="margin-top: 50px;">
+						<small>kiang @ 國中職涯分享 2025-10-20</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>👨‍💻 kiang === 江明宗</h2>
+					<ul style="margin-top: 40px;">
+						<li><p>💻 2004 開始全職寫程式</p></li>
+						<li><p class="fragment">🏢 2009 成立工作室接案</p></li>
+						<li><p class="fragment">🗳️ 2014 參與公民科技社群</p></li>
+						<li><p class="fragment">🏛️ 2016-2019 參與政府工作</p></li>
+						<li><p class="fragment">🚀 2020 恢復自由工作者</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>📱 先問大家幾個問題</h2>
+					<ul>
+						<li class="fragment"><p>📱 有用過手機 App 嗎？</p></li>
+						<li class="fragment"><p>🎮 有玩過遊戲嗎？</p></li>
+						<li class="fragment"><p>🌐 有上過網站嗎？</p></li>
+						<li class="fragment"><p>📺 有看過 YouTube 嗎？</p></li>
+					</ul>
+					<h2 class="fragment neon-text" style="margin-top: 40px;">這些都是軟體開發者做出來的！</h2>
+				</section>
+
+				<section class="center-content">
+					<h2>🤔 什麼是軟體開發者？</h2>
+					<div class="highlight-box fragment">
+						<h3 class="gradient-text">軟體開發者 = 用程式碼創造東西的人</h3>
+					</div>
+					<div class="fragment" style="margin-top: 30px;">
+						<div class="flex-container">
+							<div class="tech-card flex-item fragment">💻 寫程式讓電腦做事</div>
+							<div class="tech-card flex-item fragment">🎨 設計網站和 App</div>
+						</div>
+						<div class="flex-container">
+							<div class="tech-card flex-item fragment">🎮 開發遊戲</div>
+							<div class="tech-card flex-item fragment">🛠️ 製作各種數位工具</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="center-content">
+					<h2>🗣️ 程式語言就像人類的語言</h2>
+					<div class="flex-container" style="margin-top: 40px;">
+						<div class="tech-card flex-item fragment">
+							<h3>🇹🇼 中文</h3>
+							<p style="font-size: 1.5em;">你好</p>
+						</div>
+						<div class="tech-card flex-item fragment">
+							<h3>🇬🇧 英文</h3>
+							<p style="font-size: 1.5em;">Hello</p>
+						</div>
+					</div>
+					<div class="flex-container">
+						<div class="code-box flex-item fragment">
+							<h3>🐍 Python</h3>
+							<p style="font-family: monospace; color: #00ff88;">print("Hello")</p>
+						</div>
+						<div class="code-box flex-item fragment">
+							<h3>⚡ JavaScript</h3>
+							<p style="font-family: monospace; color: #00ff88;">console.log("Hello")</p>
+						</div>
+					</div>
+					<h3 class="fragment neon-text" style="margin-top: 30px;">用不同的語言跟電腦溝通！</h3>
+				</section>
+
+				<section>
+					<h2>👨‍💻 軟體開發者做什麼？</h2>
+					<div class="highlight-box">
+						<ul>
+							<li class="fragment">🧠 思考問題如何解決</li>
+							<li class="fragment">📝 設計解決方案</li>
+							<li class="fragment">⌨️ 寫程式碼實現想法</li>
+							<li class="fragment">🐛 測試和修正錯誤</li>
+							<li class="fragment">🤝 跟團隊合作</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>📅 一天的工作生活</h2>
+					<div style="margin-top: 20px; font-size: 0.85em;">
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">10:00 ☕ 開會討論專案</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">11:00 💻 寫程式碼</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">12:00 🍱 午餐時間</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">13:00 ⌨️ 繼續寫程式</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">15:00 🐛 測試和除錯</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">17:00 👀 檢視程式碼</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">18:00 🏠 下班（彈性工作時間）</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>🧰 開發者的工具箱</h2>
+					<ul>
+						<li class="fragment"><p>💻 電腦（Mac / Windows / Linux）</p></li>
+						<li class="fragment"><p>⌨️ 程式編輯器（VS Code、PyCharm）</p></li>
+						<li class="fragment"><p>🌐 網路瀏覽器</p></li>
+						<li class="fragment"><p>📁 版本控制（Git / GitHub）</p></li>
+						<li class="fragment"><p class="neon-text">🎁 還有很多免費的工具和資源！</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>🎨 軟體開發的種類</h2>
+					<div class="tech-card fragment" style="margin: 15px 0; padding: 15px;">
+						<h3>🎨 前端開發 (Frontend)</h3>
+						<p>做網站和 App 的畫面，讓使用者看到的部分</p>
+					</div>
+					<div class="tech-card fragment" style="margin: 15px 0; padding: 15px;">
+						<h3>⚙️ 後端開發 (Backend)</h3>
+						<p>處理資料、邏輯，使用者看不到的部分</p>
+					</div>
+					<div class="tech-card fragment" style="margin: 15px 0; padding: 15px;">
+						<h3>🚀 全端開發 (Full Stack)</h3>
+						<p>前端和後端都會做</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>🌟 還有更多專業領域</h2>
+					<div class="flex-container" style="margin-top: 30px;">
+						<div class="tech-card flex-item fragment">🎮 遊戲開發</div>
+						<div class="tech-card flex-item fragment">📱 手機 App 開發</div>
+						<div class="tech-card flex-item fragment">📊 資料科學</div>
+					</div>
+					<div class="flex-container">
+						<div class="tech-card flex-item fragment">🤖 人工智慧 / 機器學習</div>
+						<div class="tech-card flex-item fragment">🔒 資訊安全</div>
+						<div class="tech-card flex-item fragment">☁️ 雲端運算</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>😷 實際案例：<a href="https://kiang.github.io/pharmacies/" target="_blank">口罩地圖</a></h2>
+					<div class="highlight-box fragment" style="margin: 15px 0; padding: 15px;">
+						<h3>2020 年疫情時期，開發者們做了什麼？</h3>
+					</div>
+					<ul style="margin-top: 20px;">
+						<li class="fragment"><p>📍 即時顯示藥局口罩庫存</p></li>
+						<li class="fragment"><p>🗺️ 用地圖顯示最近的藥局</p></li>
+						<li class="fragment"><p>❤️ 幫助民眾快速找到口罩</p></li>
+						<li class="fragment"><p>🔓 免費開放原始碼</p></li>
+					</ul>
+					<h3 class="fragment neon-text" style="margin-top: 20px;">程式可以幫助很多人！</h3>
+				</section>
+
+				<section>
+					<h2>🎯 需要什麼技能？</h2>
+					<div class="highlight-box">
+						<ul>
+							<li class="fragment"><p>🧠 邏輯思考能力</p></li>
+							<li class="fragment"><p>🔍 解決問題的能力</p></li>
+							<li class="fragment"><p>📚 願意學習新事物</p></li>
+							<li class="fragment"><p>⏰ 耐心和細心</p></li>
+							<li class="fragment"><p>🤝 團隊合作</p></li>
+							<li class="fragment"><p>🇬🇧 英文閱讀能力（很多資料是英文的）</p></li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="center-content">
+					<h2>🤔 數學要很好嗎？</h2>
+					<div class="highlight-box fragment" style="margin-top: 40px;">
+						<h1 class="neon-text">不一定！</h1>
+					</div>
+					<ul style="margin-top: 40px;">
+						<li class="fragment"><p>➕ 基本的加減乘除就夠了</p></li>
+						<li class="fragment"><p>💡 邏輯思考比數學計算重要</p></li>
+						<li class="fragment"><p>🤖 某些領域需要進階數學（AI、遊戲物理）</p></li>
+						<li class="fragment"><p>✅ 但大部分的開發工作不需要複雜數學</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>🚀 如何開始學習程式？</h2>
+					<h3 class="gradient-text">線上學習資源（免費！）</h3>
+					<div class="flex-container" style="margin-top: 30px;">
+						<div class="tech-card flex-item fragment">
+							<h3>🎨 Scratch</h3>
+							<p>圖形化程式設計</p>
+						</div>
+						<div class="tech-card flex-item fragment">
+							<h3>🎓 Code.org</h3>
+							<p>適合初學者</p>
+						</div>
+					</div>
+					<div class="flex-container">
+						<div class="tech-card flex-item fragment">
+							<h3>💻 Codecademy</h3>
+							<p>互動式學習</p>
+						</div>
+						<div class="tech-card flex-item fragment">
+							<h3>📺 YouTube</h3>
+							<p>教學影片</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>🏆 推薦的第一個程式語言</h2>
+					<div class="flex-container" style="margin-top: 20px; font-size: 0.9em;">
+						<div class="highlight-box flex-item fragment" style="padding: 20px;">
+							<h2>🐍 Python</h2>
+							<ul style="margin-top: 10px;">
+								<li><p>✅ 語法簡單易懂</p></li>
+								<li><p>🌍 應用範圍廣泛</p></li>
+								<li><p>📚 學習資源豐富</p></li>
+								<li><p>👍 適合初學者</p></li>
+							</ul>
+						</div>
+						<div class="highlight-box flex-item fragment" style="padding: 20px;">
+							<h2>⚡ JavaScript</h2>
+							<ul style="margin-top: 10px;">
+								<li><p>🌐 做網頁必學</p></li>
+								<li><p>👀 馬上看到成果</p></li>
+								<li><p>💼 工作機會多</p></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>💻 實際寫一段程式看看</h2>
+					<div class="code-box fragment" style="margin-top: 30px;">
+						<pre><code data-trim style="color: #00ff88; font-size: 1.2em;">
+# Python 範例
+name = input("你的名字是？")
+print("哈囉，" + name + "!")
+print("歡迎來到程式的世界！")
+						</code></pre>
+					</div>
+					<h3 class="fragment neon-text" style="margin-top: 30px;">就是這麼簡單！</h3>
+				</section>
+
+				<section>
+					<h2>🎮 做一個簡單的遊戲</h2>
+					<div class="code-box fragment" style="margin-top: 30px;">
+						<pre><code data-trim style="color: #00ff88; font-size: 1.1em;">
+# 猜數字遊戲
+import random
+
+number = random.randint(1, 10)
+guess = int(input("猜一個 1-10 的數字："))
+
+if guess == number:
+    print("答對了！")
+else:
+    print("答案是", number)
+						</code></pre>
+					</div>
+					<h3 class="fragment neon-text" style="margin-top: 30px;">幾行程式碼就能做出互動遊戲！</h3>
+				</section>
+
+				<section>
+					<h2>📈 職涯發展路徑</h2>
+					<div style="margin-top: 20px; font-size: 0.85em;">
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">1️⃣ 初級工程師（Junior Developer）</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">2️⃣ 中級工程師（Mid-level Developer）</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">3️⃣ 資深工程師（Senior Developer）</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">4️⃣ 技術主管（Tech Lead）</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">5️⃣ 架構師（Architect）</div>
+						<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">6️⃣ 技術長（CTO）</div>
+					</div>
+				</section>
+
+				<section class="center-content">
+					<h2>💰 薪資待遇</h2>
+					<div class="flex-container" style="margin-top: 20px; font-size: 0.85em;">
+						<div class="salary-card flex-item fragment" style="padding: 15px; margin: 5px;">
+							<h3>🆕 新鮮人</h3>
+							<p style="font-size: 1.8em; font-weight: bold; color: #00ff88; margin: 8px 0;">35K-50K</p>
+							<p style="font-size: 0.9em;">元/月</p>
+						</div>
+						<div class="salary-card flex-item fragment" style="padding: 15px; margin: 5px;">
+							<h3>💼 3-5年經驗</h3>
+							<p style="font-size: 1.8em; font-weight: bold; color: #00ff88; margin: 8px 0;">60K-100K</p>
+							<p style="font-size: 0.9em;">元/月</p>
+						</div>
+						<div class="salary-card flex-item fragment" style="padding: 15px; margin: 5px;">
+							<h3>⭐ 資深工程師</h3>
+							<p style="font-size: 1.8em; font-weight: bold; color: #00ff88; margin: 8px 0;">100K-200K+</p>
+							<p style="font-size: 0.9em;">元/月</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="center-content">
+					<h2>💰 薪資待遇（續）</h2>
+					<div class="highlight-box fragment" style="margin: 30px auto 20px; padding: 25px; max-width: 600px;">
+						<h3 style="font-size: 1.3em;">🌎 外商公司薪資通常更高</h3>
+						<p style="margin: 15px 0; font-size: 1.1em;">國外遠端工作機會也很多</p>
+					</div>
+					<div class="highlight-box fragment" style="margin: 20px auto; padding: 25px; max-width: 600px;">
+						<h3 style="font-size: 1.3em;">💪 接案收入彈性更大</h3>
+						<p style="margin: 15px 0; font-size: 1.1em;">可以同時接多個專案</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>🏢 工作環境與福利</h2>
+					<div class="flex-container" style="margin-top: 30px;">
+						<div class="tech-card flex-item fragment">⏰ 彈性工作時間</div>
+						<div class="tech-card flex-item fragment">🏠 遠端工作機會多</div>
+						<div class="tech-card flex-item fragment">🪑 舒適的辦公環境</div>
+					</div>
+					<div class="flex-container">
+						<div class="tech-card flex-item fragment">🍕 免費零食飲料</div>
+						<div class="tech-card flex-item fragment">✈️ 員工旅遊、團隊活動</div>
+						<div class="tech-card flex-item fragment">📈 持續學習和成長機會</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>⚠️ 挑戰與困難</h2>
+					<div class="highlight-box">
+						<ul>
+							<li class="fragment"><p>📚 需要不斷學習新技術</p></li>
+							<li class="fragment"><p>🐛 有時會遇到很難解決的 Bug</p></li>
+							<li class="fragment"><p>⏳ 專案截止日的壓力</p></li>
+							<li class="fragment"><p>💺 長時間坐在電腦前</p></li>
+							<li class="fragment"><p>🎯 需要保持專注力</p></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>✨ 但為什麼還是很棒？</h2>
+					<ul>
+						<li class="fragment"><p>🎨 創造新東西的成就感</p></li>
+						<li class="fragment"><p>👥 看到自己的作品被人使用</p></li>
+						<li class="fragment"><p>💡 解決問題的滿足感</p></li>
+						<li class="fragment"><p>🌈 工作選擇多元</p></li>
+						<li class="fragment"><p>🏠 可以在家工作</p></li>
+						<li class="fragment"><p>💰 薪資待遇不錯</p></li>
+						<li class="fragment"><p class="neon-text">🌍 用程式改變世界！</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>📝 真實案例分享</h2>
+					<div class="highlight-box fragment" style="margin: 15px 0; padding: 15px;">
+						<h3>我做過的專案（有新聞報導）</h3>
+					</div>
+					<ul style="margin-top: 20px;">
+						<li class="fragment"><p>😷 <a href="https://kiang.github.io/pharmacies/" target="_blank" style="color: #00ff88;">藥局口罩採購地圖</a> - 42 則新聞報導</p></li>
+						<li class="fragment"><p>🦠 <a href="https://kiang.github.io/covid19/" target="_blank" style="color: #00ff88;">Covid-19 本土病例地圖</a> - 27 則新聞報導</p></li>
+						<li class="fragment"><p>🍽️ <a href="https://kiang.github.io/foodlover/" target="_blank" style="color: #00ff88;">好食券地圖</a> - 27 則新聞報導</p></li>
+						<li class="fragment"><p>🥚 <a href="https://tainan.olc.tw/p/egg/" target="_blank" style="color: #00ff88;">蛋蛋前線支援地圖</a> - 25 則新聞報導</p></li>
+						<li class="fragment"><p>👶 <a href="https://kiang.github.io/preschools/" target="_blank" style="color: #00ff88;">台灣幼兒園地圖</a> - 15 則新聞報導</p></li>
+					</ul>
+					<h3 class="fragment neon-text" style="margin-top: 20px;">這些都是用程式幫助社會！</h3>
+				</section>
+
+				<section class="center-content">
+					<h2 style="font-size: 1.8em;">🦸 軟體開發者的超能力</h2>
+					<div class="flex-container" style="margin-top: 8px; font-size: 0.75em;">
+						<div class="tech-card flex-item fragment" style="padding: 10px; margin: 3px;">
+							<p style="font-size: 1.8em; margin: 5px 0;">💡</p>
+							<p style="margin: 5px 0;">把想法變成現實</p>
+						</div>
+						<div class="tech-card flex-item fragment" style="padding: 10px; margin: 3px;">
+							<p style="font-size: 1.8em; margin: 5px 0;">⚡</p>
+							<p style="margin: 5px 0;">自動化重複的工作</p>
+						</div>
+					</div>
+					<div class="flex-container" style="font-size: 0.75em;">
+						<div class="tech-card flex-item fragment" style="padding: 10px; margin: 3px;">
+							<p style="font-size: 1.8em; margin: 5px 0;">📊</p>
+							<p style="margin: 5px 0;">處理大量資料</p>
+						</div>
+						<div class="tech-card flex-item fragment" style="padding: 10px; margin: 3px;">
+							<p style="font-size: 1.8em; margin: 5px 0;">🌍</p>
+							<p style="margin: 5px 0;">連接世界各地的人</p>
+						</div>
+					</div>
+					<div class="tech-card fragment" style="padding: 10px; margin: 8px auto; max-width: 350px; font-size: 0.75em;">
+						<p style="font-size: 1.8em; margin: 5px 0;">🚀</p>
+						<p style="margin: 5px 0;">24 小時不間斷服務</p>
+					</div>
+					<h3 class="fragment gradient-text" style="margin-top: 8px; font-size: 1em;">程式碼就是你的魔法棒！🪄</h3>
+				</section>
+
+				<section>
+					<h2>🤔 適合什麼樣的人？</h2>
+					<div class="highlight-box" style="padding: 20px; margin: 15px 0;">
+						<ul>
+							<li class="fragment"><p>🧩 喜歡解謎和挑戰</p></li>
+							<li class="fragment"><p>💻 對科技有興趣</p></li>
+							<li class="fragment"><p>🌱 願意嘗試新事物</p></li>
+							<li class="fragment"><p>🎨 享受創造的過程</p></li>
+							<li class="fragment"><p>💪 不怕失敗，願意重來</p></li>
+						</ul>
+					</div>
+					<h3 class="fragment neon-text" style="margin-top: 15px;">如果這些聽起來像你，那很適合！</h3>
+				</section>
+
+				<section>
+					<h2>🎯 現在可以做什麼？</h2>
+					<div style="margin-top: 15px; font-size: 0.8em;">
+						<div class="tech-card fragment" style="margin: 6px 0; padding: 10px;">1️⃣ 試試 Scratch 或 Code.org</div>
+						<div class="tech-card fragment" style="margin: 6px 0; padding: 10px;">2️⃣ 看 YouTube 程式教學影片</div>
+						<div class="tech-card fragment" style="margin: 6px 0; padding: 10px;">3️⃣ 參加學校的程式社團</div>
+						<div class="tech-card fragment" style="margin: 6px 0; padding: 10px;">4️⃣ 跟朋友一起學習</div>
+						<div class="tech-card fragment" style="margin: 6px 0; padding: 10px;">5️⃣ 做個小專案（計算機、小遊戲）</div>
+						<div class="tech-card fragment" style="margin: 6px 0; padding: 10px;">6️⃣ 不要怕犯錯，持續練習！</div>
+					</div>
+				</section>
+
+				<section class="center-content">
+					<h2>🔮 未來的科技世界</h2>
+					<div class="highlight-box fragment" style="margin: 40px 0;">
+						<h3 class="gradient-text">程式設計將變得越來越重要</h3>
+					</div>
+					<div class="flex-container">
+						<div class="tech-card flex-item fragment">🤖 人工智慧 AI</div>
+						<div class="tech-card flex-item fragment">🥽 虛擬實境 VR/AR</div>
+						<div class="tech-card flex-item fragment">📡 物聯網 IoT</div>
+					</div>
+					<div class="flex-container">
+						<div class="tech-card flex-item fragment">🚗 自動駕駛</div>
+						<div class="tech-card flex-item fragment">🏙️ 智慧城市</div>
+					</div>
+					<h3 class="fragment neon-text" style="margin-top: 30px;">這些都需要軟體開發者！</h3>
+				</section>
+
+				<section>
+					<h2>🌏 開源與社群</h2>
+					<div class="highlight-box fragment" style="margin-top: 30px;">
+						<h3 class="gradient-text">g0v 零時政府</h3>
+						<p>用程式改變社會的公民科技社群</p>
+					</div>
+					<ul style="margin-top: 30px;">
+						<li class="fragment"><p>🔓 開放原始碼</p></li>
+						<li class="fragment"><p>🤝 協作與分享</p></li>
+						<li class="fragment"><p>👥 任何人都可以參與</p></li>
+						<li class="fragment"><p>🌍 用科技解決社會問題</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>💡 給同學們的建議</h2>
+					<div class="highlight-box" style="padding: 20px;">
+						<div style="margin-top: 10px; font-size: 0.85em;">
+							<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">1️⃣ 保持好奇心 🔍</div>
+							<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">2️⃣ 不要害怕犯錯 💪</div>
+							<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">3️⃣ 多動手實作 ⚡</div>
+							<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">4️⃣ 跟他人分享學習 🤝</div>
+							<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">5️⃣ 專注在解決問題，不是背程式碼 🧠</div>
+							<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">6️⃣ 培養英文閱讀能力 📚</div>
+							<div class="tech-card fragment" style="margin: 8px 0; padding: 12px;">7️⃣ 享受創造的樂趣！ 🎉</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>📌 重點整理</h2>
+					<ul style="font-size: 0.9em;">
+						<li class="fragment"><p>💻 軟體開發 = 用程式碼創造東西</p></li>
+						<li class="fragment"><p>🧮 不需要超強數學，需要邏輯思考</p></li>
+						<li class="fragment"><p>🎓 很多免費學習資源</p></li>
+						<li class="fragment"><p>💼 工作機會多，薪資待遇好</p></li>
+						<li class="fragment"><p>🏠 可以遠端工作，彈性高</p></li>
+						<li class="fragment"><p>🌍 能用程式幫助社會</p></li>
+						<li class="fragment"><p class="neon-text">🚀 現在就可以開始學習！</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>📬 想知道更多？</h2>
+					<div style="margin-top: 50px;">
+						<div class="tech-card fragment">
+							<p>💻 GitHub: <a href="https://github.com/kiang" target="_blank" style="color: #00ff88;">github.com/kiang</a></p>
+						</div>
+						<div class="tech-card fragment">
+							<p>🌏 g0v 零時政府: <a href="https://g0v.tw" target="_blank" style="color: #00ff88;">g0v.tw</a></p>
+						</div>
+					</div>
+					<h3 class="fragment neon-text" style="margin-top: 50px;">歡迎隨時交流討論！</h3>
+				</section>
+
+				<section class="center-content" data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+					<h1>💬 Q&A</h1>
+					<h2 style="margin-top: 50px;">有任何問題嗎？</h2>
+					<h3 class="fragment neon-text" style="margin-top: 50px;">不要害羞，儘管發問！</h3>
+				</section>
+
+				<section class="center-content" data-background-gradient="linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+					<h1>🙏 謝謝大家！</h1>
+					<h2 style="margin-top: 50px;">希望今天的分享對你們有幫助</h2>
+					<div class="highlight-box fragment" style="margin-top: 50px;">
+						<h3>記得：任何人都可以學程式</h3>
+					</div>
+					<h2 class="fragment gradient-text" style="margin-top: 50px;">從今天開始，成為未來的開發者！🚀</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/zoom/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
