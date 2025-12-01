@@ -334,8 +334,145 @@
 		.icon-green { background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%); }
 		.icon-blue { background: linear-gradient(135deg, #339af0 0%, #228be6 100%); }
 		.icon-yellow { background: linear-gradient(135deg, #ffd43b 0%, #fab005 100%); }
+
+		/* 列印樣式 */
+		@media print {
+			/* 停止所有動畫 */
+			*, *::before, *::after {
+				animation: none !important;
+				transition: none !important;
+			}
+
+			/* 確保背景顏色和圖片可以列印 */
+			* {
+				-webkit-print-color-adjust: exact !important;
+				print-color-adjust: exact !important;
+				color-adjust: exact !important;
+			}
+
+			/* 讓所有 fragment 元素直接顯示，避免重複頁面 */
+			.reveal .slides section .fragment {
+				opacity: 1 !important;
+				visibility: visible !important;
+			}
+
+			/* 背景圖片列印設定 */
+			.reveal .slide-background {
+				display: block !important;
+				position: absolute !important;
+				top: 0 !important;
+				left: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				z-index: -1 !important;
+				opacity: 1 !important;
+				visibility: visible !important;
+			}
+
+			.reveal .slide-background-content {
+				background-size: contain !important;
+				background-repeat: no-repeat !important;
+				background-position: center !important;
+			}
+
+			/* 確保背景圖片在列印時顯示 */
+			.reveal .backgrounds {
+				display: block !important;
+				visibility: visible !important;
+			}
+
+			/* 調整文字大小確保可讀性 */
+			.reveal h1 { font-size: 1.8em !important; }
+			.reveal h2 { font-size: 1.4em !important; }
+			.reveal h3 { font-size: 1.2em !important; }
+			.reveal p, .reveal li { font-size: 0.9em !important; }
+
+			/* 確保 emoji 在列印時正常顯示 */
+			.big-emoji {
+				font-size: 60px !important;
+				margin: 10px auto !important;
+			}
+
+			.big-emoji-row {
+				font-size: 40px !important;
+				gap: 20px !important;
+			}
+
+			/* 選擇題樣式調整 */
+			.quiz-option {
+				background: #667eea !important;
+				padding: 10px 20px !important;
+				margin: 8px auto !important;
+				font-size: 0.85em !important;
+				border: 1px solid #333 !important;
+			}
+
+			.quiz-option.correct {
+				background: #11998e !important;
+			}
+
+			.quiz-option.wrong {
+				background: #eb3349 !important;
+			}
+
+			/* 進度條簡化 */
+			.progress-bar {
+				height: 15px !important;
+				margin: 15px auto !important;
+			}
+
+			/* 圓形圖標縮小 */
+			.icon-circle {
+				width: 60px !important;
+				height: 60px !important;
+				font-size: 1.5em !important;
+				margin: 8px !important;
+			}
+
+			/* 標籤調整 */
+			.tag {
+				padding: 5px 12px !important;
+				font-size: 0.75em !important;
+				margin: 3px !important;
+			}
+
+			/* 時間軸調整 */
+			.timeline-icon {
+				font-size: 1.8em !important;
+			}
+
+			/* 計數器調整 */
+			.counter {
+				font-size: 3em !important;
+			}
+
+			/* 確保白色文字在漸層背景上可見 */
+			section[data-background] h1,
+			section[data-background] h2,
+			section[data-background] h3,
+			section[data-background] p {
+				text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
+			}
+
+			/* 頁面邊距 */
+			.reveal .slides section {
+				padding: 20px !important;
+			}
+
+			/* 隱藏不需要列印的元素 */
+			.warning-flash {
+				color: #e74c3c !important;
+			}
+		}
 	</style>
 
+	<!--
+		列印說明 / Print Instructions:
+		1. 在網址後加上 ?print-pdf (例如: 20251207_pingtungsw.html?print-pdf)
+		2. 使用 Chrome 瀏覽器列印 (Ctrl+P 或 Cmd+P)
+		3. 選擇「儲存為 PDF」
+		4. 在「更多設定」中勾選「背景圖形」
+	-->
 	<!-- Printing and PDF exports -->
 	<script>
 		var link = document.createElement('link');
@@ -999,6 +1136,9 @@
 			center: true,
 
 			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// PDF 列印設定：不要為每個 fragment 建立獨立頁面
+			pdfSeparateFragments: false,
 
 			// Optional reveal.js plugins
 			dependencies: [
