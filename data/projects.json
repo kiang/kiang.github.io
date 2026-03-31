@@ -2,6 +2,132 @@
   "projects": [
     {
       "title": {
+        "zh": "廢棄物棄置案件管理系統",
+        "en": "Waste Dumping Case Management System"
+      },
+      "description": {
+        "zh": "追蹤台灣廢棄物非法棄置案件的互動地圖系統，提供環保執法透明度。",
+        "en": "Interactive map system tracking illegal waste dumping cases in Taiwan, providing transparency on environmental enforcement."
+      },
+      "image": "img/factory_map.png",
+      "url": "https://tainan.olc.tw/p/wdms/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": {
+        "zh": "社會住宅地圖",
+        "en": "Social Housing Map"
+      },
+      "description": {
+        "zh": "台灣社會住宅分佈的互動地圖，協助民眾查詢社會住宅位置與申請資訊。",
+        "en": "Interactive map of social housing locations across Taiwan, helping residents find and apply for social housing."
+      },
+      "image": "img/tainan_basecode_house.png",
+      "url": "https://tainan.olc.tw/p/social_housing/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": {
+        "zh": "台灣太陽光電地圖",
+        "en": "Taiwan Solar Power Map"
+      },
+      "description": {
+        "zh": "全台灣太陽光電設施分佈的互動地圖，提供再生能源建設的地理視覺化資訊。",
+        "en": "Interactive map of solar power facilities across Taiwan, providing geographic visualization of renewable energy infrastructure."
+      },
+      "image": "img/revo.png",
+      "url": "https://tainan.olc.tw/p/revo/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": {
+        "zh": "台南市北門區錦湖里光電地圖",
+        "en": "Tainan Jinhu Solar Power Map"
+      },
+      "description": {
+        "zh": "台南市北門區錦湖里太陽光電設施分佈的互動地圖，關注農村地區光電開發議題。",
+        "en": "Interactive map of solar power facilities in Jinhu Village, Beimen District, Tainan, focusing on rural solar development issues."
+      },
+      "image": "img/jinhu.png",
+      "url": "https://tainan.olc.tw/p/jinhu/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": {
+        "zh": "水面型光電環評地圖",
+        "en": "Floating Solar Environmental Review Map"
+      },
+      "description": {
+        "zh": "顯示水面型太陽光電設施環境影響評估資訊的互動地圖，提供光電開發透明度。",
+        "en": "Interactive map showing environmental impact assessment information for floating solar power facilities."
+      },
+      "image": "img/solar.png",
+      "url": "https://tainan.olc.tw/p/floating/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": {
+        "zh": "陳亭妃單車踩街軌跡地圖",
+        "en": "Chen Ting-fei Cycling Campaign Route Map"
+      },
+      "description": {
+        "zh": "記錄台南市立委陳亭妃單車踩街活動軌跡的互動地圖。",
+        "en": "Interactive map recording the cycling campaign routes of Tainan legislator Chen Ting-fei."
+      },
+      "image": "img/fififans.png",
+      "url": "https://tainan.olc.tw/p/fififans/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": {
+        "zh": "台南廢棄物發爐地圖",
+        "en": "Tainan Illegal Waste Burning Map"
+      },
+      "description": {
+        "zh": "記錄台南市廢棄物非法燃燒案件的互動地圖，協助追蹤環境污染問題。",
+        "en": "Interactive map recording illegal waste burning incidents in Tainan City, helping track environmental pollution issues."
+      },
+      "image": "img/chimney_map.png",
+      "url": "https://tainan.olc.tw/p/dumpster_fire/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": {
+        "zh": "前金後謝調查局",
+        "en": "Political Donation Investigation Bureau"
+      },
+      "description": {
+        "zh": "遊戲化的群眾外包調查系統，追蹤政治獻金與潛在對價關係，涵蓋28,869家企業捐款人資料。",
+        "en": "Gamified crowdsourcing investigation system for tracking political donations and potential quid pro quo relationships across 28,869 business donors."
+      },
+      "image": "img/ardata_fun.png",
+      "url": "https://tainan.olc.tw/p/ardata_fun/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": {
+        "zh": "2026 台灣選舉候選人地圖",
+        "en": "2026 Taiwan Election Candidate Map"
+      },
+      "description": {
+        "zh": "互動地圖呈現2026年台灣地方選舉各縣市候選人資訊，方便選民查詢候選人分佈與背景。",
+        "en": "Interactive map showing candidate information for the 2026 Taiwan local elections across cities and counties."
+      },
+      "image": "img/tainan2026.png",
+      "url": "https://tainan.olc.tw/p/2026/",
+      "sourceCode": "https://github.com/kiang/tainan.olc.tw",
+      "media": []
+    },
+    {
+      "title": {
         "zh": "美國互惠關稅地圖",
         "en": "US Reciprocal Tariff Map"
       },
