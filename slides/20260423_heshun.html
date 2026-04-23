@@ -1,0 +1,1275 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>AI 新時代：認識生活中的 AI 好幫手 @ 和順里</title>
+
+	<meta name="author" content="Finjon Kiang">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+	<style>
+		.slides .header {
+			position: absolute;
+			top: -50%;
+			left: -50%;
+		}
+
+		.slides .footer {
+			position: absolute;
+			bottom: 50%;
+			left: -50%;
+		}
+
+		.big-emoji {
+			font-size: 120px;
+			display: block;
+			margin: 20px auto;
+			animation: bounce 2s ease-in-out infinite;
+		}
+
+		.big-emoji-row {
+			font-size: 80px;
+			display: flex;
+			justify-content: center;
+			gap: 40px;
+			margin: 30px 0;
+		}
+
+		@keyframes bounce {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-20px); }
+		}
+
+		@keyframes pulse {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.1); }
+		}
+
+		@keyframes shake {
+			0%, 100% { transform: translateX(0); }
+			25% { transform: translateX(-10px); }
+			75% { transform: translateX(10px); }
+		}
+
+		@keyframes glow {
+			0%, 100% { text-shadow: 0 0 10px rgba(255,200,0,0.5); }
+			50% { text-shadow: 0 0 30px rgba(255,200,0,1), 0 0 60px rgba(255,150,0,0.8); }
+		}
+
+		.pulse { animation: pulse 1.5s ease-in-out infinite; }
+		.shake { animation: shake 0.5s ease-in-out infinite; }
+		.glow { animation: glow 2s ease-in-out infinite; }
+		.bounce { animation: bounce 2s ease-in-out infinite; }
+
+		.tag {
+			display: inline-block;
+			padding: 10px 25px;
+			border-radius: 25px;
+			margin: 5px;
+			font-size: 0.9em;
+			color: white;
+		}
+		.tag-red { background: #e74c3c; }
+		.tag-green { background: #27ae60; }
+		.tag-blue { background: #3498db; }
+		.tag-orange { background: #e67e22; }
+		.tag-purple { background: #9b59b6; }
+
+		.quiz-option {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			padding: 25px 40px;
+			margin: 15px auto;
+			border-radius: 15px;
+			font-size: 1.3em;
+			max-width: 80%;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+		}
+
+		.quiz-option:hover {
+			transform: scale(1.05);
+			box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+		}
+
+		.quiz-option.correct {
+			background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+		}
+
+		.quiz-option.wrong {
+			background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+		}
+
+		.icon-circle {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 3em;
+			margin: 15px;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+		}
+
+		.icon-red { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%); }
+		.icon-green { background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%); }
+		.icon-blue { background: linear-gradient(135deg, #339af0 0%, #228be6 100%); }
+		.icon-yellow { background: linear-gradient(135deg, #ffd43b 0%, #fab005 100%); }
+
+		.progress-bar {
+			width: 80%;
+			height: 30px;
+			background: #eee;
+			border-radius: 15px;
+			margin: 30px auto;
+			overflow: hidden;
+		}
+
+		.progress-fill {
+			height: 100%;
+			background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+			border-radius: 15px;
+			transition: width 1s ease-out;
+		}
+
+		.timeline {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 80%;
+			margin: 40px auto;
+		}
+
+		.timeline-item {
+			text-align: center;
+			flex: 1;
+			position: relative;
+		}
+
+		.timeline-item::after {
+			content: '→';
+			position: absolute;
+			right: -10px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 2em;
+			color: #667eea;
+		}
+
+		.timeline-item:last-child::after {
+			display: none;
+		}
+
+		.timeline-icon {
+			font-size: 3em;
+			margin-bottom: 10px;
+		}
+
+		.compare-table {
+			display: flex;
+			justify-content: center;
+			gap: 40px;
+			margin: 30px 0;
+		}
+
+		.compare-col {
+			padding: 30px;
+			border-radius: 15px;
+			min-width: 300px;
+		}
+
+		.compare-good {
+			background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+		}
+
+		.compare-bad {
+			background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+		}
+
+		.compare-title {
+			font-size: 1.5em;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		.demo-box {
+			background: #f8f9fa;
+			border: 2px solid #dee2e6;
+			border-radius: 15px;
+			padding: 30px;
+			margin: 20px auto;
+			max-width: 80%;
+			text-align: left;
+			font-size: 0.9em;
+			line-height: 1.8;
+		}
+
+		.demo-box .user-msg {
+			background: #d1ecf1;
+			padding: 10px 20px;
+			border-radius: 10px;
+			margin: 10px 0;
+		}
+
+		.demo-box .ai-msg {
+			background: #d4edda;
+			padding: 10px 20px;
+			border-radius: 10px;
+			margin: 10px 0;
+		}
+
+		.practice-box {
+			background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+			border: 3px solid #f39c12;
+			border-radius: 20px;
+			padding: 20px 25px;
+			margin: 10px auto;
+			max-width: 85%;
+		}
+
+		.practice-box h3 {
+			color: #e67e22;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+
+		.step-box {
+			background: white;
+			border-radius: 12px;
+			padding: 10px 18px;
+			margin: 6px 0;
+			text-align: left;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			font-size: 0.9em;
+		}
+
+		.step-num {
+			display: inline-block;
+			background: #667eea;
+			color: white;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 30px;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+
+		.warning-flash {
+			animation: warning-blink 1s ease-in-out infinite;
+		}
+
+		@keyframes warning-blink {
+			0%, 100% { color: #e74c3c; }
+			50% { color: #f39c12; }
+		}
+
+		@media print {
+			*, *::before, *::after {
+				animation: none !important;
+				transition: none !important;
+			}
+
+			* {
+				-webkit-print-color-adjust: exact !important;
+				print-color-adjust: exact !important;
+				color-adjust: exact !important;
+			}
+
+			.reveal .slides section .fragment {
+				opacity: 1 !important;
+				visibility: visible !important;
+			}
+
+			.reveal .slide-background {
+				display: block !important;
+				position: absolute !important;
+				top: 0 !important;
+				left: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				z-index: -1 !important;
+				opacity: 1 !important;
+				visibility: visible !important;
+			}
+
+			.reveal h1 { font-size: 1.8em !important; }
+			.reveal h2 { font-size: 1.4em !important; }
+			.reveal h3 { font-size: 1.2em !important; }
+			.reveal p, .reveal li { font-size: 0.9em !important; }
+
+			.big-emoji {
+				font-size: 60px !important;
+				margin: 10px auto !important;
+			}
+
+			.big-emoji-row {
+				font-size: 40px !important;
+				gap: 20px !important;
+			}
+
+			.quiz-option {
+				background: #667eea !important;
+				padding: 10px 20px !important;
+				margin: 8px auto !important;
+				font-size: 0.85em !important;
+				border: 1px solid #333 !important;
+			}
+
+			.icon-circle {
+				width: 60px !important;
+				height: 60px !important;
+				font-size: 1.5em !important;
+				margin: 8px !important;
+			}
+
+			.tag {
+				padding: 5px 12px !important;
+				font-size: 0.75em !important;
+				margin: 3px !important;
+			}
+
+			.timeline-icon {
+				font-size: 1.8em !important;
+			}
+
+			.reveal .slides section {
+				padding: 20px !important;
+			}
+
+			.warning-flash {
+				color: #e74c3c !important;
+			}
+		}
+	</style>
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<div class="slides">
+			<!-- ==================== 開場 (10 分鐘) ==================== -->
+			<section data-background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+				<h2 style="color: white;">AI 新時代</h2>
+				<h1 style="color: white;">認識生活中的<br />AI 好幫手</h1>
+				<div class="big-emoji">🤖</div>
+				<p>
+					<small style="color: rgba(255,255,255,0.9);">江明宗 2026-04-23</small>
+				</p>
+			</section>
+
+			<section>
+				<h1>關於明宗</h1>
+				<div class="big-emoji">👋</div>
+			</section>
+			<section>
+				<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+					<div class="fragment" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px 30px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">💻</span>
+						<p style="margin: 10px 0 0 0;">20年程式開發經驗</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 20px 30px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">😷</span>
+						<p style="margin: 10px 0 0 0;">口罩地圖開發者</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px 30px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">🏛️</span>
+						<p style="margin: 10px 0 0 0;">前台南智慧城市辦公室秘書</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 20px 30px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">👨‍👧‍👦</span>
+						<p style="margin: 10px 0 0 0;">兩個孩子的爸</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>📋 簽到</h1>
+				<h3>請掃描 QR Code 填寫簽到表</h3>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSdsOa6HresHMTJBNR7j1GTqCv7Hk6u2-i2-xaccAphFfaz-Wg/viewform" target="_blank"><img
+						src="20260423_heshun/rollcall_qrcode.png" width="350" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);" /></a>
+			</section>
+
+			<section>
+				<h1>今天是「動手做」的課</h1>
+				<h2 class="fragment">請大家準備好手機 📱</h2>
+				<div class="big-emoji fragment">✋</div>
+			</section>
+
+			<section>
+				<h1>今天的六個練習</h1>
+			</section>
+			<section>
+				<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+					<div class="fragment" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 15px; width: 40%; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+						<h3 style="color: white;">練習一</h3>
+						<p>安裝 AI 工具</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 15px; width: 40%; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+						<h3 style="color: white;">練習二</h3>
+						<p>打字問 AI</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px; border-radius: 15px; width: 40%; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+						<h3 style="color: white;">練習三</h3>
+						<p>用「說」的問 AI</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%); color: white; padding: 20px; border-radius: 15px; width: 40%; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+						<h3 style="color: white;">練習四</h3>
+						<p>拍照讓 AI 看</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%); color: white; padding: 20px; border-radius: 15px; width: 40%; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+						<h3 style="color: white;">練習五</h3>
+						<p>請 AI 畫圖</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 20px; border-radius: 15px; width: 40%; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+						<h3 style="color: white;">練習六</h3>
+						<p>辨識 AI 詐騙</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- ==================== 練習一：安裝 AI 工具 (15 分鐘) ==================== -->
+			<section data-background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+				<div class="big-emoji pulse">📱</div>
+				<h1 style="color: white;">練習一</h1>
+				<h2 style="color: white;">在手機上安裝 AI 工具</h2>
+				<div class="progress-bar">
+					<div class="progress-fill" style="width: 15%;"></div>
+				</div>
+			</section>
+
+			<section>
+				<h1>AI 是什麼？</h1>
+				<h2 class="fragment">一個住在手機裡的聰明助理</h2>
+				<div class="big-emoji fragment">📚</div>
+			</section>
+			<section>
+				<ul>
+					<li><p>它讀過網路上幾十億篇文章</p></li>
+					<li><p class="fragment">你問它問題，它會用中文回答你</p></li>
+					<li><p class="fragment">可以幫你查資料、寫文章、翻譯</p></li>
+					<li><p class="fragment">但它不是人，有時候會說錯</p></li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>我們今天用 Google Gemini</h1>
+				<h2>Google 推出的免費 AI 工具</h2>
+			</section>
+
+			<section>
+				<h2>為什麼選 Gemini？</h2>
+				<ul>
+					<li><p>Google 出的，大品牌可靠</p></li>
+					<li><p class="fragment">免費就很好用</p></li>
+					<li><p class="fragment">用你的 Google 帳號就能登入</p></li>
+					<li><p class="fragment">會聊天、看照片、畫圖，功能很齊全</p></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="practice-box">
+					<h3>👉 練習一：安裝 Google Gemini App</h3>
+					<div class="step-box fragment">
+						<span class="step-num">1</span> 打開手機的 <strong>App Store</strong>（蘋果）或 <strong>Play 商店</strong>（Android）
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">2</span> 在搜尋欄打 <strong>Gemini</strong>
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">3</span> 找到有 <strong>彩色星星圖示 ✨</strong> 的那個，開發者是 <strong>Google</strong>
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">4</span> 按「安裝」或「取得」
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">5</span> 安裝好後打開，用你的 <strong>Google 帳號</strong>登入
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2>⚠️ 注意！認明正版</h2>
+				<ul>
+					<li><p>開發者一定是「Google LLC」</p></li>
+					<li><p class="fragment">圖示是彩色的星星 ✨</p></li>
+					<li><p class="fragment">不要下載名字很像但不是的 App</p></li>
+					<li><p class="fragment">免費就可以用，不需要付費</p></li>
+				</ul>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>大家一起安裝</h2>
+				<h3>有問題舉手，我來幫忙！</h3>
+				<div class="big-emoji">🙋</div>
+			</section>
+
+			<section>
+				<h1>安裝好了嗎？</h1>
+				<h2 class="fragment">看到聊天畫面就對了 ✅</h2>
+				<div class="big-emoji fragment">👍</div>
+			</section>
+
+			<!-- ==================== 練習二：打字問 AI (25 分鐘) ==================== -->
+			<section data-background="linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+				<div class="big-emoji pulse">⌨️</div>
+				<h1 style="color: white;">練習二</h1>
+				<h2 style="color: white;">打字問 AI 問題</h2>
+				<div class="progress-bar">
+					<div class="progress-fill" style="width: 30%;"></div>
+				</div>
+			</section>
+
+			<section>
+				<h1>跟 AI 聊天很簡單</h1>
+				<h2 class="fragment">就像傳訊息一樣</h2>
+				<h2 class="fragment">在下面的輸入框打字就好</h2>
+			</section>
+
+			<!-- 練習 2-1：問食譜 -->
+			<section>
+				<h2>練習 2-1</h2>
+				<h1>問 AI 今天煮什麼</h1>
+				<div class="big-emoji">🍳</div>
+			</section>
+			<section>
+				<div class="practice-box">
+					<h3>👉 請在 Gemini 輸入以下文字：</h3>
+					<div class="step-box" style="font-size: 1.2em; text-align: center; background: #e8f5e9;">
+						「我家有雞蛋、豆腐、青菜，<br />請推薦兩道簡單的家常菜，<br />告訴我做法」
+					</div>
+					<p class="fragment" style="text-align: center; margin-top: 20px;">按「送出」，等 AI 回答 ⏳</p>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>試試看！</h2>
+				<p style="font-size: 1.2em;">也可以換成你家冰箱有的食材</p>
+				<div class="big-emoji">👩‍🍳</div>
+			</section>
+
+			<section>
+				<h1>問問題的小技巧</h1>
+				<h2>說得越清楚，答案越好</h2>
+			</section>
+			<section>
+				<div class="compare-table">
+					<div class="compare-col compare-bad">
+						<div class="compare-title">❌ 太簡單</div>
+						<p>「今天煮什麼？」</p>
+					</div>
+					<div class="compare-col compare-good">
+						<div class="compare-title">✅ 說清楚</div>
+						<p>「我有雞蛋、豆腐、青菜，<br />推薦簡單的家常菜」</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- 練習 2-2：寫祝賀詞 -->
+			<section>
+				<h2>練習 2-2</h2>
+				<h1>請 AI 幫忙寫祝賀詞</h1>
+				<div class="big-emoji">✍️</div>
+			</section>
+			<section>
+				<div class="practice-box">
+					<h3>👉 請在 Gemini 輸入：</h3>
+					<div class="step-box" style="font-size: 1.2em; text-align: center; background: #e8f5e9;">
+						「朋友的孫子考上大學，<br />幫我寫一段簡短的祝賀」
+					</div>
+					<p class="fragment" style="text-align: center; margin-top: 15px;">💡 你可以改成任何你需要的場合：<br />生日、結婚、新居落成...</p>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>寫你自己需要的祝賀詞</h2>
+				<div class="big-emoji">🎉</div>
+			</section>
+
+			<!-- 練習 2-3：翻譯 -->
+			<section>
+				<h2>練習 2-3</h2>
+				<h1>請 AI 幫忙翻譯</h1>
+				<div class="big-emoji">🌐</div>
+			</section>
+			<section>
+				<div class="practice-box">
+					<h3>👉 請在 Gemini 輸入：</h3>
+					<div class="step-box" style="font-size: 1.2em; text-align: center; background: #e8f5e9;">
+						「幫我把『請問這個多少錢』<br />翻譯成日文和英文，<br />也告訴我怎麼唸」
+					</div>
+					<p class="fragment" style="text-align: center; margin-top: 15px;">💡 出國旅遊超好用！<br />可以翻譯任何你想說的話</p>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>試著翻譯一句你想說的話</h2>
+				<div class="big-emoji">✈️</div>
+			</section>
+
+			<!-- 練習 2-4：問健康 -->
+			<section>
+				<h2>練習 2-4</h2>
+				<h1>問 AI 健康小知識</h1>
+				<div class="big-emoji">💊</div>
+			</section>
+			<section>
+				<div class="practice-box">
+					<h3>👉 請在 Gemini 輸入：</h3>
+					<div class="step-box" style="font-size: 1.2em; text-align: center; background: #e8f5e9;">
+						「膝蓋痛的人，<br />在家可以做什麼舒緩的運動？<br />請用簡單的方式說明」
+					</div>
+					<p class="fragment" style="text-align: center; margin-top: 15px;">💡 可以換成你自己關心的健康問題</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="warning-flash">⚠️ 重要提醒</h2>
+				<h1>AI 不是醫生！</h1>
+				<ul>
+					<li><p class="fragment">AI 的健康資訊只能「參考」</p></li>
+					<li><p class="fragment">身體不舒服一定要看醫生</p></li>
+					<li><p class="fragment">不要自己按照 AI 說的吃藥</p></li>
+				</ul>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>問一個你關心的健康問題</h2>
+				<div class="big-emoji">🏥</div>
+			</section>
+
+			<section>
+				<h1>你已經學會跟 AI 聊天了！</h1>
+				<div class="big-emoji">🎊</div>
+				<h2 class="fragment">接下來學「用說的」</h2>
+			</section>
+
+			<!-- ==================== 練習三：語音問 AI (15 分鐘) ==================== -->
+			<section data-background="linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+				<div class="big-emoji pulse">🎤</div>
+				<h1 style="color: white;">練習三</h1>
+				<h2 style="color: white;">用「說」的問 AI</h2>
+				<div class="progress-bar">
+					<div class="progress-fill" style="width: 45%;"></div>
+				</div>
+			</section>
+
+			<section>
+				<h1>不用打字！</h1>
+				<h2>直接對手機說話就好</h2>
+				<div class="big-emoji">🗣️</div>
+			</section>
+
+			<section>
+				<div class="practice-box">
+					<h3>👉 練習三：用語音跟 AI 對話</h3>
+					<div class="step-box fragment">
+						<span class="step-num">1</span> 在 Gemini 畫面，找到下方的 <strong>麥克風按鈕 🎤</strong>
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">2</span> 按一下麥克風
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">3</span> 對著手機說：<br />
+						<strong>「我想去台南玩兩天，<br />幫我規劃輕鬆的行程」</strong>
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">4</span> 說完等 AI 回答
+					</div>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>用說的問 AI 任何問題！</h2>
+				<p style="font-size: 1.2em;">問旅遊、問食譜、問天氣都可以</p>
+				<div class="big-emoji">🎙️</div>
+			</section>
+
+			<section>
+				<h1>語音聊天功能</h1>
+				<h2>Gemini 還有「即時語音對話」</h2>
+			</section>
+			<section>
+				<div class="practice-box">
+					<h3>👉 進階：Gemini Live 語音對話</h3>
+					<div class="step-box fragment">
+						<span class="step-num">1</span> 在 Gemini 首頁，找到右下角的 <strong>Gemini Live 按鈕 🎙️</strong>（波浪圖示）
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">2</span> 按下去，就可以跟 AI 「講電話」
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">3</span> 像跟真人聊天一樣，隨時開口說
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">4</span> AI 也會用語音回答你
+					</div>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>跟 AI 「講電話」看看！</h2>
+				<p style="font-size: 1.2em;">試著跟它聊聊天氣或你最近的生活</p>
+				<div class="big-emoji">📞</div>
+			</section>
+
+			<section>
+				<h1>恭喜！你會打字和說話了 🎉</h1>
+				<h2 class="fragment">接下來學「拍照給 AI 看」</h2>
+			</section>
+
+			<!-- ==================== 休息時間 ==================== -->
+			<section data-background="linear-gradient(135deg, #fdcb6e 0%, #e17055 100%)">
+				<h1 style="color: white;">☕ 休息一下</h1>
+				<div class="big-emoji">🍵</div>
+				<h2 style="color: white;">喝杯茶、上個廁所</h2>
+				<h3 style="color: white;">10 分鐘後回來</h3>
+			</section>
+
+			<!-- ==================== 練習四：拍照問 AI (20 分鐘) ==================== -->
+			<section data-background="linear-gradient(135deg, #fdcb6e 0%, #e17055 100%)">
+				<div class="big-emoji pulse">📷</div>
+				<h1 style="color: white;">練習四</h1>
+				<h2 style="color: white;">拍照讓 AI 看</h2>
+				<div class="progress-bar">
+					<div class="progress-fill" style="width: 60%;"></div>
+				</div>
+			</section>
+
+			<section>
+				<h1>AI 會「看」照片！</h1>
+				<h2 class="fragment">你拍什麼，它就能告訴你那是什麼</h2>
+			</section>
+
+			<section>
+				<h1>可以拍什麼讓 AI 看？</h1>
+				<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px;">
+					<span class="tag tag-blue fragment">藥袋 💊</span>
+					<span class="tag tag-green fragment">菜市場的菜 🥬</span>
+					<span class="tag tag-purple fragment">英文標示 🔤</span>
+					<span class="tag tag-orange fragment">花草植物 🌺</span>
+					<span class="tag tag-red fragment">電器面板 🔘</span>
+					<span class="tag tag-blue fragment">路邊的蟲 🐛</span>
+				</div>
+			</section>
+
+			<!-- 練習 4-1：拍身邊的東西 -->
+			<section>
+				<h2>練習 4-1</h2>
+				<h1>拍身邊的東西問 AI</h1>
+			</section>
+			<section>
+				<div class="practice-box">
+					<h3>👉 拍一張照片讓 AI 看</h3>
+					<div class="step-box fragment">
+						<span class="step-num">1</span> 在 Gemini 輸入框左邊，按 <strong>相機圖示 📷</strong> 或 <strong>「+」按鈕</strong>
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">2</span> 選「拍照」或「從相簿選擇」
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">3</span> 拍一張身邊的東西<br />（水杯、零食包裝、植物都可以）
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">4</span> 在輸入框打：<strong>「這是什麼？」</strong>
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">5</span> 按送出，看 AI 怎麼回答
+					</div>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>拍身邊任何東西問 AI！</h2>
+				<div class="big-emoji">📸</div>
+			</section>
+
+			<!-- 練習 4-2：拍文字翻譯 -->
+			<section>
+				<h2>練習 4-2</h2>
+				<h1>拍文字讓 AI 翻譯</h1>
+			</section>
+			<section>
+				<div class="practice-box">
+					<h3>👉 拍有文字的東西讓 AI 翻譯或說明</h3>
+					<div class="step-box fragment">
+						<span class="step-num">1</span> 找一個有文字的東西<br />（產品包裝、名片、紙張）
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">2</span> 拍照後上傳給 Gemini
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">3</span> 問：<strong>「請幫我看這上面寫什麼，<br />用簡單的中文解釋」</strong>
+					</div>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>拍一張有文字的東西問 AI</h2>
+				<p style="font-size: 1.2em;">有英文、日文的包裝最適合</p>
+				<div class="big-emoji">🔤</div>
+			</section>
+
+			<section>
+				<h1>以後看到不懂的東西</h1>
+				<h2>拍一張照片問 AI 就好！</h2>
+				<div class="big-emoji">💡</div>
+			</section>
+
+			<!-- ==================== 練習五：AI 畫圖 (15 分鐘) ==================== -->
+			<section data-background="linear-gradient(135deg, #eb3349 0%, #f45c43 100%)">
+				<div class="big-emoji pulse">🎨</div>
+				<h1 style="color: white;">練習五</h1>
+				<h2 style="color: white;">請 AI 畫圖</h2>
+				<div class="progress-bar">
+					<div class="progress-fill" style="width: 75%;"></div>
+				</div>
+			</section>
+
+			<section>
+				<h1>AI 還會畫圖！</h1>
+				<h2 class="fragment">你用文字描述，它就畫給你</h2>
+				<div class="big-emoji fragment">🖼️</div>
+			</section>
+
+			<section>
+				<div class="practice-box">
+					<h3>👉 練習五：請 AI 畫一張圖</h3>
+					<div class="step-box fragment">
+						<span class="step-num">1</span> 在 Gemini 輸入：<br /><strong>「幫我畫一隻在公園散步的柴犬」</strong>
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">2</span> 按送出，等一下（大約 10 秒）
+					</div>
+					<div class="step-box fragment">
+						<span class="step-num">3</span> AI 就會畫出一張圖給你！
+					</div>
+					<p class="fragment" style="text-align: center; margin-top: 15px;">💡 你可以改成任何你想要的：<br />「一隻在睡覺的貓」、「一碗滷肉飯」</p>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>請 AI 畫你想要的圖！</h2>
+				<p style="font-size: 1.2em;">可以畫動物、風景、食物...</p>
+				<div class="big-emoji">🎨</div>
+			</section>
+
+			<section>
+				<h2>📤 上傳你的作品</h2>
+				<h3>畫好了嗎？掃描 QR Code 上傳分享！</h3>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSf4ZVYn5DlXJaqzMtoaIhVZbr_0mPMLoiidCbCFOA3ETImaJg/viewform" target="_blank"><img
+						src="20260423_heshun/upload_qrcode.png" width="300" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);" /></a>
+			</section>
+
+			<section>
+				<h1>畫圖可以用在哪裡？</h1>
+				<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px;">
+					<span class="tag tag-blue fragment">做生日卡片 🎂</span>
+					<span class="tag tag-green fragment">做節日賀圖 🧧</span>
+					<span class="tag tag-purple fragment">幫孫子畫故事 📖</span>
+					<span class="tag tag-orange fragment">社群大頭貼 😊</span>
+				</div>
+			</section>
+
+			<section>
+				<h2>進階練習</h2>
+				<h1>幫自己畫一張頭像</h1>
+				<div class="practice-box">
+					<div class="step-box" style="font-size: 1.1em; text-align: center; background: #e8f5e9;">
+						「幫我畫一個 [你的特徵] 的卡通人物，<br />笑咪咪的，背景是花園」
+					</div>
+					<p style="text-align: center; margin-top: 10px;">例如：戴眼鏡的阿公、短頭髮的阿嬤</p>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>畫一張自己的卡通頭像！</h2>
+				<div class="big-emoji">🧑‍🎨</div>
+			</section>
+
+			<section>
+				<h2>📤 上傳你的頭像</h2>
+				<h3>掃描 QR Code 上傳你的卡通頭像！</h3>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSf4ZVYn5DlXJaqzMtoaIhVZbr_0mPMLoiidCbCFOA3ETImaJg/viewform" target="_blank"><img
+						src="20260423_heshun/upload_qrcode.png" width="300" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);" /></a>
+			</section>
+
+			<!-- ==================== 練習六：AI 安全與防詐 (20 分鐘) ==================== -->
+			<section data-background="linear-gradient(135deg, #11998e 0%, #38ef7d 100%)">
+				<div class="big-emoji pulse">🛡️</div>
+				<h1 style="color: white;">練習六</h1>
+				<h2 style="color: white;">安全使用 AI ＆ 防詐騙</h2>
+				<div class="progress-bar">
+					<div class="progress-fill" style="width: 90%;"></div>
+				</div>
+			</section>
+
+			<section>
+				<h1>AI 很好用</h1>
+				<h2 class="fragment">但有幾件事一定要知道</h2>
+			</section>
+
+			<!-- 重要觀念一：不給個資 -->
+			<section>
+				<h2>🔒 第一件事</h2>
+				<h1>不要告訴 AI 你的個資</h1>
+			</section>
+			<section>
+				<h2>這些千萬不要跟 AI 說：</h2>
+				<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px;">
+					<span class="tag tag-red fragment">身分證字號</span>
+					<span class="tag tag-red fragment">銀行帳號</span>
+					<span class="tag tag-red fragment">信用卡號碼</span>
+					<span class="tag tag-red fragment">家裡地址</span>
+					<span class="tag tag-red fragment">密碼</span>
+					<span class="tag tag-red fragment">健保卡號</span>
+				</div>
+				<p class="fragment" style="margin-top: 30px; font-size: 1.2em; color: #e74c3c;">
+					你跟 AI 說的話，可能會被儲存起來！
+				</p>
+			</section>
+
+			<section>
+				<div class="practice-box">
+					<h3>👉 練習：體驗 AI 的回應</h3>
+					<div class="step-box" style="font-size: 1.1em; text-align: center; background: #e8f5e9;">
+						在 Gemini 問：<br /><strong>「如果有人在網路上問我的身分證字號，我應該怎麼做？」</strong>
+					</div>
+					<p style="text-align: center; margin-top: 10px;">看看 AI 怎麼教你保護自己</p>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>問 AI 怎麼保護個資</h2>
+				<div class="big-emoji">🔐</div>
+			</section>
+
+			<!-- 重要觀念二：AI 會說錯 -->
+			<section>
+				<h2>🤔 第二件事</h2>
+				<h1>AI 有時候會說錯</h1>
+				<div class="big-emoji glow">🤥</div>
+			</section>
+
+			<section>
+				<div class="practice-box">
+					<h3>👉 練習：測試 AI 會不會說錯</h3>
+					<div class="step-box" style="font-size: 1.1em; text-align: center; background: #e8f5e9;">
+						在 Gemini 問：<br /><strong>「我們這裡（和順里）附近<br />有哪些推薦的餐廳？」</strong>
+					</div>
+					<p style="text-align: center; margin-top: 10px;">看看 AI 的回答，<br />你覺得它說的對嗎？</p>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>問 AI 你熟悉的事</h2>
+				<h3>看它會不會說錯！</h3>
+				<div class="big-emoji">🔍</div>
+			</section>
+
+			<section>
+				<h1>發現了嗎？</h1>
+				<h2 class="fragment">AI 會「一本正經地胡說八道」</h2>
+				<ul>
+					<li><p class="fragment">它講得很有信心，但不一定對</p></li>
+					<li><p class="fragment">地名、人名、電話常常是錯的</p></li>
+					<li><p class="fragment">重要的事一定要自己再確認！</p></li>
+				</ul>
+			</section>
+
+			<!-- 重要觀念三：防詐騙 -->
+			<section>
+				<h2>🚨 第三件事</h2>
+				<h1>小心 AI 詐騙</h1>
+				<div class="big-emoji shake">⚠️</div>
+			</section>
+
+			<section>
+				<h1>AI 讓詐騙變厲害了</h1>
+				<div class="timeline">
+					<div class="timeline-item fragment">
+						<div class="timeline-icon">📝</div>
+						<div>以前<br /><small>錯字很多<br />一看就假</small></div>
+					</div>
+					<div class="timeline-item fragment">
+						<div class="timeline-icon">💬</div>
+						<div>現在<br /><small>文字很通順<br />難分真假</small></div>
+					</div>
+					<div class="timeline-item fragment">
+						<div class="timeline-icon">🎭</div>
+						<div>最近<br /><small>假聲音假影像<br />更難辨識</small></div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>常見的 AI 詐騙</h1>
+			</section>
+			<section>
+				<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+					<div class="fragment" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; width: 40%;">
+						<span style="font-size: 2em;">📞</span>
+						<h3 style="color: white;">假聲音電話</h3>
+						<p>用 AI 模仿家人聲音<br />打電話要錢</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; width: 40%;">
+						<span style="font-size: 2em;">🎥</span>
+						<h3 style="color: white;">假名人影片</h3>
+						<p>AI 做的假影片<br />騙你去投資</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; width: 40%;">
+						<span style="font-size: 2em;">💕</span>
+						<h3 style="color: white;">假交友</h3>
+						<p>AI 自動聊天<br />騙感情和金錢</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; width: 40%;">
+						<span style="font-size: 2em;">📧</span>
+						<h3 style="color: white;">假中獎通知</h3>
+						<p>AI 寫的完美詐騙訊息<br />騙你點連結</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2>真實案例</h2>
+				<h1>假孫子來電</h1>
+				<div class="demo-box">
+					<p>📞 電話響起，聽起來是孫子的聲音：</p>
+					<div class="ai-msg">
+						「阿嬤！我出車禍了，需要 10 萬塊修車，趕快匯錢給我，不要跟爸媽說...」
+					</div>
+					<p class="fragment" style="color: #e74c3c; font-weight: bold;">
+						⚠️ 這個「孫子的聲音」是 AI 模仿的！
+					</p>
+				</div>
+			</section>
+
+			<!-- 互動測驗 -->
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h2>🙋 快問快答</h2>
+				<h3>接到「孫子」打來借錢的電話<br />你應該怎麼做？</h3>
+				<div class="quiz-option fragment" onclick="this.classList.add('wrong')">A. 聽起來很急，趕快匯錢</div>
+				<div class="quiz-option fragment" onclick="this.classList.add('correct')">B. 掛掉，自己打給孫子確認</div>
+				<div class="quiz-option fragment" onclick="this.classList.add('wrong')">C. 先問他要匯到哪裡</div>
+			</section>
+			<section data-background="linear-gradient(135deg, #11998e 0%, #38ef7d 100%)">
+				<h2 style="color: white;">✅ 答案是 B</h2>
+				<div class="big-emoji">📞</div>
+				<h3 style="color: white;">掛掉電話，自己打給孫子確認</h3>
+				<p style="color: rgba(255,255,255,0.9); font-size: 1.1em;">不管聲音多像，一定要自己打回去確認<br />詐騙集團最怕你「慢慢來」！</p>
+			</section>
+
+			<section>
+				<h1>防詐三步驟</h1>
+			</section>
+			<section>
+				<div style="display: flex; justify-content: center; gap: 30px;">
+					<div class="fragment" style="text-align: center;">
+						<div class="icon-circle icon-red" style="width: 100px; height: 100px; font-size: 2.5em;">🛑</div>
+						<h3>停</h3>
+						<p>先別急<br />冷靜一下</p>
+					</div>
+					<div class="fragment" style="text-align: center;">
+						<div class="icon-circle icon-yellow" style="width: 100px; height: 100px; font-size: 2.5em;">🔍</div>
+						<h3>查</h3>
+						<p>自己打電話<br />跟本人確認</p>
+					</div>
+					<div class="fragment" style="text-align: center;">
+						<div class="icon-circle icon-green" style="width: 100px; height: 100px; font-size: 2.5em;">📞</div>
+						<h3>問</h3>
+						<p>不確定就打<br />165 反詐騙專線</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>跟家人設「安全密語」</h1>
+				<ul>
+					<li><p>約一個只有彼此知道的暗號</p></li>
+					<li><p class="fragment">例如：「我們家的狗叫什麼名字？」</p></li>
+					<li><p class="fragment">接到可疑電話，先問暗號</p></li>
+					<li><p class="fragment">AI 再厲害也不知道你家的暗號！</p></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="practice-box">
+					<h3>👉 練習：用 AI 幫你防詐</h3>
+					<div class="step-box" style="font-size: 1.1em; text-align: center; background: #e8f5e9;">
+						在 Gemini 問：<br /><strong>「收到一則訊息說我中了 100 萬，<br />要我點連結領獎，<br />這是真的嗎？」</strong>
+					</div>
+					<p style="text-align: center; margin-top: 10px;">看看 AI 怎麼幫你判斷</p>
+				</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+				<h1>⏰ 動手時間</h1>
+				<h2>用 AI 來幫你判斷詐騙！</h2>
+				<div class="big-emoji">🛡️</div>
+			</section>
+
+			<section>
+				<h1>也可以用 AI 查假消息</h1>
+				<div class="practice-box">
+					<div class="step-box" style="font-size: 1.1em; text-align: center; background: #e8f5e9;">
+						<strong>「有人傳給我一則訊息說<br />喝檸檬水可以治癌症，<br />這是真的嗎？」</strong>
+					</div>
+				</div>
+				<p class="fragment" style="text-align: center; color: #666;">⚠️ 但記得：AI 也可能出錯，重要的事還是要查證</p>
+			</section>
+
+			<!-- ==================== 總結 (15 分鐘) ==================== -->
+			<section data-background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+				<h1 style="color: white;">🎯 今天的成果</h1>
+				<div class="big-emoji">🏆</div>
+			</section>
+
+			<section>
+				<h1>你今天學會了</h1>
+			</section>
+			<section>
+				<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+					<div class="fragment" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px 25px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">📱</span>
+						<p>安裝 Gemini</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px 25px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">⌨️</span>
+						<p>打字問 AI</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px 25px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">🎤</span>
+						<p>用說的問 AI</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%); color: white; padding: 20px 25px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">📷</span>
+						<p>拍照問 AI</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%); color: white; padding: 20px 25px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">🎨</span>
+						<p>請 AI 畫圖</p>
+					</div>
+					<div class="fragment" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 20px 25px; border-radius: 15px; text-align: center;">
+						<span style="font-size: 2em;">🛡️</span>
+						<p>安全防詐</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1>回家可以試試的事</h1>
+			</section>
+			<section>
+				<ul>
+					<li><p>問 AI 明天的午餐煮什麼 🍳</p></li>
+					<li><p class="fragment">拍藥袋問 AI 怎麼吃藥 💊</p></li>
+					<li><p class="fragment">出國前翻譯幾句常用的話 ✈️</p></li>
+					<li><p class="fragment">畫一張卡片送給朋友 🎨</p></li>
+					<li><p class="fragment">收到奇怪訊息，問 AI 是不是詐騙 🛡️</p></li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>三個一定要記得的事</h1>
+			</section>
+			<section>
+				<div style="display: flex; justify-content: center; gap: 30px;">
+					<div class="fragment" style="text-align: center;">
+						<div class="icon-circle icon-blue" style="width: 100px; height: 100px; font-size: 2.5em;">🔍</div>
+						<h3>查證</h3>
+						<p>AI 說的不一定對<br />重要的事要確認</p>
+					</div>
+					<div class="fragment" style="text-align: center;">
+						<div class="icon-circle icon-red" style="width: 100px; height: 100px; font-size: 2.5em;">🔒</div>
+						<h3>保密</h3>
+						<p>個人資料<br />不要告訴 AI</p>
+					</div>
+					<div class="fragment" style="text-align: center;">
+						<div class="icon-circle icon-green" style="width: 100px; height: 100px; font-size: 2.5em;">🛑</div>
+						<h3>防詐</h3>
+						<p>遇到可疑的<br />停、查、問</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h1 class="warning-flash">記住！</h1>
+				<h2>AI 再聰明</h2>
+				<h2>也比不上你的人生智慧</h2>
+				<div class="big-emoji">💡</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #11998e 0%, #38ef7d 100%)">
+				<h1 style="color: white;">善用 AI</h1>
+				<h1 style="color: white;">讓生活更精彩！</h1>
+				<div class="big-emoji">🎉</div>
+			</section>
+
+			<section data-background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+				<h2 style="color: white;">🙋 Q&A 時間</h2>
+				<a href="https://kiang.github.io/slides/20260423_heshun.html" target="_blank"><img
+						src="20260423_heshun/slides_qrcode.png" width="300" style="border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" /></a>
+				<p style="color: rgba(255,255,255,0.9); font-size: 0.9em;">掃描 QR Code 可以看到今天的簡報</p>
+				<p style="color: rgba(255,255,255,0.6); font-size: 0.7em; margin-top: 20px;">簡報結構由 Claude 生成</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+	<script>
+
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide',
+
+			pdfSeparateFragments: false,
+
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'plugin/zoom/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+</body>
+
+</html>
